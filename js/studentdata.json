@@ -1,0 +1,37 @@
+{
+  "students": [{
+      "name": "name here",
+      "website": "http://www.wesfrancis.com",
+      "bio":"here is my cool bio"
+    },
+    {
+      "name": "name here",
+      "website": "http://www.wesfrancis.com",
+      "bio":"here is my cool bio"
+    },
+    {
+      "name": "name here",
+      "website": "http://www.wesfrancis.com",
+      "bio":"here is my cool bio"
+    },
+    {
+      "name": "name here",
+      "website": "http://www.wesfrancis.com",
+      "bio":"here is my cool bio"
+    },
+    {
+      "name": "name here",
+      "website": "http://www.wesfrancis.com",
+      "bio":"here is my cool bio"
+    },
+    {
+      "name": "name here",
+      "website": "http://www.wesfrancis.com",
+      "bio":"here is my cool bio"
+    },
+    {
+      "name": "name here",
+      "website": "http://www.wesfrancis.com",
+      "bio":"here is my cool bio"
+    }]
+}
