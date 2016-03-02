@@ -48,11 +48,20 @@ ul.social li {
   background: white;
   box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.15);
 }
+.modal button {
+  position: absolute;
+  z-index: 100;
+  top: 10px;
+  right: 10px;
+  border: 0;
+  outline: 0;
+}
 .modal .bio {
   background: #e8e8e8;
   height: 100%;
   position: absolute;
   max-width: 384px;
+  min-width: 384px;
   padding: 40px;
   z-index: inherit;
 }
@@ -71,13 +80,28 @@ ul.social li {
   right: 0;
   height: 100%;
 }
+.modal .slider-container .slider-shadow {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, #f4f4f4 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 82%, #f4f4f4 100%);
+  background: -o-linear-gradient(left, #f4f4f4 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 82%, #f4f4f4 100%);
+  background: linear-gradient(to right, #f4f4f4 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 82%, #f4f4f4 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
 .modal .slider-container .slider {
+  transition: .8s ease left .1s;
   width: 2000px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
+
   height: 400px;
   position: relative;
   top: 60px;
-  left: 80px;
+  left: 70px;
+  box-shadow: inset;
 }
 .modal .slider-container .slider div {
   height: 100%;
@@ -85,7 +109,7 @@ ul.social li {
   background: #e8e8e8;
   display: inline-block;
   float: left;
-  margin-right: 30px;
+  margin-right: 70px;
 }
 /* Content
 * 

@@ -25,12 +25,7 @@
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
 
-         <!-- JS
-        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-        <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
-        <script src="js/script.js"></script>
-
+        
 
         <!-- Favicon
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -64,12 +59,11 @@
       <section class="gallery">
         <!-- start Modal -->
         <div class="modal">
+          <button><i class="fa fa-close"></i> close</button>
           <div class="bio">
             <h3>William Smith</h3>
-            <a href="#">www.wsmith.com</a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla accusamus quidem, expedita, sint atque sapiente temporibus eius debitis dicta, eum facilis doloremque? Iure sint debitis sit eligendi dolore, nostrum accusantium.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla accusamus quidem, expedita, sint atque sapiente temporibus eius debitis dicta, eum facilis doloremque? Iure sint debitis sit eligendi dolore, nostrum accusantium.</p>
-            <a href="#">Get in touch</a>
+            <a class="website" href="#">www.wsmith.com</a>
+            <p class="bio-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla accusamus quidem, expedita, sint atque sapiente temporibus eius debitis dicta, eum facilis doloremque? Iure sint debitis sit eligendi dolore, nostrum accusantium.</p>
             <ul class="social">
               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -78,16 +72,23 @@
             </ul>
           </div>
           <div class="slider-container">
-              <div class="slider">
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
+            <div class="slider-shadow"></div>
+            <div class="slider">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
           </div>
         </div>
         <!-- end Modal -->
       </section>
-
+      
+      <ul class="profiles">
+        <li>Wes</li>
+        <li>Dom</li>
+        <li>Anna</li>
+        <li>Shawn</li>
+      </ul>
       <section class="map">
 
           
@@ -108,7 +109,6 @@
                 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
                 voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </div>
-
       </section>
       <section class="instagram-feed">
           
@@ -116,5 +116,12 @@
       <footer>
       </footer>
     </div>
+
+     <!-- JS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+        <script src="js/script.js"></script>
+
 </body>
 </html>
