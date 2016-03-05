@@ -130,6 +130,13 @@ ul.social li {
   display: block;
   width: 100%;
 }
+footer .social {
+  font-size: 1.65em;
+}
+footer .social li {
+  margin-right: 1em;
+  text-align: right;
+}
 /* Media Queries
 * 
 --------------------------------------------- */
