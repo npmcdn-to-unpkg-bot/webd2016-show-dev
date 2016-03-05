@@ -1,3 +1,5 @@
+"use strict";
+
 (function(){
 
 	// Set up firebase url and variables
@@ -66,7 +68,20 @@
 		$('.modal').fadeOut();
 	});
 		
-	
+	//set up instafeed.js
+	var feed = new Instafeed({
+	    accessToken: '1691322362.1677ed0.43cc655ed4884ffbb58bb593b185fb6a',
+	    get: 'user',
+	    userId: '11427426', //change to "1691322362" when feed is available
+	    clientId: '30e90425d4c442bba0ee569e2c31f5b5',
+	    template: '<a href="{{link}}"  class="instagram-item instagram-{{orientation}}" target="__blank"><img src="{{image}}" /></a>',
+	    limit: 10,
+	    resolution: 'standard_resolution'
+	});
+	feed.run();	
 	
 
 })();
+
+
+

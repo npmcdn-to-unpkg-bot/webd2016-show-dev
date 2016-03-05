@@ -1,8 +1,8 @@
 /* Variables
 --------------------------------------------- */
 
-@mediumLightGray: #E8E8E8;
-@lightGray:#F4F4F4;
+@mediumLightGray: 		#E8E8E8;
+@lightGray:				#F4F4F4;
 
 
 
@@ -34,6 +34,10 @@ body {
 	width: 80%; // temporary, needs to be changed
 	margin: 0 auto;
 }
+
+/* Content
+* 
+--------------------------------------------- */
 
 ul {
 	padding: 0;
@@ -130,11 +134,22 @@ ul {
     }
 }
 
-/* Content
-* 
---------------------------------------------- */
+
+#instafeed {
+	width: 100%;
+
+	.instagram-item {
+		display: block;
+		float: left;
+		width: 20%;
 
 
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+}
 
 
 
