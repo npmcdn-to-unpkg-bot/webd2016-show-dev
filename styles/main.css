@@ -37,18 +37,18 @@ p {
 #gallery .selection li.active {
   border-bottom: 1px solid;
 }
-#gallery .profiles li {
+#gallery .grid-item {
   margin-top: 40px;
   position: relative;
   display: inline-block;
 }
-#gallery .profiles li .profileInfo {
+#gallery .grid-item .profileInfo {
   margin-left: 10px;
   bottom: 50px;
   position: absolute;
   width: 40%;
 }
-#gallery .profiles li .profileInfo hr {
+#gallery .grid-item .profileInfo hr {
   border: none;
   height: 2px;
   background: #fff;
@@ -57,22 +57,22 @@ p {
   margin-bottom: 4px;
   margin-top: 4px;
 }
-#gallery .profiles li .profileInfo p {
+#gallery .grid-item .profileInfo p {
   color: #fff;
   font-size: 9pt;
 }
-#gallery .profiles li .profileInfo .title {
+#gallery .grid-item .profileInfo .title {
   line-height: 13px;
 }
-#gallery .profiles li .profileInfo .website {
+#gallery .grid-item .profileInfo .website {
   margin-bottom: 10px;
 }
-#gallery .profiles li .firstName {
+#gallery .grid-item .firstName {
   color: #000;
   font-size: 15pt;
   font-weight: bold;
 }
-#gallery .profiles li .lastName {
+#gallery .grid-item .lastName {
   color: #000;
   font-size: 12pt;
   font-weight: bold;
@@ -111,7 +111,7 @@ ul.social li {
   outline: 0;
 }
 .modal .bio {
-  background: #e8e8e8;
+  background: #E8E8E8;
   height: 100%;
   position: absolute;
   max-width: 384px;
@@ -127,6 +127,7 @@ ul.social li {
   bottom: 20px;
 }
 .modal .slider-container {
+  background: #F4F4F4;
   position: absolute;
   left: 384px;
   overflow: hidden;
@@ -139,9 +140,9 @@ ul.social li {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: -webkit-linear-gradient(left, #f4f4f4 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 82%, #f4f4f4 100%);
-  background: -o-linear-gradient(left, #f4f4f4 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 82%, #f4f4f4 100%);
-  background: linear-gradient(to right, #f4f4f4 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 82%, #f4f4f4 100%);
+  background: -webkit-linear-gradient(left, #F4F4F4 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 82%, #F4F4F4 100%);
+  background: -o-linear-gradient(left, #F4F4F4 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 82%, #F4F4F4 100%);
+  background: linear-gradient(to right, #F4F4F4 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 82%, #F4F4F4 100%);
   /* Chrome10-25,Safari5.1-6 */
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
@@ -158,7 +159,7 @@ ul.social li {
 .modal .slider-container .slider div {
   height: 100%;
   width: 540px;
-  background: #e8e8e8;
+  background: #E8E8E8;
   display: inline-block;
   float: left;
   margin-right: 70px;
@@ -186,3 +187,10 @@ footer .social li {
   margin-right: 1em;
   text-align: right;
 }
+.grid-item {
+  margin-right: 5px;
+  padding: 10px;
+}
+/* Media Queries
+* 
+--------------------------------------------- */

@@ -9,7 +9,7 @@
 	
 
 	// ** replace jquery item with gallery item	
-	$('.profiles li').click(function(e){
+	$('.grid-item').click(function(e){
 		$('.modal').fadeIn();
 
 		// Get index of item clicked in the DOM
@@ -80,34 +80,57 @@
 	});
 	feed.run();	
 
-
-	/////////Toggle active class on selected element and remove from previous
-	$(".selection").on("click", "li", function() {				
-		var $this = $(this);									
-	    $this.addClass("active")								
-	    .siblings().removeClass("active");						
+	var $grid = $('.grid').isotope({
+	  masonry: {
+	    columnWidth: 50
+	  }
 	});
+
+	$('.grid').isotope({
+	  // options
+	  itemSelector: '.grid-item',
+	  layoutMode: 'fitRows'
+	});
+
+	$('a.all').on('click', function(){
+		$grid.isotope({ filter: '*' });
+	});
+	$('a.hyb').on('click', function(){
+		$grid.isotope({ filter: '.hyb' });
+	});
+	$('a.dev').on('click', function(){
+		$grid.isotope({ filter: '.dev' });
+	});
+	$('a.des').on('click', function(){
+		$grid.isotope({ filter: '.des' });
+	});
+	/////////Toggle active class on selected element and remove from previous
+	// $(".selection").on("click", "li", function() {				
+	// 	var $this = $(this);									
+	//     $this.addClass("active")								
+	//     .siblings().removeClass("active");						
+	// });
 	///////////////
 
 	//////////toggle portfolio pics
-	$(".all").on("click", function(){						
-		$(".all1").fadeIn(600);								
-	});	
+	// $(".all").on("click", function(){						
+	// 	$(".all1").fadeIn(600);								
+	// });	
 
-	$(".dev").on("click", function(){						
-		$(".dev1").fadeIn(600);								
-		$(".des1, .hyb1").fadeOut(600);													
-	});	
+	// $(".dev").on("click", function(){						
+	// 	$(".dev1").fadeIn(600);								
+	// 	$(".des1, .hyb1").fadeOut(600);													
+	// });	
 
-	$(".des").on("click", function(){						
-		$(".des1").fadeIn(600);							
-		$(".dev1, .hyb1").fadeOut(600);
-	});	
+	// $(".des").on("click", function(){						
+	// 	$(".des1").fadeIn(600);							
+	// 	$(".dev1, .hyb1").fadeOut(600);
+	// });	
 
-	$(".hyb").on("click", function(){						
-		$(".hyb1").fadeIn(600);								
-		$(".dev1, .des1").fadeOut(600);
-	});	
+	// $(".hyb").on("click", function(){						
+	// 	$(".hyb1").fadeIn(600);								
+	// 	$(".dev1, .des1").fadeOut(600);
+	// });	
 	//////////////////
 	
 

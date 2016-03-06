@@ -1,21 +1,61 @@
 {
   "students": [{
-      "name": "Wes",
+      "name": "A",
       "website": "http://www.wesfrancis.com",
       "bio":"here is my cool bio"
     },
     {
-      "name": "Dom",
+      "name": "B",
       "website": "http://www.wesfrancis.com",
       "bio":"here is my cool bio"
     },
     {
-      "name": "Anna",
+      "name": "C",
       "website": "http://www.wesfrancis.com",
       "bio":"here is my cool bio"
     },
     {
-      "name": "Shawn",
+      "name": "D",
+      "website": "http://www.wesfrancis.com",
+      "bio":"here is my cool bio"
+    },
+    {
+      "name": "E",
+      "website": "http://www.wesfrancis.com",
+      "bio":"here is my cool bio"
+    },
+    {
+      "name": "F",
+      "website": "http://www.wesfrancis.com",
+      "bio":"here is my cool bio"
+    },
+    {
+      "name": "G",
+      "website": "http://www.wesfrancis.com",
+      "bio":"here is my cool bio"
+    },
+    {
+      "name": "H",
+      "website": "http://www.wesfrancis.com",
+      "bio":"here is my cool bio"
+    },
+    {
+      "name": "I",
+      "website": "http://www.wesfrancis.com",
+      "bio":"here is my cool bio"
+    },
+    {
+      "name": "J",
+      "website": "http://www.wesfrancis.com",
+      "bio":"here is my cool bio"
+    },
+    {
+      "name": "K",
+      "website": "http://www.wesfrancis.com",
+      "bio":"here is my cool bio"
+    },
+    {
+      "name": "L",
       "website": "http://www.wesfrancis.com",
       "bio":"here is my cool bio"
     }]

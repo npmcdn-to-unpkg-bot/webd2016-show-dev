@@ -1,0 +1,19 @@
+{
+  "name": "webd2016-show-dev",
+  "version": "1.0.0",
+  "description": "web humber influx",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesleydean/webd2016-show-dev.git"
+  },
+  "author": "Humber webd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesleydean/webd2016-show-dev/issues"
+  },
+  "homepage": "https://github.com/wesleydean/webd2016-show-dev#readme"
+}
