@@ -35,9 +35,87 @@ body {
 	margin: 0 auto;
 }
 
+p {
+	margin: 0;
+}
+
 /* Content
 * 
 --------------------------------------------- */
+
+
+
+#gallery {
+
+	.selection {
+
+		li {
+			display: inline-block;
+			padding: 6px 5px 4px 5px;
+			font-size: 13pt;
+			font-weight: bold;
+			margin-right: 15px;
+			cursor: pointer;
+
+			&.active {
+				border-bottom: 1px solid;
+			}	
+		}				
+	}
+
+	.profiles {
+
+		li {
+			margin-top: 40px;
+			position: relative;
+			display: inline-block;
+
+			.profileInfo {
+				margin-left: 10px;
+				bottom: 50px;
+				position: absolute;
+				width: 40%;
+
+				hr {
+					border: none;
+					height: 2px;
+					background: #fff;
+					width: 74px;
+					margin: 0;
+					margin-bottom: 4px;
+					margin-top: 4px;
+				}
+
+				p {
+					color: #fff;
+					font-size: 9pt;
+				}
+
+				.title {
+					line-height: 13px;
+				}
+
+				.website {
+					margin-bottom: 10px;
+				}
+			}
+			
+			.firstName {
+				color: #000;
+				font-size: 15pt;
+				font-weight: bold;
+			}
+
+			.lastName {
+				color: #000;
+				font-size: 12pt;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+
 
 ul {
 	padding: 0;

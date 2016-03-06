@@ -79,6 +79,36 @@
 	    resolution: 'standard_resolution'
 	});
 	feed.run();	
+
+
+	/////////Toggle active class on selected element and remove from previous
+	$(".selection").on("click", "li", function() {				
+		var $this = $(this);									
+	    $this.addClass("active")								
+	    .siblings().removeClass("active");						
+	});
+	///////////////
+
+	//////////toggle portfolio pics
+	$(".all").on("click", function(){						
+		$(".all1").fadeIn(600);								
+	});	
+
+	$(".dev").on("click", function(){						
+		$(".dev1").fadeIn(600);								
+		$(".des1, .hyb1").fadeOut(600);													
+	});	
+
+	$(".des").on("click", function(){						
+		$(".des1").fadeIn(600);							
+		$(".dev1, .hyb1").fadeOut(600);
+	});	
+
+	$(".hyb").on("click", function(){						
+		$(".hyb1").fadeIn(600);								
+		$(".dev1, .des1").fadeOut(600);
+	});	
+	//////////////////
 	
 
 })();
