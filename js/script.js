@@ -112,28 +112,7 @@
 	});
 	///////////////
 
-	//////////toggle portfolio pics
-	// $(".all").on("click", function(){						
-	// 	$(".all1").fadeIn(600);								
-	// });	
-
-	// $(".dev").on("click", function(){						
-	// 	$(".dev1").fadeIn(600);								
-	// 	$(".des1, .hyb1").fadeOut(600);													
-	// });	
-
-	// $(".des").on("click", function(){						
-	// 	$(".des1").fadeIn(600);							
-	// 	$(".dev1, .hyb1").fadeOut(600);
-	// });	
-
-	// $(".hyb").on("click", function(){						
-	// 	$(".hyb1").fadeIn(600);								
-	// 	$(".dev1, .des1").fadeOut(600);
-	// });	
-	//////////////////
-	
-	////Smooth Scroll for nav
+	///Smooth Scroll for nav
 	$('a[href^="#"]').on('click', function(event) {
 
     var target = $( $(this).attr('href') );
