@@ -34,7 +34,7 @@ section {
 }
 .logo {
   font-size: 25px;
-  color: #E8E8E8;
+  color: #e8e8e8;
   text-transform: uppercase;
   float: left;
   display: block;
@@ -86,7 +86,7 @@ nav ul a {
   cursor: pointer;
 }
 #gallery .selection li.active {
-  border-bottom: 1px solid;
+  border: 1px solid;
 }
 #gallery .grid-item {
   margin-top: 40px;
@@ -168,7 +168,7 @@ ul.social li {
   outline: 0;
 }
 .modal .bio {
-  background: #E8E8E8;
+  background: #e8e8e8;
   height: 100%;
   position: absolute;
   max-width: 384px;
@@ -184,7 +184,6 @@ ul.social li {
   bottom: 20px;
 }
 .modal .slider-container {
-  background: #F4F4F4;
   position: absolute;
   left: 384px;
   overflow: hidden;
@@ -197,9 +196,9 @@ ul.social li {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: -webkit-linear-gradient(left, #F4F4F4 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 82%, #F4F4F4 100%);
-  background: -o-linear-gradient(left, #F4F4F4 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 82%, #F4F4F4 100%);
-  background: linear-gradient(to right, #F4F4F4 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 82%, #F4F4F4 100%);
+  background: -webkit-linear-gradient(left, #f4f4f4 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 82%, #f4f4f4 100%);
+  background: -o-linear-gradient(left, #f4f4f4 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 82%, #f4f4f4 100%);
+  background: linear-gradient(to right, #f4f4f4 0%, rgba(255, 255, 255, 0) 17%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 82%, #f4f4f4 100%);
   /* Chrome10-25,Safari5.1-6 */
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
@@ -216,7 +215,7 @@ ul.social li {
 .modal .slider-container .slider div {
   height: 100%;
   width: 540px;
-  background: #E8E8E8;
+  background: #e8e8e8;
   display: inline-block;
   float: left;
   margin-right: 70px;
@@ -244,6 +243,3 @@ footer .social li {
   margin-right: 1em;
   text-align: right;
 }
-/* Media Queries
-* 
---------------------------------------------- */

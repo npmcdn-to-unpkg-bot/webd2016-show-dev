@@ -105,11 +105,11 @@
 		$grid.isotope({ filter: '.des' });
 	});
 	/////////Toggle active class on selected element and remove from previous
-	// $(".selection").on("click", "li", function() {				
-	// 	var $this = $(this);									
-	//     $this.addClass("active")								
-	//     .siblings().removeClass("active");						
-	// });
+	$(".selection").on("click", "li", function() {				
+		var $this = $(this);									
+	    $this.addClass("active")								
+	    .siblings().removeClass("active");						
+	});
 	///////////////
 
 	//////////toggle portfolio pics
