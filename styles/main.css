@@ -29,9 +29,12 @@ section {
 /* Content
 * 
 --------------------------------------------- */
+.header {
+  position: static;
+}
 .logo {
   font-size: 25px;
-  color: #F4F4F4;
+  color: #E8E8E8;
   text-transform: uppercase;
   float: left;
   display: block;
@@ -60,14 +63,21 @@ nav ul a {
   text-transform: uppercase;
   font-size: 12px;
 }
-.row {
+.row-nav {
+  display: inline-block;
   width: 100%;
   max-width: 100vw;
   margin: 0 auto;
   position: relative;
   padding: 0 2%;
 }
-s #gallery .selection li {
+#right-box-intro {
+  padding: 10%;
+}
+#left-box-intro {
+  padding: 2.5%;
+}
+#gallery .selection li {
   display: inline-block;
   padding: 6px 5px 4px 5px;
   font-size: 13pt;
@@ -75,27 +85,27 @@ s #gallery .selection li {
   margin-right: 15px;
   cursor: pointer;
 }
-s #gallery .selection li.active {
+#gallery .selection li.active {
   border-bottom: 1px solid;
 }
-s #gallery .grid-item {
+#gallery .grid-item {
   margin-top: 40px;
   width: 20%;
   position: relative;
   display: inline-block;
   /*padding-right: 10px;*/
 }
-s #gallery .grid-item img {
+#gallery .grid-item img {
   box-shadow: 0 19px 44px rgba(0, 0, 0, 0.09);
   max-width: 170px;
 }
-s #gallery .grid-item .profileInfo {
+#gallery .grid-item .profileInfo {
   margin-left: 10px;
   bottom: 50px;
   position: absolute;
   width: 40%;
 }
-s #gallery .grid-item .profileInfo hr {
+#gallery .grid-item .profileInfo hr {
   border: none;
   height: 2px;
   background: #fff;
@@ -104,22 +114,22 @@ s #gallery .grid-item .profileInfo hr {
   margin-bottom: 4px;
   margin-top: 4px;
 }
-s #gallery .grid-item .profileInfo p {
+#gallery .grid-item .profileInfo p {
   color: #fff;
   font-size: 9pt;
 }
-s #gallery .grid-item .profileInfo .title {
+#gallery .grid-item .profileInfo .title {
   line-height: 13px;
 }
-s #gallery .grid-item .profileInfo .website {
+#gallery .grid-item .profileInfo .website {
   margin-bottom: 10px;
 }
-s #gallery .grid-item .firstName {
+#gallery .grid-item .firstName {
   color: #000;
   font-size: 15pt;
   font-weight: bold;
 }
-s #gallery .grid-item .lastName {
+#gallery .grid-item .lastName {
   color: #000;
   font-size: 12pt;
   font-weight: bold;
