@@ -5,6 +5,10 @@
 @lightGray:				#F4F4F4;
 
 
+@montserrat: 			'Montserrat', sans-serif;
+@lato: 					'Lato', sans-serif;
+
+
 
 
 /* Mixins 
@@ -28,10 +32,12 @@
 
 body {
 	width: 100%;
+	font-family: @montserrat;
 }
 
 .container {
-	width: 80%; // temporary, needs to be changed
+	width: 80%;
+	max-width: 1140px; // temporary, needs to be changed
 	margin: 0 auto;
 }
 
@@ -42,6 +48,7 @@ p {
 section {
 	min-height: 75vh;
 }
+
 /* Content
 * 
 --------------------------------------------- */
@@ -115,6 +122,7 @@ nav {
 }
 
 //------------------------------------------> Nav End
+
 
 // Intro  ----------------------------------------->
 
@@ -303,11 +311,45 @@ ul {
 }
 
 
-#map {
+
+
+/* Map ------------------------------------------ */
+
+#show-info {
 	width: 100%;
-	height: 1000px;
+	position: relative;
+	margin-top: 8em;
+
+	h2 {
+		text-transform: uppercase;
+	}
+
+
+	.container {
+		background-color: white;
+		padding: 1em 0;
+		position: absolute;
+	    z-index: 9;
+	    margin-left: auto;
+	    margin-right: auto;
+	    left: 20px;
+	    right: 20px;
+	    top: -5em;
+	    max-width: 1140px;
+	    background: white;
+	    box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.15);
+	}
 }
 
+#map {
+	width: 100%;
+	height: 800px;
+	z-index: -10;
+}
+
+
+
+/* Instagram feed ------------------------------------- */
 
 #instafeed {
 	width: 100%;
@@ -325,6 +367,8 @@ ul {
 	}
 }
 
+/* Footer --------------------------------------------- */
+
 footer .social {
 	font-size: 1.65em;
 
@@ -334,7 +378,6 @@ footer .social {
 	}
 
 }
-
 
 
 
