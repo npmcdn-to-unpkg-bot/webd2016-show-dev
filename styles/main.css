@@ -30,6 +30,12 @@ section {
 }
 .btn {
   display: block;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 0;
+  background-color: white;
+  box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
 }
 /* Content
 * 
@@ -227,26 +233,27 @@ ul.social li {
   margin-right: 70px;
 }
 /* Map ------------------------------------------ */
-#show-info {
+.map-section {
   width: 100%;
   position: relative;
   margin-top: 8em;
 }
-#show-info h2 {
+.map-section h2 {
   text-transform: uppercase;
 }
-#show-info h3 {
+.map-section h3 {
   margin-top: 3em;
 }
-#show-info .btn {
-  margin-top: 2em;
-}
-#show-info .direction-btn {
+.map-section .direction-btn {
+  width: 240px;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 15em;
 }
-#show-info .container {
+.map-section .container {
   background-color: white;
   padding: 1.3em 0;
   position: absolute;
@@ -260,17 +267,25 @@ ul.social li {
   background: white;
   box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.15);
 }
-#show-info .show-info {
-  padding: 4em  0 4em 5em;
+.map-section .container .btn {
+  width: 170px;
+  margin-top: 2em;
+}
+.map-section .show-info {
+  padding: 4em 0 4em 5em;
 }
 #map {
   width: 100%;
-  height: 800px;
+  height: 1000px;
   z-index: -10;
 }
 /* RSVP info ------------------------------------- */
 #rsvp-info {
   margin-top: 5em;
+}
+#rsvp-info .btn {
+  width: 170px;
+  margin-top: 2em;
 }
 /* Instagram feed ------------------------------------- */
 #instafeed {
