@@ -1,7 +1,7 @@
 /* Variables
 --------------------------------------------- */
-/* Variables
---------------------------------------------- */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Lato);
 /* Mixins 
 --------------------------------------------- */
 /* Global
@@ -9,38 +9,201 @@
 * {
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
-
   -moz-box-sizing: border-box;
   /* Firefox, other Gecko */
-
   box-sizing: border-box;
   /* Opera/IE 8+ */
-
   text-decoration: none;
 }
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 body {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+a {
+  text-decoration: none;
 }
 /* Content
 * 
 --------------------------------------------- */
 .container {
-  display: block;
-  float: left;
+  width: 1140px;
   margin: 0 auto;
-  width: 1600px;
 }
-#title {
-  display: block;
+h1#logo {
+  margin: 50px 10px;
+  width: 204px;
+  height: 190px;
+  background: url(../images/logo.png) no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+ul li {
+  list-style-type: none;
+}
+#left {
+  display: inline;
   float: left;
+  width: 645px;
+  margin: 0 10px;
+}
+#left #title h1 {
+  margin: 0;
+  padding: 10px 0;
+  font: 41px 'Lato', sans-serif;
+  font-weight: bold;
+  color: #00acd3;
+}
+#left #title p {
+  margin: 0;
+}
+#left #title p:first-child {
+  font-size: 24px;
+  color: #888;
+}
+#left #title p:last-child {
+  padding-bottom: 25px;
+  font-size: 26px;
+  color: #666;
 }
 #info {
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+}
+#info #when {
   display: block;
   float: left;
+  width: 260px;
+  text-transform: uppercase;
 }
-ul {
-  list-style-type: none;
+#info #when #date {
+  font-size: 29px;
+}
+#info #when #date sup {
+  text-transform: lowercase;
+}
+#info #when #time {
+  font: 62px "Lato", Arial, sans-serif;
+  font-weight: bold;
+}
+#info #address {
+  display: block;
+  float: left;
+  margin: 0 10px;
+  padding-bottom: 30px;
+}
+#info #address p {
+  padding: 0;
+  margin: 0;
+  color: #666;
+  font-size: 21px;
+  line-height: 35px;
+}
+#right {
+  float: right;
+  padding-top: 70px;
+  display: inline;
+  float: left;
+  width: 455px;
+  margin: 0 10px;
+}
+#right #label {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+#right .emailForm,
+#right .mailchimp {
+  margin: 15px 0;
+}
+#right .emailForm {
+  width: 426px;
+  padding: 15px 25px;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+}
+#right .mailchimp {
+  width: 204px;
+  padding: 10px;
+  background-color: #dd4b0a;
+  font-size: 21px;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: .1em;
+  outline: none;
+}
+#right input.mailchimp:focus {
+  outline: 0;
+}
+footer {
+  clear: both;
+}
+footer .footerBox {
+  border-top: 1px solid #ccc;
+  padding: 30px 0;
+}
+footer .footerBox #counter {
+  display: inline;
+  float: left;
+  width: 930px;
+  margin: 0 10px;
+}
+footer .footerBox #counter ul.countdown {
+  margin: 0;
+  padding: 0;
+}
+footer .footerBox #counter ul.countdown li {
+  display: inline-block;
+  width: 50px;
+  color: #888;
+}
+footer .footerBox #counter ul.countdown li span {
+  font-size: 55px;
+  font-weight: bold;
+  line-height: 55px;
+}
+footer .footerBox #counter ul.countdown li.seperator {
+  margin: 0 55px;
+  height: 55px;
+  width: 1px;
+  sfont-size: 55px;
+  line-height: 55px;
+  vertical-align: top;
+  border: 1px solid #888;
+}
+footer .footerBox #counter ul.countdown li p {
+  font-size: 16px;
+}
+footer .footerBox #social ul {
+  margin: 0;
+  padding: 0;
+  float: right;
+  display: inline;
+  float: left;
+  width: 170px;
+  margin: 0 10px;
+}
+footer .footerBox #social ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+footer .footerBox #social ul li i {
+  display: block;
+  padding: 10px;
+  color: #00acd3;
 }
 /* Media Queries
 * 

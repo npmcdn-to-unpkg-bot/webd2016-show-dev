@@ -1,34 +1,56 @@
 /* Variables
 --------------------------------------------- */
 
-
-
-
-
-
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@column-width: 75;
+@gutter-width: 20;
+@columns: 12;
+@gridsystem-width: (@column-width * @columns) + (@gutter-width * @columns) * 1px;
+@total-width: @gridsystem-width;
+@blue: #00acd3;
+@txtColorGrey: #888;
 
 /* Mixins 
 --------------------------------------------- */
 
-
-
-
-
+.column(@x, @columns: @columns) {
+    display: inline;
+    float: left;
+    width: @total-width*((((@gutter-width + @column-width) * @x ) - @gutter-width) / @gridsystem-width);
+    margin: 0 @total-width * ((@gutter-width * .5) / @gridsystem-width);
+}
 
 
 /* Global
 --------------------------------------------- */
 
-* { 
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
-  text-decoration: none;
+* {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+    text-decoration: none;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 body {
-	width: 100%;
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+a {
+	text-decoration: none;
 }
 
 
@@ -36,34 +58,181 @@ body {
 * 
 --------------------------------------------- */
 
-
 .container {
-	display: block;
-	float: left;
-	margin: 0 auto;
-	width: 1600px;
+    width: @gridsystem-width;
+    margin: 0 auto;
 }
 
-#title {
-	display: block;
-	float: left;
-}
-
-#info {
-	display: block;
-	float: left;
+h1#logo {
+    margin: 50px 10px;
+    width: 204px;
+    height: 190px;
+    background: url(../images/logo.png) no-repeat;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 ul {
-	list-style-type: none;
+    li {
+        list-style-type: none;
+    }
 }
 
+#left {
+    float: left;
+    .column(7);
+    #title {
+        h1 {
+            margin: 0;
+            padding: 10px 0;
+            font: 41px 'Lato', sans-serif;
+            font-weight: bold;
+            color: @blue;
+        }
+        p {
+            margin: 0;
+            &:first-child {
+                font-size: 24px;
+                color: @txtColorGrey;
+            }
+            &:last-child {
+                padding-bottom: 25px;
+                font-size: 26px;
+                color: #666;
+            }
+        }
+    }
+}
 
+#info {
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+    #when {
+        display: block;
+        float: left;
+        width: 260px;
+        text-transform: uppercase;
+        #date {
+            font-size: 29px;
+            sup {
+                text-transform: lowercase;
+            }
+        }
+        #time {
+            font: 62px "Lato", Arial, sans-serif;
+            font-weight: bold;
+        }
+    }
+    #address {
+        display: block;
+        float: left;
+        margin: 0 10px;
+        padding-bottom: 30px;
+        p {
+            padding: 0;
+            margin: 0;
+            color: #666;
+            font-size: 21px;
+            line-height: 35px;
+        }
+    }
+}
 
+#right {
+    float: right;
+    padding-top: 70px;
+    #label {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        font-weight: normal;
+        letter-spacing: 1px;
+    }
+    .emailForm,
+    .mailchimp {
+        margin: 15px 0;
+    }
+    .emailForm {
+        width: 426px;
+        padding: 15px 25px;
+        border: 1px solid #d5d5d5;
+        border-radius: 5px;
+    }
+    .mailchimp {
+        width: 204px;
+        padding: 10px;
+        background-color: #dd4b0a;
+        font-size: 21px;
+        color: #fff;
+        border: 0;
+        border-radius: 5px;
+        font-weight: bold;
+        letter-spacing: .1em;
+        outline: none;
+    }
 
+    input.mailchimp:focus {
+    		outline: 0;
+    	
+    }
+    .column(5);
+}
 
-
-
+footer {
+    clear: both;
+    .footerBox {
+        border-top: 1px solid #ccc;
+        padding: 30px 0;
+        #counter {
+            ul.countdown {
+                margin: 0;
+                padding: 0;
+                li {
+                    display: inline-block;
+                    width: 50px;
+                    color: @txtColorGrey;
+                    span {
+                        font-size: 55px;
+                        font-weight: bold;
+                        line-height: 55px;
+                    }
+                    &.seperator {
+                    	margin: 0 55px;
+                    	height: 55px;
+                    	width: 1px;s
+                        font-size: 55px;
+                        line-height: 55px;
+                        vertical-align: top;
+                        border: 1px solid @txtColorGrey;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .column(10);
+        }
+        #social {
+            ul {
+                margin: 0;
+                padding: 0;
+                float: right;
+                li {
+                    display: inline-block;
+                    margin: 0;
+                    padding: 0;
+                    i {
+                        display: block;
+                        padding: 10px;
+                        color: @blue;
+                    }
+                }
+                .column(2);
+            }
+        }
+    }
+}
 
 
 /* Media Queries
