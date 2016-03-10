@@ -64,10 +64,11 @@ section {
 --------------------------------------------- */
 
 
-// Nav  ----------------------------------------->
+// Nav  ------------------------------------------->
 
 .header {
 	position: static;
+	width: 100%;
 }
 .logo {
   
@@ -138,10 +139,33 @@ nav {
 
 #right-box-intro{
 	padding: 10%
+	
 }
 
 #left-box-intro{
-	padding: 2.5%
+	padding: 2.5%;
+
+    #title {
+        h1 {
+            margin: 0;
+            padding: 10px 0;
+            font: 41px 'Lato', sans-serif;
+            font-weight: bold;
+            color: @lightGray;
+        }
+        p {
+            margin: 0;
+            &:first-child {
+                font-size: 24px;
+                color: @mediumLightGray;
+            }
+            &:last-child {
+                padding-bottom: 25px;
+                font-size: 26px;
+                color: #666;
+            }
+        }
+    }
 }
 
 //------------------------------------------> Intro End
