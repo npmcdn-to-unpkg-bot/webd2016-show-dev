@@ -1,18 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 @import url(https://fonts.googleapis.com/css?family=Lato);
 /* Variables
---------------------------------------------- */
-/* Mixins 
 --------------------------------------------- */
 /* Global
 --------------------------------------------- */
 * {
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
+
   -moz-box-sizing: border-box;
   /* Firefox, other Gecko */
+
   box-sizing: border-box;
   /* Opera/IE 8+ */
+
   text-decoration: none;
 }
 .clearfix:after {
@@ -24,6 +26,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  height: 100%;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-weight: lighter;
 }
@@ -34,11 +37,12 @@ a {
 * 
 --------------------------------------------- */
 .container {
-  width: 1140px;
+  width: 90%;
+  max-width: 1140px;
   margin: 0 auto;
 }
 h1#logo {
-  margin: 50px 10px;
+  margin: 50px 0;
   width: 204px;
   height: 190px;
   background: url(../images/logo.png) no-repeat;
@@ -50,10 +54,8 @@ ul li {
   list-style-type: none;
 }
 #left {
-  display: inline;
   float: left;
-  width: 645px;
-  margin: 0 10px;
+  width: 60%;
 }
 #left #title h1 {
   margin: 0;
@@ -70,13 +72,12 @@ ul li {
   color: #888888;
 }
 #left #title p:last-child {
-  padding-bottom: 25px;
+  padding-bottom: 40px;
   font-size: 26px;
   color: #666;
 }
 #info {
-  padding: 30px 0;
-  border-top: 1px solid #ccc;
+  padding: 40px 0;
 }
 #info #when {
   display: block;
@@ -91,8 +92,9 @@ ul li {
   text-transform: lowercase;
 }
 #info #when #time {
-  font: 62px "Lato", Arial, sans-serif;
+  font-size: 60px;
   font-weight: bold;
+  letter-spacing: -1px;
 }
 #info #address {
   display: block;
@@ -107,344 +109,244 @@ ul li {
   font-size: 21px;
   line-height: 35px;
 }
+.divider {
+  height: 1px;
+  width: 80%;
+  background-color: #ccc;
+}
 #right {
   float: right;
-  padding-top: 70px;
-  display: inline;
-  float: left;
-  width: 455px;
-  margin: 0 10px;
+  width: 40%;
 }
-#right #label {
-  margin: 0;
-  padding: 0;
+#right p {
+  margin-top: 0;
   font-size: 24px;
   font-weight: normal;
+  font-family: 'Montserrat';
+  white-space: nowrap;
+}
+#right label p {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 1.5em;
+  font-weight: 700;
   letter-spacing: 1px;
 }
-#right .emailForm,
-#right .mailchimp {
-  margin: 15px 0;
+#mc_embed_signup form {
+  padding-left: 0!important;
 }
-#right .emailForm {
-  width: 426px;
+.form-wrapper {
+  width: 450px;
+  padding-top: 10px;
+}
+.emailForm {
+  width: 60%;
+  float: left;
+  height: 50px;
   padding: 15px 25px;
   border: 1px solid #d5d5d5;
-  border-radius: 5px;
+  border-right: none!important;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin: 0;
+  font-family: 'Montserrat';
+  font-size: 1.1em;
 }
-#right .mailchimp {
-  width: 204px;
-  padding: 10px;
-  background-color: #dd4b0a;
-  font-size: 21px;
+.notify-btn {
+  float: left;
+  position: relative;
+  padding: .8em .2em;
+  width: 40%;
+  height: 50px;
+  background-color: #7986cb;
   color: #fff;
-  border: 0;
-  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 16px;
   font-weight: bold;
+  text-transform: uppercase;
   letter-spacing: .1em;
-  outline: none;
+  border: none!important;
+  overflow: hidden;
+  z-index: 0;
 }
-#right input.mailchimp:focus {
+.notify-btn::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin: -15px 0 0 1px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #3f51b5;
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transform: scale3d(1, 2, 1);
+  transform: scale3d(1, 2, 1);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+}
+.notify-btn .button__icon {
+  vertical-align: middle;
+}
+.notify-btn > span {
+  vertical-align: middle;
+  padding-left: 0.75em;
+}
+.notify-btn:hover::before {
+  -webkit-transform: scale3d(9, 9, 1);
+  transform: scale3d(9, 9, 1);
+}
+.fa-envelope-o {
+  color: white;
+}
+input.mailchimp:focus {
   outline: 0;
 }
-footer {
-  clear: both;
-}
-footer .footerBox {
-  border-top: 1px solid #ccc;
-  padding: 30px 0;
-}
-footer .footerBox #counter {
-  display: inline;
+ul#social {
+  margin: 0;
+  margin-top: .5em;
+  padding: 0;
   float: left;
-  width: 930px;
-  margin: 0 10px;
+  width: 100%;
 }
-footer .footerBox #counter ul.countdown {
+ul#social li {
+  display: inline-block;
   margin: 0;
   padding: 0;
 }
-footer .footerBox #counter ul.countdown li {
+ul#social li i {
+  display: block;
+  padding: 15px;
+  color: #00acd3;
+  font-size: 2.5em;
+  transition: color 0.5s ease;
+}
+ul#social li i.fa-twitter {
+  padding: 0;
+}
+ul#social li i:hover {
+  color: #3f51b5;
+}
+ul.countdown {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+ul.countdown li {
   display: inline-block;
   width: 50px;
   color: #888888;
 }
-footer .footerBox #counter ul.countdown li span {
-  font-size: 55px;
+ul.countdown li span {
+  font-size: 50px;
   font-weight: bold;
   line-height: 55px;
 }
-footer .footerBox #counter ul.countdown li.seperator {
-  margin: 0 55px;
+ul.countdown li.seperator {
+  margin: 0 30px;
   height: 55px;
   width: 1px;
-  sfont-size: 55px;
+  font-size: 55px;
   line-height: 55px;
   vertical-align: top;
   border: 1px solid #888888;
 }
-footer .footerBox #counter ul.countdown li p {
+#counter p {
   font-size: 16px;
 }
-footer .footerBox #social ul {
-  margin: 0;
-  padding: 0;
-  float: right;
-  display: inline;
-  float: left;
-  width: 170px;
-  margin: 0 10px;
-}
-footer .footerBox #social ul li {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-footer .footerBox #social ul li i {
+.humber-logo {
+  width: 120px;
+  clear: both;
   display: block;
-  padding: 10px;
-  color: #00acd3;
+  margin: 0 auto;
 }
 /* Media Queries
 * 
 --------------------------------------------- */
-/* Smart-phones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* Styles */
-  html {
-    margin: 0 5%;
+@media screen and (max-width: 1270px) {
+  .container {
+    max-width: none;
+  }
+}
+@media screen and (max-width: 1147px) {
+  .container {
+    width: 80%;
+    max-width: none;
+  }
+  #left,
+  #right {
+    width: 100%;
+  }
+  #right {
+    margin-top: 2em;
+  }
+  ul#social {
+    padding-top: 1.5em;
+    width: 35%;
+  }
+  .humber-logo {
+    padding: 3em 0 2em 0;
+    float: left;
+    clear: none;
+  }
+  #info #when {
+    width: auto;
+  }
+}
+@media screen and (max-width: 675px) {
+  .container {
+    width: 85%;
   }
   h1#logo {
-    margin: 4% 4%;
-    width: 20%;
-  }
-  #left {
-    width: 100%;
-    display: inline;
-    float: left;
-    width: 265px;
-    margin: 0 10px;
-    text-align: center;
+    margin: 1.5em auto;
+    width: 150px;
+    height: 140px;
+    background-size: cover;
   }
   #left #title h1 {
-    font-size: 18px;
+    font-size: 38px;
   }
-  #left #title p:first-child {
-    font-size: 16px;
-  }
-  #left #title p:last-child {
-    font-size: 18px;
-  }
-  #info {
-    text-align: center;
+  #info #when {
+    margin-right: 1.5em;
   }
   #info #when #date {
-    font-size: 21px;
+    font-size: 25px;
   }
   #info #when #time {
-    font-size: 40px;
+    font-size: 52px;
   }
   #info #address {
-    clear: both;
+    margin-left: 0;
+    margin-top: 1em;
   }
   #info #address p {
-    font-size: 16px;
-    line-height: 22px;
-    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
   }
-  #right {
-    border-top: 1px solid #ccc;
+  #right p {
+    white-space: normal;
+  }
+  ul.countdown li span {
+    font-size: 33px;
+  }
+  ul.countdown li.seperator {
+    margin: 0 24px;
+    height: 45px;
     padding-top: 10px;
+  }
+  .form-wrapper {
     width: 100%;
-    clear: both;
-    display: inline;
-    float: left;
-    width: 265px;
-    margin: 0 10px;
-    text-align: center;
   }
-  #right #label {
-    letter-spacing: 0;
-    line-height: 20px;
-    font-size: 16px;
+  .notify-btn {
+    font-size: 13px;
   }
-  #right #mc_embed_signup_scroll {
-    text-align: center;
+  .humber-logo {
+    float: right;
   }
-  #right .emailForm,
-  #right .mailchimp {
-    margin: 5px 0;
-  }
-  #right .emailForm {
-    width: 200px;
-    padding: 10px 15px;
-  }
-  #right .mailchimp {
-    width: 100px;
-    padding: 5px;
-    font-size: 14px;
-    letter-spacing: 0px;
-    font-weight: normal;
-    text-align: center;
-  }
-  footer {
-    display: inline;
-    float: left;
-    width: 360px;
-    margin: 0 10px;
-  }
-  footer .footerBox {
-    padding: 10px 0;
-  }
-  footer .footerBox #counter ul.countdown {
-    width: 45%;
-    padding: 2px;
-    margin: 2px;
-  }
-  footer .footerBox #counter ul.countdown li {
-    width: 5px;
-  }
-  footer .footerBox #counter ul.countdown li span {
-    font-size: 20px;
-    line-height: 0px;
-  }
-  footer .footerBox #counter ul.countdown li p {
-    font-size: 16px;
-  }
-  footer #social {
-    clear: both;
-    display: inline;
-    float: left;
-    width: 170px;
-    margin: 0 10px;
-    text-align: center;
-  }
-  footer #social ul {
-    float: center;
-  }
-  footer #social ul li {
-    display: inline-block;
-    padding: 10px;
-  }
-}
-/* Smart-phones (landscape) ----------- */
-@media only screen and (min-width: 321px) {
-  /* Styles */
-  /*  .container {
-        background-color: gray;
-    }
-
-    #left {
-        .column(2);
-       
-
-      }
-
-    #right {
-        .column(2);
-       
-    }
-
-    .footerBox {
-        .column(3);
-    }*/
-}
-/* Smart phones (portrait) ----------- */
-@media only screen and (max-width: 320px) {
-  /* Styles */
-  .container {
-    background-color: gray;
-  }
-}
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* Styles */
-  html {
-    margin: 0 5%;
-  }
-  /*#left {
-        .column(3);
-        float: left;
-       
-    }
-
-    #right {
-        .column(2);
-        clear: both;
-        float: left;
-       
-    }
-
-    .footerBox {
-        .column(4);
-    }*/
-}
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* Styles */
-  /* .container {
-        background-color: orange;
-    }*/
-}
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  /* Styles */
-  #left {
-    display: inline;
-    width: 645px;
-    margin: 0 10px;
-    float: left;
-  }
-  #right {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #ccc;
-    display: inline;
-    width: 645px;
-    margin: 0 10px;
-    clear: both;
-    float: left;
-  }
-  #right #mc_embed_signup_scroll {
-    text-align: center;
-  }
-  footer {
-    border-top: 1px solid #ccc;
-    margin-top: 20px;
-    display: inline;
-    float: left;
-    width: 455px;
-    margin: 0 10px;
-  }
-  #social {
-    clear: both;
-    display: inline;
-    float: left;
-    width: 265px;
-    margin: 0 10px;
-    font-size: 40px;
-    margin-top: 50px;
-  }
-  #social ul {
-    float: center;
-  }
-  #social ul li {
-    display: inline;
-    padding: 30px;
-    line-height: none;
-  }
-}
-/* Desktops and laptops ----------- */
-@media only screen and (min-width: 1224px) {
-  /* Styles */
-  /*.container {
-        background-color: green;
-    }*/
-}
-/* Large screens ----------- */
-@media only screen and (min-width: 1824px) {
-  /* Styles */
-  /* .container {
-        background-color: teal;
-    }*/
 }
