@@ -92,16 +92,16 @@
 	  layoutMode: 'fitRows'
 	});
 
-	$('a.all').on('click', function(){
+	$('li.all').on('click', function(){
 		$grid.isotope({ filter: '*' });
 	});
-	$('a.hyb').on('click', function(){
+	$('li.hyb').on('click', function(){
 		$grid.isotope({ filter: '.hyb' });
 	});
-	$('a.dev').on('click', function(){
+	$('li.dev').on('click', function(){
 		$grid.isotope({ filter: '.dev' });
 	});
-	$('a.des').on('click', function(){
+	$('li.des').on('click', function(){
 		$grid.isotope({ filter: '.des' });
 	});
 	/////////Toggle active class on selected element and remove from previous
