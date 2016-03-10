@@ -238,3 +238,284 @@ footer {
 /* Media Queries
 * 
 --------------------------------------------- */
+
+  /* Smart-phones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+    html {
+        margin: 0 5%;
+    }
+
+    h1#logo {
+        margin: 4% 4%;
+        width: 20%;
+    }
+
+    #left {
+        width: 100%;
+        float: left;
+        .column(3);
+        text-align: center;
+        #title {
+            h1 {
+                font-size: 18px;
+            }
+
+            p {
+                &:first-child {
+                    font-size: 16px;
+                }
+                &:last-child {
+                    font-size: 18px;
+              }
+            }
+        }
+    }
+
+    #info {
+        text-align: center;
+        #when{
+            #date {
+                font-size: 21px;
+            }
+            #time {
+                font-size: 40px;
+            }
+        }
+        #address {
+            clear: both;
+            p {
+                font-size: 16px;
+                line-height: 22px;
+                padding: 0;
+            }
+        }
+    }
+
+    #right {
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        width: 100%;
+        clear: both;
+        .column(3);
+         text-align: center;
+
+        #label {
+            letter-spacing:0; 
+            line-height: 20px;
+            font-size: 16px;  
+        }
+
+        #mc_embed_signup_scroll {
+            text-align: center;
+        }
+        .emailForm,.mailchimp {
+            margin: 5px 0;
+         }
+         .emailForm {
+            width: 200px;
+            padding: 10px 15px;
+         }
+
+         .mailchimp {
+            width: 100px;
+            padding: 5px;
+            font-size: 14px;
+            letter-spacing: 0px;
+            font-weight: normal;
+            text-align: center;
+         }
+        
+    }
+
+    
+
+    footer {
+        float: left;
+        .column(4);
+        .footerBox {
+            padding: 10px 0;
+            #counter {
+                ul.countdown {
+                    width: 45%;
+                    padding: 2px;
+                        margin: 2px;
+                    li {
+                        width: 5px;
+                        span {
+                            font-size: 20px;
+                            line-height: 0px;
+                        }
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #social {
+            clear: both;
+            .column(2);
+            text-align: center;
+            ul {
+                float: center;
+                li {
+                    display: inline-block;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+
+}
+
+/* Smart-phones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+
+  /*  .container {
+        background-color: gray;
+    }
+
+    #left {
+        .column(2);
+       
+
+      }
+
+    #right {
+        .column(2);
+       
+    }
+
+    .footerBox {
+        .column(3);
+    }*/
+
+}
+
+/* Smart phones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+
+    .container {
+        background-color: gray;
+    }
+
+
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+
+    html {
+        margin: 0 5%;
+    }
+
+    /*#left {
+        .column(3);
+        float: left;
+       
+    }
+
+    #right {
+        .column(2);
+        clear: both;
+        float: left;
+       
+    }
+
+    .footerBox {
+        .column(4);
+    }*/
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+
+   /* .container {
+        background-color: orange;
+    }*/
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+   
+   
+
+    #left {
+        .column(7);
+        float: left;
+       
+    }
+
+    #right {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid #ccc;
+        .column(7);
+        clear: both;
+        float: left;   
+
+        #label {}
+        #mc_embed_signup_scroll {
+            text-align: center;
+        } 
+    }
+
+    footer {
+        border-top: 1px solid #ccc;
+        margin-top: 20px;
+        .column(5);
+    }
+
+    #social {
+        clear: both;
+        .column(3);
+        font-size: 40px;
+        margin-top: 50px;
+        ul {
+            float: center;
+            li {
+                display: inline;
+                padding: 30px;
+                line-height: none;
+            }
+        }
+    }
+     
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+/* Styles */
+
+    /*.container {
+        background-color: green;
+    }*/
+
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+/* Styles */
+
+   /* .container {
+        background-color: teal;
+    }*/
+
+}
+
+
+
+
+
