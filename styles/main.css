@@ -87,7 +87,7 @@ ul li {
   text-transform: uppercase;
 }
 #info #when #date {
-  font-size: 29px;
+  font-size: 23px;
 }
 #info #when #date sup {
   text-transform: lowercase;
@@ -334,11 +334,10 @@ ul.countdown li.seperator {
     white-space: normal;
   }
   ul.countdown li span {
-    font-size: 45px;
+    font-size: 40px;
   }
   ul.countdown li.seperator {
-    margin: 0 18px;
-    padding-top: 10px;
+    margin: 0 15px;
   }
   .form-wrapper {
     width: 100%;
