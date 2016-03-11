@@ -1,5 +1,7 @@
 /* Variables
 --------------------------------------------- */
+/* Mixins 
+--------------------------------------------- */
 .blue-gradient {
   background: -moz-linear-gradient(45deg, #62a9d6 0%, #62a9d6 1%, rgba(98, 169, 214, 0.87) 26%, rgba(98, 169, 214, 0.42) 52%, rgba(101, 171, 215, 0.4) 53%, rgba(137, 191, 224, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* FF3.6-15 */
@@ -24,8 +26,14 @@
   background: linear-gradient(45deg, #8852a0 0%, #62a9d6 1%, rgba(98, 169, 214, 0.87) 26%, rgba(136, 82, 160, 0.42) 52%, rgba(138, 86, 162, 0.4) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
-/* Mixins 
---------------------------------------------- */
+.blue-purple-gradient {
+  background: -moz-linear-gradient(45deg, #8852a0 0%, #4096ee 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #8852a0 0%, #4096ee 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #8852a0 0%, #4096ee 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
 /* Global
 --------------------------------------------- */
 * {
@@ -145,7 +153,7 @@ nav ul a {
 }
 #gallery .grid-item {
   margin-top: 40px;
-  width: 20%;
+  width: 170px;
   position: relative;
   display: inline-block;
   /*padding-right: 10px;*/
@@ -157,6 +165,7 @@ nav ul a {
 #gallery .grid-item img:nth-of-type(2) {
   position: absolute;
   left: 0;
+  top: 0;
   opacity: 0;
   -webkit-transition: .3s ease opacity;
   -o-transition: .3s ease opacity;
@@ -250,10 +259,12 @@ nav ul a {
 ul {
   padding: 0;
 }
-ul.social {
+ul.social,
+ul#social-profiles {
   list-style-type: none;
 }
-ul.social li {
+ul.social li,
+ul#social-profiles li {
   display: inline-block;
   float: left;
   margin-right: 10px;
@@ -264,10 +275,11 @@ ul.social li {
   z-index: 10;
   margin-left: auto;
   margin-right: auto;
-  left: 20px;
-  right: 20px;
-  top: 100px;
-  height: 584px;
+  left: 10%;
+  right: 10%;
+  top: 10%;
+  bottom: 10%;
+  max-height: 630px;
   max-width: 1140px;
   background: white;
   box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.15);
@@ -275,7 +287,7 @@ ul.social li {
   -o-transition: .3s ease top .1s;
   transition: .3s ease top .1s;
 }
-.modal.slide {
+.modal.slide-in {
   top: 50px;
 }
 .modal button {
@@ -297,10 +309,27 @@ ul.social li {
 }
 .modal .bio h3 {
   margin-bottom: 0;
+  margin-top: 13px;
+}
+.modal .bio p {
+  margin-top: 20px;
+  font-size: 13px;
 }
 .modal .bio .social {
   position: absolute;
-  bottom: 20px;
+  bottom: 90px;
+}
+.modal .avatar-pic {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 100%;
+  overflow: hidden;
+  display: inline-block;
+  float: left;
+}
+.modal .avatar-pic img {
+  width: 100%;
 }
 .modal .slider-container {
   background: #F4F4F4;
@@ -339,6 +368,41 @@ ul.social li {
   display: inline-block;
   float: left;
   margin-right: 70px;
+}
+.modal .profile-select-buttons {
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+  height: 67px;
+  width: 100%;
+  background: white;
+  z-index: 10;
+  bottom: -16px;
+  background: -moz-linear-gradient(45deg, #8852a0 0%, #4096ee 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #8852a0 0%, #4096ee 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #8852a0 0%, #4096ee 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.modal .profile-select-buttons li {
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+  /*border:1px solid red;*/
+  padding: 23px 40px;
+  color: white;
+  cursor: pointer;
+}
+.modal .profile-select-buttons li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.modal .profile-select-buttons li:nth-of-type(1) {
+  float: left;
+}
+.modal .profile-select-buttons li:nth-of-type(2) {
+  float: right;
+  text-align: right;
 }
 /* Map ------------------------------------------ */
 .map-section {
@@ -419,3 +483,20 @@ footer .social li {
 /* Media Queries
 * 
 --------------------------------------------- */
+@media (max-width: 768px) {
+  .modal .slider-container {
+    right: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+    visibility: hidden;
+  }
+  .modal .bio {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    min-width: 0px;
+    top: 0;
+  }
+}

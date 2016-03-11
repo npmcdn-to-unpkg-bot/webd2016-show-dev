@@ -1,62 +1,134 @@
 {
   "students": [{
-      "name": "Wes <br/> Francis",
-      "website": "http://www.wesfrancis.com",
-      "bio":"here is my cool bio"
+      "name": "Wes Francis",
+      "website": "kristennakamura.com",
+      "bio":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla accusamus quidem, expedita, sint atque sapiente temporibus eius debitis dicta, eum facilis doloremque? Iure sint debitis sit eligendi dolore, nostrum accusantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla accusamus quidem, expedita, sint atque sapiente temporibus eius debitis dicta, eum facilis doloremque? Iure sint debitis sit eligendi dolore, nostrum accusantium.Iure sint debitis sit eligendi dolore, nostrum accusantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla accusamus quidem, expedita, sint atque sapiente temporibus eius debitis dicta, eum facilis doloremque? Iure sint debitis sit eligendi dolore, sit eligendi dolore, nostrum accusantium.",
+      "social":[{
+        "facebook":"facebook page",
+        "twitter":"twitter.com",
+        "behance":"behanc.com",
+        "instagram":"instagram.com"
+        }]
     },
     {
-      "name": "B",
-      "website": "http://www.wesfrancis.com",
-      "bio":"here is my cool bio"
+      "name": "B SMITH",
+      "website": "kristennakamura.com",
+      "bio":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla accusamus quidem, expedita, sint atque sapiente temporibus eius debitis dicta, eum facilis doloremque? Iure sint debitis sit eligendi dolore, nostrum accusantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla accusamus quidem, expedita, sint atque sapiente temporibus eius debitis dicta, eum facilis doloremque? Iure sint debitis sit eligendi dolore, nostrum accusantium.Iure sint debitis sit eligendi dolore, nostrum accusantium.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla accusamus quidem, expedita, sint atque sapiente temporibus eius debitis dicta, eum facilis doloremque? Iure sint debitis sit eligendi dolore, sit eligendi dolore, nostrum accusantium.",
+      "social":[{
+        "facebook":"facebook page",
+        "twitter":"",
+        "behance":"behanc.com",
+        "instagram":"instagram.com"
+        }]
     },
     {
-      "name": "C",
-      "website": "http://www.wesfrancis.com",
-      "bio":"here is my cool bio"
+      "name": "C SMITH",
+      "website": "wesfrancis.com",
+      "bio":"here is my cool bio",
+      "social":[{
+        "facebook":"facebook page",
+        "twitter":"",
+        "behance":"behanc.com",
+        "instagram":"instagram.com"
+        }]
     },
     {
-      "name": "D",
-      "website": "http://www.wesfrancis.com",
-      "bio":"here is my cool bio"
+      "name": "D SMITH",
+      "website": "wesfrancis.com",
+      "bio":"here is my cool bio",
+      "social":[{
+        "facebook":"facebook page",
+        "twitter":"",
+        "behance":"behanc.com",
+        "instagram":"instagram.com"
+        }]
     },
     {
-      "name": "E",
-      "website": "http://www.wesfrancis.com",
-      "bio":"here is my cool bio"
+      "name": "E SMITH",
+      "website": "www.wesfrancis.com",
+      "bio":"here is my cool bio",
+     "social":[{
+        "facebook":"facebook page",
+        "twitter":"",
+        "behance":"behanc.com",
+        "instagram":"instagram.com"
+        }]
     },
     {
-      "name": "F",
-      "website": "http://www.wesfrancis.com",
-      "bio":"here is my cool bio"
+      "name": "F SMITH",
+      "website": "wesfrancis.com",
+      "bio":"here is my cool bio",
+      "social":[{
+        "facebook":"facebook page",
+        "twitter":"",
+        "behance":"behanc.com",
+        "instagram":"instagram.com"
+        }]
     },
     {
-      "name": "G",
-      "website": "http://www.wesfrancis.com",
-      "bio":"here is my cool bio"
+      "name": "G SMITH",
+      "website": "wesfrancis.com",
+      "bio":"here is my cool bio",
+      "social":[{
+        "facebook":"facebook page",
+        "twitter":"",
+        "behance":"behanc.com",
+        "instagram":"instagram.com"
+        }]
     },
     {
-      "name": "H",
-      "website": "http://www.wesfrancis.com",
-      "bio":"here is my cool bio"
+      "name": "H SMITH",
+      "website": "wesfrancis.com",
+      "bio":"here is my cool bio",
+      "social":[{
+        "facebook":"facebook page",
+        "twitter":"",
+        "behance":"behanc.com",
+        "instagram":"instagram.com"
+        }]
     },
     {
-      "name": "I",
-      "website": "http://www.wesfrancis.com",
-      "bio":"here is my cool bio"
+      "name": "I SMITH",
+      "website": "wesfrancis.com",
+      "bio":"here is my cool bio",
+      "social":[{
+        "facebook":"facebook page",
+        "twitter":"",
+        "behance":"behanc.com",
+        "instagram":"instagram.com"
+        }]
     },
     {
-      "name": "J",
-      "website": "http://www.wesfrancis.com",
-      "bio":"here is my cool bio"
+      "name": "J SMITH",
+      "website": "wesfrancis.com",
+      "bio":"here is my cool bio",
+      "social":[{
+        "facebook":"facebook page",
+        "twitter":"",
+        "behance":"behanc.com",
+        "instagram":"instagram.com"
+        }]
     },
     {
-      "name": "K",
-      "website": "http://www.wesfrancis.com",
-      "bio":"here is my cool bio"
+      "name": "K SMITH",
+      "website": "wesfrancis.com",
+      "bio":"here is my cool bio",
+      "social":[{
+        "facebook":"facebook page",
+        "twitter":"",
+        "behance":"behanc.com",
+        "instagram":"instagram.com"
+        }]
     },
     {
-      "name": "L",
-      "website": "http://www.wesfrancis.com",
-      "bio":"here is my cool bio"
+      "name": "L SMITH",
+      "website": "wesfrancis.com",
+      "bio":"here is my cool bio",
+      "social":[{
+        "facebook":"facebook page",
+        "twitter":"",
+        "behance":"behanc.com",
+        "instagram":"instagram.com"
+        }]
     }]
 }

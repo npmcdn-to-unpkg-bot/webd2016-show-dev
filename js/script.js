@@ -6,28 +6,73 @@
 	var index;
 	var url = new Firebase('https://webd-portfolioshow.firebaseIO.com');
 
-	
-
-	// ** replace jquery item with gallery item	
-	$('.grid-item').click(function(e){
-		$('.modal').fadeIn();
-
-		// Get index of item clicked in the DOM
-		index = $(this).index();
-
+	function getProfile(getIndex){
+		$('#social-profiles').empty();
 		url.child('students').once('value', function(snapshot) {		    
-		    var name = snapshot.val()[index].name;
-		    var bio = snapshot.val()[index].bio;
-		    var website = snapshot.val()[index].website;
+		    var name = snapshot.val()[getIndex].name;
+		    var bio = snapshot.val()[getIndex].bio;
+		    var website = snapshot.val()[getIndex].website;
+		    var nextName = snapshot.val()[getIndex+1].name;
+		    var previousName = snapshot.val()[getIndex-1].name;
+		    var twitter = snapshot.val()[getIndex].social[0].twitter;
+		    var facebook = snapshot.val()[getIndex].social[0].facebook;
+		    var instagram = snapshot.val()[getIndex].social[0].instagram;
+		    var behance = snapshot.val()[getIndex].social[0].behance;
+
+			   
+		   if (getSocialLink(twitter) == true){
+		   	$('#social-profiles').append('<li><a href="#"><i class="fa fa-twitter"></i></a></li>');
+		   } 
+		   if (getSocialLink(facebook) == true){
+		   $('#social-profiles').append('<li><a href="#"><i class="fa fa-facebook"></i></a></li>');
+		   } 
+		   if (getSocialLink(instagram) == true){
+		   	$('#social-profiles').append('<li><a href="#"><i class="fa fa-instagram"></i></a></li>');
+		   } 
+		   if (getSocialLink(behance) == true){
+		   	$('#social-profiles').append('<li><a href="#"><i class="fa fa-behance"></i></a></li>');
+		   } 
+		    
 		    console.log(" name: "+ name + ", bio: " + bio + ", website: " + website);
 
 		    $('.bio h3').text(name);
+		    $('.next-profile').text(nextName);
+		    $('.last-profile').text(previousName);
 		    $('.bio .website').text(website);
 		    $('.bio .bio-text').text(bio);
 
- 	 	});
 
+ 	 	});
+	}
+	
+  function getSocialLink(link){
+    	if (link.length < 1 || link == undefined){
+	    	return false;
+	    } else {
+	    	return true;
+	    }
+    }
+
+	// ** replace jquery item with gallery item	
+	$('.grid-item').click(function(e){
+		$('.modal').fadeIn().addClass('slide-in');
+		// Get index of item clicked in the DOM
+		index = $(this).index();
+		getProfile(index);
+
+		
 	})
+
+	$('.next-profile').click(function(){
+		index = index+1;
+		getProfile(index);
+	})
+
+	$('.last-profile').click(function(){
+		index = index-1;
+		getProfile(index);
+	})
+
 
 	// Set up slider functionality
 
@@ -65,7 +110,7 @@
 	});
 
 	$('.modal button').click(function(){
-		$('.modal').fadeOut();
+		$('.modal').fadeOut().removeClass('slide-in');
 	});
 		
 	//set up instafeed.js
@@ -89,21 +134,22 @@
 	$('.grid').isotope({
 	  // options
 	  itemSelector: '.grid-item',
-	  layoutMode: 'fitRows'
+	  // layoutMode: 'fitRows'
 	});
 
-	$('li.all').on('click', function(){
+	$('li.show-all').on('click', function(){
 		$grid.isotope({ filter: '*' });
 	});
-	$('li.hyb').on('click', function(){
+	$('li.show-hyb').on('click', function(){
 		$grid.isotope({ filter: '.hyb' });
 	});
-	$('li.dev').on('click', function(){
+	$('li.show-dev').on('click', function(){
 		$grid.isotope({ filter: '.dev' });
 	});
-	$('li.des').on('click', function(){
+	$('li.show-des').on('click', function(){
 		$grid.isotope({ filter: '.des' });
 	});
+
 	/////////Toggle active class on selected element and remove from previous
 	$(".selection").on("click", "li", function() {				
 		var $this = $(this);									
