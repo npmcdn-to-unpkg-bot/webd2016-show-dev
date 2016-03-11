@@ -266,6 +266,10 @@ ul.countdown li.seperator {
   clear: both;
   display: block;
   margin: 0 auto;
+  position: fixed;
+  bottom: 1em;
+  left: 0;
+  right: 0;
 }
 /* Media Queries
 * 
@@ -293,6 +297,7 @@ ul.countdown li.seperator {
   }
   .humber-logo {
     padding: 3em 0 2em 0;
+    position: static;
     float: left;
     clear: none;
   }
