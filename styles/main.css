@@ -302,6 +302,9 @@ ul.countdown li.seperator {
   animation-fill-mode: both;
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
+  -webkit-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
 }
 /* Media Queries
 * 
