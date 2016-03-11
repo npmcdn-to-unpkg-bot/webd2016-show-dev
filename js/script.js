@@ -5,6 +5,6 @@ jQuery(document).ready(function($) {
         date: '04/04/2016 10:00:00',
         offset: +10
     }, function() {
-        alert('WOOT WOOT, done!');
+        alert('WOOT WOOT, we\'re launching!');
     });
 });
