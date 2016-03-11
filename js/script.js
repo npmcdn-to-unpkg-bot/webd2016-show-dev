@@ -4,7 +4,7 @@
 
 	// Set up firebase url and variables
 	var index;
-	var url = new Firebase('https://webd-portfolioshow.firebaseIO.com');
+	var url = new Firebase('https://humberinfluxdb.firebaseio.com');
 
 	function getProfile(getIndex){
 		$('#social-profiles').empty();
