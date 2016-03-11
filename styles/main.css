@@ -3,27 +3,27 @@
 /* Mixins 
 --------------------------------------------- */
 .blue-gradient {
-  background: -moz-linear-gradient(45deg, #62a9d6 0%, #62a9d6 1%, rgba(98, 169, 214, 0.87) 26%, rgba(98, 169, 214, 0.42) 52%, rgba(101, 171, 215, 0.4) 53%, rgba(137, 191, 224, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: -moz-linear-gradient(25deg, #62a9d6 0%, #62a9d6 1%, rgba(98, 169, 214, 0.35) 35%, rgba(98, 169, 214, 0) 52%, rgba(101, 171, 215, 0) 53%, rgba(137, 191, 224, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #62a9d6 0%, #62a9d6 1%, rgba(98, 169, 214, 0.87) 26%, rgba(98, 169, 214, 0.42) 52%, rgba(101, 171, 215, 0.4) 53%, rgba(137, 191, 224, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(25deg, #62a9d6 0%, #62a9d6 1%, rgba(98, 169, 214, 0.35) 35%, rgba(98, 169, 214, 0) 52%, rgba(101, 171, 215, 0) 53%, rgba(137, 191, 224, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #62a9d6 0%, #62a9d6 1%, rgba(98, 169, 214, 0.87) 26%, rgba(98, 169, 214, 0.42) 52%, rgba(101, 171, 215, 0.4) 53%, rgba(137, 191, 224, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(25deg, #62a9d6 0%, #62a9d6 1%, rgba(98, 169, 214, 0.35) 35%, rgba(98, 169, 214, 0) 52%, rgba(101, 171, 215, 0) 53%, rgba(137, 191, 224, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .purple-gradient {
-  background: -webkit-linear-gradient(45deg, #8852a0 0%, #8852a0 1%, rgba(136, 82, 160, 0.87) 26%, rgba(136, 82, 160, 0.42) 52%, rgba(138, 86, 162, 0.4) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(25deg, #8852a0 0%, #8852a0 1%, rgba(136, 82, 160, 0.35) 35%, rgba(136, 82, 160, 0) 52%, rgba(138, 86, 162, 0) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  background: -o-linear-gradient(45deg, #8852a0 0%, #8852a0 1%, rgba(136, 82, 160, 0.87) 26%, rgba(136, 82, 160, 0.42) 52%, rgba(138, 86, 162, 0.4) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(25deg, #8852a0 0%, #8852a0 1%, rgba(136, 82, 160, 0.35) 35%, rgba(136, 82, 160, 0) 52%, rgba(138, 86, 162, 0) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  background: linear-gradient(45deg, #8852a0 0%, #8852a0 1%, rgba(136, 82, 160, 0.87) 26%, rgba(136, 82, 160, 0.42) 52%, rgba(138, 86, 162, 0.4) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(25deg, #8852a0 0%, #8852a0 1%, rgba(136, 82, 160, 0.35) 35%, rgba(136, 82, 160, 0) 52%, rgba(138, 86, 162, 0) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .hybrid-gradient {
-  background: -webkit-linear-gradient(45deg, #8852a0 0%, #62a9d6 1%, rgba(98, 169, 214, 0.87) 26%, rgba(136, 82, 160, 0.42) 52%, rgba(138, 86, 162, 0.4) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(25deg, #62a9d6 0%, #62a9d6 1%, rgba(165, 126, 184, 0.35) 35%, rgba(136, 82, 160, 0) 52%, rgba(138, 86, 162, 0) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  background: -o-linear-gradient(45deg, #8852a0 0%, #62a9d6 1%, rgba(98, 169, 214, 0.87) 26%, rgba(136, 82, 160, 0.42) 52%, rgba(138, 86, 162, 0.4) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(25deg, #62a9d6 0%, #62a9d6 1%, rgba(165, 126, 184, 0.35) 35%, rgba(136, 82, 160, 0) 52%, rgba(138, 86, 162, 0) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  background: linear-gradient(45deg, #8852a0 0%, #62a9d6 1%, rgba(98, 169, 214, 0.87) 26%, rgba(136, 82, 160, 0.42) 52%, rgba(138, 86, 162, 0.4) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(25deg, #62a9d6 0%, #62a9d6 1%, rgba(165, 126, 184, 0.35) 35%, rgba(136, 82, 160, 0) 52%, rgba(138, 86, 162, 0) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .blue-purple-gradient {
@@ -167,9 +167,9 @@ nav ul a {
   left: 0;
   top: 0;
   opacity: 0;
-  -webkit-transition: .3s ease opacity;
-  -o-transition: .3s ease opacity;
-  transition: .3s ease opacity;
+  -webkit-transition: 0.3s cubic-bezier(0.39, 0.32, 0.18, 0.84) opacity;
+  -o-transition: 0.3s cubic-bezier(0.39, 0.32, 0.18, 0.84) opacity;
+  transition: 0.3s cubic-bezier(0.39, 0.32, 0.18, 0.84) opacity;
 }
 #gallery .grid-item:hover .profileInfo {
   opacity: 1;
@@ -180,27 +180,27 @@ nav ul a {
   opacity: 1;
 }
 #gallery .grid-item.dev .profileInfo {
-  background: -webkit-linear-gradient(45deg, #8852a0 0%, #8852a0 1%, rgba(136, 82, 160, 0.87) 26%, rgba(136, 82, 160, 0.42) 52%, rgba(138, 86, 162, 0.4) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(25deg, #8852a0 0%, #8852a0 1%, rgba(136, 82, 160, 0.35) 35%, rgba(136, 82, 160, 0) 52%, rgba(138, 86, 162, 0) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  background: -o-linear-gradient(45deg, #8852a0 0%, #8852a0 1%, rgba(136, 82, 160, 0.87) 26%, rgba(136, 82, 160, 0.42) 52%, rgba(138, 86, 162, 0.4) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(25deg, #8852a0 0%, #8852a0 1%, rgba(136, 82, 160, 0.35) 35%, rgba(136, 82, 160, 0) 52%, rgba(138, 86, 162, 0) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  background: linear-gradient(45deg, #8852a0 0%, #8852a0 1%, rgba(136, 82, 160, 0.87) 26%, rgba(136, 82, 160, 0.42) 52%, rgba(138, 86, 162, 0.4) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(25deg, #8852a0 0%, #8852a0 1%, rgba(136, 82, 160, 0.35) 35%, rgba(136, 82, 160, 0) 52%, rgba(138, 86, 162, 0) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 #gallery .grid-item.des .profileInfo {
-  background: -moz-linear-gradient(45deg, #62a9d6 0%, #62a9d6 1%, rgba(98, 169, 214, 0.87) 26%, rgba(98, 169, 214, 0.42) 52%, rgba(101, 171, 215, 0.4) 53%, rgba(137, 191, 224, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: -moz-linear-gradient(25deg, #62a9d6 0%, #62a9d6 1%, rgba(98, 169, 214, 0.35) 35%, rgba(98, 169, 214, 0) 52%, rgba(101, 171, 215, 0) 53%, rgba(137, 191, 224, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #62a9d6 0%, #62a9d6 1%, rgba(98, 169, 214, 0.87) 26%, rgba(98, 169, 214, 0.42) 52%, rgba(101, 171, 215, 0.4) 53%, rgba(137, 191, 224, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(25deg, #62a9d6 0%, #62a9d6 1%, rgba(98, 169, 214, 0.35) 35%, rgba(98, 169, 214, 0) 52%, rgba(101, 171, 215, 0) 53%, rgba(137, 191, 224, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #62a9d6 0%, #62a9d6 1%, rgba(98, 169, 214, 0.87) 26%, rgba(98, 169, 214, 0.42) 52%, rgba(101, 171, 215, 0.4) 53%, rgba(137, 191, 224, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(25deg, #62a9d6 0%, #62a9d6 1%, rgba(98, 169, 214, 0.35) 35%, rgba(98, 169, 214, 0) 52%, rgba(101, 171, 215, 0) 53%, rgba(137, 191, 224, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 #gallery .grid-item.hyb .profileInfo {
-  background: -webkit-linear-gradient(45deg, #8852a0 0%, #62a9d6 1%, rgba(98, 169, 214, 0.87) 26%, rgba(136, 82, 160, 0.42) 52%, rgba(138, 86, 162, 0.4) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(25deg, #62a9d6 0%, #62a9d6 1%, rgba(165, 126, 184, 0.35) 35%, rgba(136, 82, 160, 0) 52%, rgba(138, 86, 162, 0) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  background: -o-linear-gradient(45deg, #8852a0 0%, #62a9d6 1%, rgba(98, 169, 214, 0.87) 26%, rgba(136, 82, 160, 0.42) 52%, rgba(138, 86, 162, 0.4) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(25deg, #62a9d6 0%, #62a9d6 1%, rgba(165, 126, 184, 0.35) 35%, rgba(136, 82, 160, 0) 52%, rgba(138, 86, 162, 0) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  background: linear-gradient(45deg, #8852a0 0%, #62a9d6 1%, rgba(98, 169, 214, 0.87) 26%, rgba(136, 82, 160, 0.42) 52%, rgba(138, 86, 162, 0.4) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(25deg, #62a9d6 0%, #62a9d6 1%, rgba(165, 126, 184, 0.35) 35%, rgba(136, 82, 160, 0) 52%, rgba(138, 86, 162, 0) 53%, rgba(165, 126, 184, 0) 64%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 #gallery .grid-item .profileInfo {
@@ -283,9 +283,9 @@ ul#social-profiles li {
   max-width: 1140px;
   background: white;
   box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.15);
-  -webkit-transition: .3s ease top .1s;
-  -o-transition: .3s ease top .1s;
-  transition: .3s ease top .1s;
+  -webkit-transition: 0.3s top cubic-bezier(0.39, 0.32, 0.18, 0.84) 0.2s;
+  -o-transition: 0.3s top cubic-bezier(0.39, 0.32, 0.18, 0.84) 0.2s;
+  transition: 0.3s top cubic-bezier(0.39, 0.32, 0.18, 0.84) 0.2s;
 }
 .modal.slide-in {
   top: 50px;
@@ -352,7 +352,9 @@ ul#social-profiles li {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .modal .slider-container .slider {
-  transition: .8s ease left .1s;
+  -webkit-transition: 0.3s left cubic-bezier(0.39, 0.32, 0.18, 0.84);
+  -o-transition: 0.3s left cubic-bezier(0.39, 0.32, 0.18, 0.84);
+  transition: 0.3s left cubic-bezier(0.39, 0.32, 0.18, 0.84);
   width: 2000px;
   /*border: 1px solid red;*/
   height: 400px;
@@ -364,7 +366,7 @@ ul#social-profiles li {
 .modal .slider-container .slider div {
   height: 100%;
   width: 540px;
-  background: #E8E8E8;
+  background: gray;
   display: inline-block;
   float: left;
   margin-right: 70px;
