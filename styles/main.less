@@ -3,7 +3,8 @@
 
 @mediumLightGray: 		#E8E8E8;
 @lightGray:				#F4F4F4;
-
+@lightblue: 			#00acd3;
+@purple:				#8852a0;
 
 @montserrat: 			'Montserrat', sans-serif;
 @lato: 					'Lato', sans-serif;
@@ -13,6 +14,10 @@
 
 /* Mixins 
 --------------------------------------------- */
+
+.px2em( @target, @context ) {
+    font-size: (@target / @context) + 0em;
+}
 
 .blue-gradient {
 	background: -moz-linear-gradient(25deg, rgba(98,169,214,1) 0%, rgba(98,169,214,1) 1%, rgba(98,169,214,0.35) 35%, rgba(98,169,214,0) 52%, rgba(101,171,215,0) 53%, rgba(137,191,224,0) 64%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
@@ -122,7 +127,7 @@ nav {
     	color: black;
 		text-decoration: none;
 		text-transform: uppercase;
-		font-size: 12px;
+		.px2em( 12, 16 );
 		display: inline-block;
 		padding: 6px 5px 4px 5px;
 		
@@ -148,35 +153,87 @@ nav {
 
 // Intro  ----------------------------------------->
 
-#right-box-intro{
-	padding: 10%
-	
+article#right-box-intro{
+	padding: 10%;
+	padding-top:2.5%; 
+
+	div#header-container {
+		
+		div#paragraph-top {
+			padding-bottom: 25%;
+
+			p {
+				text-align: left;
+			}
+		}
+		button {
+			padding: 2.5% 0;
+			background-color: @purple;
+			color: #fff;
+			border: transparent;
+			border-radius: 4px;
+			&:last-child {
+				background-color: @lightblue;
+			} 
+		}	
+	}
 }
 
-#left-box-intro{
+article#left-box-intro{
 	padding: 2.5%;
 
-    #title {
+    div#title {
+    	
         h1 {
             margin: 0;
             padding: 10px 0;
-            font: 41px 'Lato', sans-serif;
+            font-family:'Lato', sans-serif;
+            .px2em( 28, 16 );
             font-weight: bold;
-            color: @lightGray;
+            color: @lightblue;
         }
         p {
             margin: 0;
             &:first-child {
-                font-size: 24px;
-                color: @mediumLightGray;
+                .px2em( 18, 16 );
+               
             }
             &:last-child {
                 padding-bottom: 25px;
-                font-size: 26px;
-                color: #666;
+                .px2em( 21, 16 );
             }
         }
     }
+    #info {
+    	margin-top: 25px;
+    
+    #when {
+        text-transform: uppercase;
+        #date {
+            .px2em( 24, 16 );
+            sup {
+                text-transform: lowercase;
+            }
+        }
+        #time {
+            .px2em( 49, 16 );
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+    }
+    #address {
+        display: block;
+        float: left;
+        
+        p {
+            padding: 0;
+            margin: 0;
+            color: #666;
+            .px2em( 18, 16 );
+            line-height: 18pt;
+        }
+    }
+}
 }
 
 //------------------------------------------> Intro End
