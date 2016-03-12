@@ -156,6 +156,11 @@
 	    $this.addClass("active")								
 	    .siblings().removeClass("active");						
 	});
+	$(".headerNav").on("click", "li", function() {				
+		var $this = $(this);									
+	    $this.addClass("active")								
+	    .siblings().removeClass("active");						
+	});
 	///////////////
 
 	///Smooth Scroll for nav
