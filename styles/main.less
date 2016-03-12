@@ -69,6 +69,7 @@ body {
 }
 
 p {
+	font-family:@lato;
 	margin: 0;
 }
 
@@ -164,6 +165,8 @@ article#right-box-intro{
 
 			p {
 				text-align: left;
+				font-family: @montserrat;
+				font-weight: light;
 			}
 		}
 		button {
@@ -186,13 +189,14 @@ article#left-box-intro{
     	
         h1 {
             margin: 0;
-            padding: 10px 0;
+            padding: 4% 0;
             font-family:'Lato', sans-serif;
             .px2em( 28, 16 );
             font-weight: bold;
             color: @lightblue;
         }
         p {
+        	font-family: @montserrat;
             margin: 0;
             &:first-child {
                 .px2em( 18, 16 );
@@ -238,14 +242,33 @@ article#left-box-intro{
 
 //------------------------------------------> Intro End
 
-// About  ----------------------------------------->
+// about  ----------------------------------------->
 
-#about {
+section#about {
 
 	h1,p {
 		margin: 0 auto;
 		text-align: center;
 	}
+	h1 {
+		.px2em( 32, 16 );
+		color: @purple;
+		margin-top: 15%;
+		font-weight: bold;
+	}
+	p{
+		.px2em( 20, 16 );
+	}
+	#paragraph {
+
+		margin: 5% 24%;
+		p {
+			&:first-child{
+				margin-bottom: 10%;
+			}
+		}
+	}
+
 }
 
 //------------------------------------------> About End
