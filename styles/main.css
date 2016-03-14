@@ -126,7 +126,7 @@ ul li {
   font-family: 'Montserrat';
   white-space: nowrap;
 }
-#right label p {
+#right label {
   margin-bottom: 0;
   text-transform: uppercase;
   font-size: 18px;
