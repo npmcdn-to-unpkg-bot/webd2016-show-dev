@@ -160,7 +160,7 @@ ul li {
   padding: .8em .2em;
   width: 40%;
   height: 50px;
-  background-color: #7986cb;
+  background-color: #de4f25;
   color: #fff;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -182,7 +182,7 @@ ul li {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #3f51b5;
+  background: #d53000;
   -webkit-transform-origin: 100% 50%;
   transform-origin: 100% 50%;
   -webkit-transform: scale3d(1, 2, 1);
