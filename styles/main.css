@@ -1,20 +1,16 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-@import url(https://fonts.googleapis.com/css?family=Lato);
 /* Variables
 --------------------------------------------- */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Lato);
 /* Global
 --------------------------------------------- */
 * {
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
-
   -moz-box-sizing: border-box;
   /* Firefox, other Gecko */
-
   box-sizing: border-box;
   /* Opera/IE 8+ */
-
   text-decoration: none;
 }
 .clearfix:after {
@@ -70,7 +66,7 @@ ul li {
 }
 #left #title p:first-child {
   font-size: 24px;
-  color: #888888;
+  color: #888;
 }
 #left #title p:last-child {
   padding-bottom: 40px;
@@ -242,7 +238,7 @@ ul.countdown {
 ul.countdown li {
   display: inline-block;
   width: 50px;
-  color: #888888;
+  color: #888;
 }
 ul.countdown li span {
   font-size: 50px;
@@ -256,7 +252,7 @@ ul.countdown li.seperator {
   font-size: 55px;
   line-height: 55px;
   vertical-align: top;
-  border: 1px solid #888888;
+  border: 1px solid #888;
 }
 #counter p {
   font-size: 16px;
@@ -387,5 +383,21 @@ ul.countdown li.seperator {
   }
   .humber-logo {
     float: right;
+  }
+}
+@media screen and (max-width: 320px) {
+  .emailForm {
+    width: 100%;
+    border-right: 1px solid #d5d5d5 !important;
+    border-bottom: none!important;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+  }
+  .notify-btn {
+    margin-top: 0;
+    width: 100%;
+    -webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
   }
 }
