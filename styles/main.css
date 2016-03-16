@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Lato);
-=======
->>>>>>> fbc4d5de791fa0e5c2de54d2e3d5be2115ef5a47
 /* Variables
 --------------------------------------------- */
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-@import url(https://fonts.googleapis.com/css?family=Lato);
 /* Global
 --------------------------------------------- */
 * {
@@ -71,7 +66,7 @@ ul li {
 }
 #left #title p:first-child {
   font-size: 24px;
-  color: #888;
+  color: #888888;
 }
 #left #title p:last-child {
   padding-bottom: 40px;
@@ -243,7 +238,7 @@ ul.countdown {
 ul.countdown li {
   display: inline-block;
   width: 50px;
-  color: #888;
+  color: #888888;
 }
 ul.countdown li span {
   font-size: 50px;
@@ -257,7 +252,7 @@ ul.countdown li.seperator {
   font-size: 55px;
   line-height: 55px;
   vertical-align: top;
-  border: 1px solid #888;
+  border: 1px solid #888888;
 }
 #counter p {
   font-size: 16px;
@@ -390,30 +385,51 @@ ul.countdown li.seperator {
     float: right;
   }
 }
-@media screen and (max-width: 320px) {
-<<<<<<< HEAD
+@media screen and (max-width: 360px) {
   ul.countdown {
     width: 100%;
     margin: 0px;
     text-align: center;
-    padding: 0;
+    padding: 2px;
   }
   ul.countdown li span {
-    font-size: 20px;
+    font-size: 30px;
     line-height: 25px;
   }
   ul.countdown li.seperator {
     margin: 0 5px;
     height: 25px;
-    font-size: 55px;
+    font-size: 45px;
+    line-height: 35px;
+    vertical-align: normal;
+  }
+  #counter p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 320px) {
+  ul.countdown {
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    padding: 2px;
+  }
+  ul.countdown li span {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  ul.countdown li.seperator {
+    margin: 0 0px;
+    height: 25px;
+    font-size: 45px;
     line-height: 35px;
     vertical-align: normal;
   }
   .form-wrapper {
-    width: 50%;
+    width: 100%;
   }
   #counter p {
-    font-size: 14px;
+    font-size: 12px;
   }
   ul#social {
     padding-top: 1.5em;
@@ -421,7 +437,7 @@ ul.countdown li.seperator {
   }
   ul#social li i {
     font-size: 2.0em;
-=======
+  }
   .emailForm {
     width: 100%;
     border-right: 1px solid #d5d5d5 !important;
@@ -435,6 +451,5 @@ ul.countdown li.seperator {
     width: 100%;
     -webkit-border-radius: 0 0 5px 5px;
     border-radius: 0 0 5px 5px;
->>>>>>> fbc4d5de791fa0e5c2de54d2e3d5be2115ef5a47
   }
 }
