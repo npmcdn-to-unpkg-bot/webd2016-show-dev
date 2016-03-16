@@ -1,7 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-@import url(https://fonts.googleapis.com/css?family=Lato);
 /* Variables
 --------------------------------------------- */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Lato);
 /* Global
 --------------------------------------------- */
 * {
@@ -66,7 +66,7 @@ ul li {
 }
 #left #title p:first-child {
   font-size: 24px;
-  color: #888888;
+  color: #888;
 }
 #left #title p:last-child {
   padding-bottom: 40px;
@@ -238,7 +238,7 @@ ul.countdown {
 ul.countdown li {
   display: inline-block;
   width: 50px;
-  color: #888888;
+  color: #888;
 }
 ul.countdown li span {
   font-size: 50px;
@@ -252,7 +252,7 @@ ul.countdown li.seperator {
   font-size: 55px;
   line-height: 55px;
   vertical-align: top;
-  border: 1px solid #888888;
+  border: 1px solid #888;
 }
 #counter p {
   font-size: 16px;
@@ -385,45 +385,32 @@ ul.countdown li.seperator {
     float: right;
   }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 375px) {
   ul.countdown {
     width: 100%;
     margin: 0px;
     text-align: center;
     padding: 2px;
   }
+  ul.countdown {
+    width: 100%;
+  }
   ul.countdown li span {
-    font-size: 30px;
-    line-height: 25px;
+    margin: 0 5px;
+    padding: 0;
+    font-size: 35px;
+    line-height: 35px;
   }
   ul.countdown li.seperator {
     margin: 0 5px;
-    height: 25px;
-    font-size: 45px;
-    line-height: 35px;
-    vertical-align: normal;
+    font-size: 55px;
+    line-height: 45px;
+    height: 35px;
   }
-  #counter p {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 320px) {
-  ul.countdown {
-    width: 100%;
-    margin: 0px;
-    text-align: center;
-    padding: 2px;
-  }
-  ul.countdown li span {
-    font-size: 25px;
-    line-height: 25px;
-  }
-  ul.countdown li.seperator {
-    margin: 0 0px;
-    height: 25px;
-    font-size: 45px;
-    line-height: 35px;
-    vertical-align: normal;
+  ul.countdown li.seperator:first-child {
+    width: auto;
+    margin: 0;
+    padding: 0;
   }
   .form-wrapper {
     width: 100%;
@@ -451,5 +438,32 @@ ul.countdown li.seperator {
     width: 100%;
     -webkit-border-radius: 0 0 5px 5px;
     border-radius: 0 0 5px 5px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #left #title h1 {
+    padding: 5px 0;
+    font-size: 32px;
+  }
+  #left #title p:first-child {
+    font-size: 20px;
+  }
+  #left #title p:last-child {
+    font-size: 22px;
+  }
+  ul.countdown {
+    width: 100%;
+  }
+  ul.countdown li span {
+    margin: 0 5px;
+    padding: 0;
+    font-size: 35px;
+    line-height: 35px;
+  }
+  ul.countdown li.seperator {
+    margin: 0 5px;
+    font-size: 45px;
+    line-height: 45px;
+    height: 35px;
   }
 }
