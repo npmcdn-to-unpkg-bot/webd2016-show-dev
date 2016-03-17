@@ -1,16 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
 /* Variables
 --------------------------------------------- */
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-@import url(https://fonts.googleapis.com/css?family=Lato);
 /* Global
 --------------------------------------------- */
 * {
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
+
   -moz-box-sizing: border-box;
   /* Firefox, other Gecko */
+
   box-sizing: border-box;
   /* Opera/IE 8+ */
+
   text-decoration: none;
 }
 .clearfix:after {
@@ -66,7 +70,7 @@ ul li {
 }
 #left #title p:first-child {
   font-size: 24px;
-  color: #888;
+  color: #888888;
 }
 #left #title p:last-child {
   padding-bottom: 40px;
@@ -238,7 +242,7 @@ ul.countdown {
 ul.countdown li {
   display: inline-block;
   width: 50px;
-  color: #888;
+  color: #888888;
 }
 ul.countdown li span {
   font-size: 50px;
@@ -252,7 +256,7 @@ ul.countdown li.seperator {
   font-size: 55px;
   line-height: 55px;
   vertical-align: top;
-  border: 1px solid #888;
+  border: 1px solid #888888;
 }
 #counter p {
   font-size: 16px;
@@ -408,7 +412,6 @@ ul.countdown li.seperator {
     height: 35px;
   }
   ul.countdown li.seperator:first-child {
-    width: auto;
     margin: 0;
     padding: 0;
   }
@@ -427,7 +430,7 @@ ul.countdown li.seperator {
   }
   .emailForm {
     width: 100%;
-    border-right: 1px solid #d5d5d5 !important;
+    border-right: 1px solid #999!important;
     border-bottom: none!important;
     -webkit-border-radius: 5px 5px 0 0;
     border-radius: 5px 5px 0 0;
