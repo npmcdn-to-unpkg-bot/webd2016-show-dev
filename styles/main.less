@@ -1,10 +1,20 @@
 /* Variables
 --------------------------------------------- */
 
-@mediumLightGray: 		#E8E8E8;
-@lightGray:				#F4F4F4;
-@lightblue: 			#00acd3;
-@purple:				#8852a0;
+@divider:				#CCCCCC;
+// --- lightGray1 not reflected in Franky's style guide
+@lightGray1:			#F4F4F4;
+@lightGray2:			#888888;
+// --- mediumGray1 not reflected in Franky's style guide
+@mediumGray1: 			#E8E8E8;
+@mediumGray2:			#666666;
+@black: 				#232627;
+@lightBlue: 			#00acd3;
+@darkBlue:				#2a909b;
+@lightPurple:			#8852a0;
+@darkPurple:			#793f98;
+@red:					#d53000;
+@orange:				#de4f25;
 
 @montserrat: 			'Montserrat', sans-serif;
 @lato: 					'Lato', sans-serif;
@@ -171,12 +181,12 @@ article#right-box-intro{
 		}
 		button {
 			padding: 2.5% 0;
-			background-color: @purple;
+			background-color: @lightPurple;
 			color: #fff;
 			border: transparent;
 			border-radius: 4px;
 			&:last-child {
-				background-color: @lightblue;
+				background-color: @lightBlue;
 			} 
 		}	
 	}
@@ -193,7 +203,7 @@ article#left-box-intro{
             font-family:'Lato', sans-serif;
             .px2em( 28, 16 );
             font-weight: bold;
-            color: @lightblue;
+            color: @lightBlue;
         }
         p {
         	font-family: @montserrat;
@@ -252,7 +262,7 @@ section#about {
 	}
 	h1 {
 		.px2em( 32, 16 );
-		color: @purple;
+		color: @lightPurple;
 		margin-top: 15%;
 		font-weight: bold;
 	}
@@ -455,7 +465,7 @@ ul {
 
     .bio {
 
-    	background: @mediumLightGray;
+    	background: @mediumGray1;
 	    height: 100%;
 	    position: absolute;
 	    max-width: 384px;
@@ -495,7 +505,7 @@ ul {
     }
 
     .slider-container {
-    	background:@lightGray;
+    	background:@lightGray1;
     	position: absolute;
 	    left: 384px;
 	    overflow: hidden;
@@ -507,9 +517,9 @@ ul {
 			position: absolute;
 			width: 100%;
 			height: 100%;
-		    background: -webkit-linear-gradient(left, @lightGray 0%, rgba(255,255,255,0) 17%, rgba(255,255,255,0) 51%, rgba(255,255,255,0) 82%, @lightGray 100%);
-		    background: -o-linear-gradient(left, @lightGray 0%, rgba(255,255,255,0) 17%, rgba(255,255,255,0) 51%, rgba(255,255,255,0) 82%, @lightGray 100%);
-		    background: linear-gradient(to right, @lightGray 0%, rgba(255,255,255,0) 17%, rgba(255,255,255,0) 51%, rgba(255,255,255,0) 82%, @lightGray 100%); /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		    background: -webkit-linear-gradient(left, @lightGray1 0%, rgba(255,255,255,0) 17%, rgba(255,255,255,0) 51%, rgba(255,255,255,0) 82%, @lightGray1 100%);
+		    background: -o-linear-gradient(left, @lightGray1 0%, rgba(255,255,255,0) 17%, rgba(255,255,255,0) 51%, rgba(255,255,255,0) 82%, @lightGray1 100%);
+		    background: linear-gradient(to right, @lightGray1 0%, rgba(255,255,255,0) 17%, rgba(255,255,255,0) 51%, rgba(255,255,255,0) 82%, @lightGray1 100%); /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		
 		}
 
