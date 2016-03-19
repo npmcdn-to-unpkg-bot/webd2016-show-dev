@@ -61,6 +61,27 @@ p {
 section {
   min-height: 75vh;
 }
+button {
+  height: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+  padding-left: 25px;
+  padding-right: 25px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+input {
+  height: 50px;
+  color: #ffffff;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding-left: 25px;
+  border: 1px solid #888;
+}
 .btn {
   display: block;
   text-align: center;
