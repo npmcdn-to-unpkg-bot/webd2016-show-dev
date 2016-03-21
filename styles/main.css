@@ -143,6 +143,11 @@ nav ul a {
   position: relative;
   padding: 0 2%;
 }
+#logo {
+  display: inline-block;
+  width: 100%;
+  padding: 2.5%;
+}
 article#right-box-intro {
   padding: 10%;
   padding-top: 2.5%;
