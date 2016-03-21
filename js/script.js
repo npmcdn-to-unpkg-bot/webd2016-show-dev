@@ -3,7 +3,7 @@
 (function(){
 
 	// Set up firebase url and variables
-	var index;
+	var index,avatar;
 	var url = new Firebase('https://humberinfluxdb.firebaseio.com');
 
 	function getProfile(getIndex){
@@ -35,10 +35,11 @@
 		    
 		    console.log(" name: "+ name + ", bio: " + bio + ", website: " + website);
 
-		    $('.bio h3').text(name);
-		    $('.next-profile').text(nextName);
-		    $('.last-profile').text(previousName);
+		    $('.modal header h3').text(name);
+		    $('.next-profile span').text(nextName);
+		    $('.last-profile span').text(previousName);
 		    $('.bio .website').text(website);
+		    $('.bio .website').attr('href','http://'+website);
 		    $('.bio .bio-text').text(bio);
 
 
@@ -54,12 +55,16 @@
     }
 
 	// ** replace jquery item with gallery item	
-	$('.grid-item').click(function(e){
-		$('.modal').fadeIn().addClass('slide-in');
+	$('.grid-item').click(function(){
+		$('.modal-container').fadeIn();
+		avatar = $(this).find('.primary-pic').attr('src');
+		// alert(avatar);
+		$('.modal .pic').attr('src',avatar);
+		$('.modal').addClass('slide-in');
+		
 		// Get index of item clicked in the DOM
 		index = $(this).index();
 		getProfile(index);
-
 		
 	})
 
@@ -110,7 +115,8 @@
 	});
 
 	$('.modal button').click(function(){
-		$('.modal').fadeOut().removeClass('slide-in');
+		$('.modal-container').fadeOut();
+		$('.modal').removeClass('slide-in');
 	});
 		
 	//set up instafeed.js
@@ -125,29 +131,43 @@
 	});
 	feed.run();	
 
-	var $grid = $('.grid').isotope({
-	  masonry: {
-	    columnWidth: 50
-	  }
-	});
+	// var $grid = $('.grid').isotope({
+	//   masonry: {
+	//     // columnWidth: 50
+	//   }
+	// });
 
-	$('.grid').isotope({
-	  // options
-	  itemSelector: '.grid-item',
-	  // layoutMode: 'fitRows'
-	});
+	// $('.grid').isotope({
+	//   // options
+	//   itemSelector: '.grid-item',
+	//    isFitWidth: true
+	//   // layoutMode: 'fitRows'
+	// });
 
 	$('li.show-all').on('click', function(){
-		$grid.isotope({ filter: '*' });
+		$('.grid-item').removeClass('highlight');
+		$('.grid-item').removeClass('dim');
+		
 	});
 	$('li.show-hyb').on('click', function(){
-		$grid.isotope({ filter: '.hyb' });
+		$('.grid-item').removeClass('highlight');
+		$('.grid-item').addClass('dim');
+		$('.grid-item.hyb').addClass('highlight');
+		// $('.grid-item.hyb').removeClass('hidden');
 	});
 	$('li.show-dev').on('click', function(){
-		$grid.isotope({ filter: '.dev' });
+		$('.grid-item').removeClass('highlight');
+		$('.grid-item').addClass('dim');
+		$('.grid-item.dev').addClass('highlight');
+		// $('.grid-item').addClass('hidden');
+		// $('.grid-item.dev').removeClass('hidden');
 	});
 	$('li.show-des').on('click', function(){
-		$grid.isotope({ filter: '.des' });
+		$('.grid-item').removeClass('highlight');
+		$('.grid-item').addClass('dim');
+		$('.grid-item.des').addClass('highlight');
+		// $('.grid-item').addClass('hidden');
+		// $('.grid-item.des').removeClass('hidden');
 	});
 
 	/////////Toggle active class on selected element and remove from previous
