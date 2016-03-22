@@ -9,6 +9,7 @@
 @mediumGray1: 			#E8E8E8;
 @mediumGray2:			#666666;
 @black: 				#232627;
+@white:					#FFFFFF;
 @lightBlue: 			#00acd3;
 @darkBlue:				#2a909b;
 @lightPurple:			#8852a0;
@@ -21,13 +22,11 @@
 
 //font: font-style font-variant font-weight font-size/line-height font-family;
 //font: italic small-caps bold 13px/150% Arial, Helvetica, sans-serif;
-@h1:  bold 2em/100% "Montserrat", Arial, Helvetica, sans-serif;
-@h2:  uppercase bold 1.5em/100% "Montserrat", Arial, Helvetica, sans-serif;
-@h3:  bold 1.17em/100% "Montserrat", Arial, Helvetica, sans-serif;
-@h4:  bold 1.05em/100% "Montserrat", Arial, Helvetica, sans-serif;
-@p:   bold 1em/21px "Lato", sans-serif;
-
-
+@h1:  bold 2em "Montserrat", Arial, Helvetica, sans-serif;
+@h2:  bold 1.75em "Montserrat", Arial, Helvetica, sans-serif;
+@h3:  bold 1.35em "Montserrat", Arial, Helvetica, sans-serif;
+@h4:  bold 1.05em "Montserrat", Arial, Helvetica, sans-serif;
+@p:   normal 1em "Lato", sans-serif;
 
 
 /* Mixins 
@@ -78,6 +77,7 @@
 body {
 	width: 100%;
 	font-family: @montserrat;
+	font-size: 17px;
 }
 
 .container {
@@ -86,9 +86,15 @@ body {
 	margin: 0 auto;
 }
 
+h1 { font: @h1; }
+h2 { font: @h2; text-transform: uppercase; letter-spacing: 0.075em; }
+h3 { font: @h3; }
+h4 { font: @h4; }
+
 p {
-	font-family:@lato;
+	font: @p;
 	margin: 0;
+	line-height: 1.3125;
 }
 
 a, a:link, a:active, a:visited, a:hover {
@@ -102,11 +108,11 @@ section {
 
 //button style based off franky's style guide
 
-button {
+button, .btn {
 	height: 50px;
 	font-family: @montserrat;
 	font-size: 16px;
-	color: #ffffff;
+	color: @white;
 	font-weight: bold;
 	padding-left: 25px;
 	padding-right: 25px;
@@ -117,7 +123,7 @@ button {
 
 input {
 	height: 50px;
-	color:#ffffff;
+	color: @white;
 	font-family: 'Montserrat';
 	text-transform: uppercase;
 	border-radius: 5px;
@@ -129,7 +135,7 @@ input {
 	display: block;
 	text-align: center;
 	text-transform: uppercase;
-	padding: 20px 0;
+	padding: 17px 0;
     background-color: white;
 	box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.15);
 	border-radius: 5px;
@@ -170,6 +176,7 @@ nav {
 		&.active {
 			border: 1px solid;
 			border-radius: 2pt;
+			padding: 0 10px;
 		}	
     }
     a {
@@ -226,7 +233,7 @@ article#right-box-intro{
 		button {
 			padding: 2.5% 0;
 			background-color: @lightPurple;
-			color: #fff;
+			color: @white;
 			border: transparent;
 			border-radius: 4px;
 			&:last-child {
@@ -516,7 +523,7 @@ section#about {
 			hr {
 				border: none;
 				height: 2px;
-				background: #fff;
+				background: @white;
 				width: 74px;
 				margin: 0;
 				margin-bottom: 4px;
@@ -527,7 +534,7 @@ section#about {
 			}
 
 			p {
-				color: #fff;
+				color: @white;
 				font-size: 9pt;
 			}
 
@@ -804,12 +811,17 @@ ul {
 	position: relative;
 	margin-top: 8em;
 
+	p {
+		font-size: 1.3em;
+		font-weight: 300;
+	}
+
 	h2 {
 		text-transform: uppercase;
 	}
 
 	h3 {
-		margin-top: 3em;
+		margin-top: 2em;
 	}
 
 
@@ -820,7 +832,9 @@ ul {
 	    margin-right: auto;
 	    left: 0;
 	    right: 0;
-	    bottom: 15em;
+	    bottom: 10em;
+	    background-color: @lightBlue;
+	    color: @white;
 	}
 
 
@@ -838,15 +852,22 @@ ul {
 	    background: white;
 	    box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.15);
 
-	    .btn {
-	    	width: 170px;
-	    	margin-top: 2em;
-	    }
+		    a.btn {
+			width: 170px;
+			color: @white;
+			margin-top: 2em;
+		}
+
+
 	}
 
 
 	.show-info {
-		padding: 4em 0 4em 5em;
+		padding: 1em 0 2em 5em;
+
+		.btn {
+			background-color: @darkPurple;
+		}
 	}
 }
 
@@ -857,14 +878,16 @@ ul {
 }
 
 
-
 /* RSVP info ------------------------------------- */
 #rsvp-info {
-	margin-top: 5em;
+	margin: 5em 0 7em 0;
+	min-height: auto;
 
 	.btn {
 		width: 170px;
 		margin-top: 2em;
+		background-color: @darkPurple;
+		color: @white;
 	}
 }
 
@@ -932,6 +955,7 @@ footer .social {
 
 		}
 	}
+
 }
 
 @media(min-width: 1140px){
@@ -940,9 +964,72 @@ footer .social {
 	}
 }
 
-@media(max-width: 980px){
+
+@media(max-width: 1140px){
+	// map section
+	.map-section .show-info {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.map-section h3 {
+		margin-top: 1.5em;
+		font-size: 1.17em;
+	}
+
+	.map-section p {
+		font-size: 1.2em;
+	}
+
+	.map-section .direction-btn {
+		bottom: 8em;
+	}
+
+	#map {
+		height: 800px;
+	}
+}
+
+@media(max-width: 990px){
 	#gallery .grid-item {
 		width: 25%; 
+	}
+
+	// map section
+	.map-section .container {
+		width: 80%;
+	}
+
+	.map-section .show-info {
+		padding-left: 3em;
+		width: 45%;
+		float: left;
+
+		h2 {
+			margin-top: 20px;
+		}
+
+		h3, h4 {
+			margin-top: 1.3em;
+			margin-bottom: .5em;
+		}
+
+		p {
+			font-size: 1.1em;
+		}
+	}
+
+	.map-section #show-info img.col-md-6 {
+		width: 55%;
+		float: left;
+		padding-left: 0;
+		padding-right: 1.3em;
+	}
+
+
+	//thank you section
+	#rsvp-info .col-md-4:first-child {
+		margin-bottom: 4em;
 	}
 }
 
@@ -950,6 +1037,68 @@ footer .social {
 	#gallery .grid-item {
 		width: 33.33333%; 
 	}
+
+	// map section
+	.map-section .show-info,
+	.map-section #show-info img.col-md-6 {
+		width: 100%;
+	}
+
+	.show-details,
+	.location {
+		width: 50%;
+		float: left;
+	}
+
+	.map-section #show-info img.col-md-6 {
+		padding-top: 2.5em;
+    	padding-left: 1.3em;
+	}
+
+	#map {
+		height: 1100px
+	}
+
+	.map-section .direction-btn {
+		bottom: 3.7em;
+	}
+	
+
+}
+
+@media(max-width: 640px){
+
+	// map section
+	.map-section .container {
+		padding: 2em;
+	}
+	
+	.map-section .show-info {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+		padding: 0;
+		float: none;
+	}
+
+	.show-details,
+	.location {
+		width: 100%;
+	}
+
+	.map-section #show-info img.col-md-6 {
+		padding: 3em 0 0 0;
+	}
+
+	// #map {
+	// 	height: 1100px
+	// }
+
+	// .map-section .direction-btn {
+	// 	bottom: 3.7em;
+	// }
+
+
 }
 
 @media(max-width: 820px){

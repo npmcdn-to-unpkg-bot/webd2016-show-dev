@@ -123,7 +123,7 @@
 	var feed = new Instafeed({
 	    accessToken: '1691322362.1677ed0.43cc655ed4884ffbb58bb593b185fb6a',
 	    get: 'user',
-	    userId: '11427426', //change to "1691322362" when feed is available
+	    userId: '1691322362', //change to "1691322362" when feed is available
 	    clientId: '30e90425d4c442bba0ee569e2c31f5b5',
 	    template: '<a href="{{link}}"  class="instagram-item instagram-{{orientation}}" target="__blank"><img src="{{image}}" /></a>',
 	    limit: 10,
@@ -202,10 +202,14 @@
 //set up the map
 function initMap() {
   var myLatLng = {lat: 43.647054, lng: -79.403410};
+  var latlng = new google.maps.LatLng(43.647054, -79.403410);
+
+  
 
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 16,
-    center: myLatLng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    center: latlng,
 
     //map settings
     disableDefaultUI: true,
@@ -215,22 +219,70 @@ function initMap() {
   	draggable: false,
     
     //custom map theme - https://snazzymaps.com
-    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#193341"}]},
-    {"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#2c5a71"}]},
-    {"featureType":"road","elementType":"geometry","stylers":[{"color":"#29768a"},{"lightness":-37}]},
-    {"featureType":"poi","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"featureType":"transit","elementType":"geometry","stylers":
-    [{"color":"#406d80"}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#3e606f"},{"weight":2},
-    {"gamma":0.84}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry","stylers":
-    [{"weight":0.6},{"color":"#1a3541"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry",
-    "stylers":[{"color":"#2c5a71"}]}]
+    styles: [{"featureType":"landscape","elementType":"labels","stylers":
+    [{"visibility":"off"}]},{"featureType":"transit","elementType":"labels","stylers":
+    [{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":
+    [{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":
+    [{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":
+    [{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":12}]},
+    {"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":24}]},
+    {"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}]
   });
 
   var marker = new google.maps.Marker({
     position: myLatLng,
-    map: map,
-    title: 'Hello World!'
+    map: map
   });
+
+
+
+	google.maps.Map.prototype.setCenterWithOffset= function(latlng, offsetX, offsetY) {
+	    var map = this;
+	    var ov = new google.maps.OverlayView();
+	    ov.onAdd = function() {
+	        var proj = this.getProjection();
+	        var aPoint = proj.fromLatLngToContainerPixel(latlng);
+	        aPoint.x = aPoint.x+offsetX;
+	        aPoint.y = aPoint.y+offsetY;
+	        map.setCenter(proj.fromContainerPixelToLatLng(aPoint));
+	    }; 
+	    ov.draw = function() {}; 
+	    ov.setMap(this); 
+	};
+
+	var bounds = [
+	    {min:0,max:500,func: map.setCenterWithOffset(latlng, 0, -110)},
+	    {min:501,max:850,func: map.setCenterWithOffset(latlng, 0, -210)},
+	    {min:851,func: map.setCenterWithOffset(latlng, 0, -210)}
+	];
+
+	// define a resize function. use a closure for the lastBoundry determined.
+	var resizeFn = function(){
+	    var lastBoundry; // cache the last boundry used
+	    return function(){
+	        var width = window.innerWidth; // get the window's inner width
+	        var boundry, min, max;
+	        for(var i=0; i<bounds.length; i++){
+	            boundry = bounds[i];
+	            min = boundry.min || Number.MIN_VALUE;
+	            max = boundry.max || Number.MAX_VALUE;
+	            if(width > min && width < max 
+	               && lastBoundry !== boundry){
+	                lastBoundry = boundry;
+	                return boundry.func.call(boundry);            
+	            }
+	        }
+	    }
+	};
+	$(window).resize(resizeFn()); // bind the resize event handler
+	$(document).ready(function(){
+	    $(window).trigger('resize'); // on load, init the lastBoundry
+	});
 }
+
+
+
+
 
 
 
