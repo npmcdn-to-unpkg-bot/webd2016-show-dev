@@ -207,9 +207,14 @@ function initMap() {
   
 
   var map = new google.maps.Map(document.getElementById('map'), {
+// <<<<<<< HEAD
+//     zoom: 17,
+//     center: myLatLng,
+// =======
     zoom: 16,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     center: latlng,
+// >>>>>>> 9e6806fc60c131c3ed8de998cfb0dc5b9773c401
 
     //map settings
     disableDefaultUI: true,
@@ -219,19 +224,20 @@ function initMap() {
   	draggable: false,
     
     //custom map theme - https://snazzymaps.com
-    styles: [{"featureType":"landscape","elementType":"labels","stylers":
-    [{"visibility":"off"}]},{"featureType":"transit","elementType":"labels","stylers":
-    [{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":
-    [{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":
-    [{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":
-    [{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":12}]},
-    {"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":24}]},
-    {"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}]
+
+    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#f4f4f4"}]},
+    {"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#e3e3e3"}]},
+    {"featureType":"road","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":-37}]},
+    {"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},
+    {"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"off"},{"color":"#b2b2b2"}]},{"featureType":"transit","elementType":"geometry","stylers":
+    [{"color":"#f3f3f3"}]}]
   });
 
   var marker = new google.maps.Marker({
     position: myLatLng,
-    map: map
+    map: map,
+		icon: 'images/flux-marker.png',
+    title: 'Hello World!'
   });
 
 
