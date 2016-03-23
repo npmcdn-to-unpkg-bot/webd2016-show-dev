@@ -27,11 +27,11 @@
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .blue-purple-gradient {
-  background: -moz-linear-gradient(45deg, #8852a0 0%, #4096ee 100%);
+  background: -moz-linear-gradient(45deg, rgba(136, 82, 160, 0.7) 0%, rgba(0, 172, 211, 0.7) 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #8852a0 0%, #4096ee 100%);
+  background: -webkit-linear-gradient(45deg, rgba(136, 82, 160, 0.7) 0%, rgba(0, 172, 211, 0.7) 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #8852a0 0%, #4096ee 100%);
+  background: linear-gradient(45deg, rgba(136, 82, 160, 0.7) 0%, rgba(0, 172, 211, 0.7) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 /* Global
@@ -260,6 +260,8 @@ section#about #paragraph p:first-child {
 }
 #gallery .grid ul {
   display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 #gallery .grid-item {
   cursor: pointer;
@@ -309,7 +311,7 @@ section#about #paragraph p:first-child {
   /*visibility: hidden;	*/
 }
 #gallery .grid-item .gallery-pic {
-  margin: 3px;
+  margin: 10px;
   position: relative;
 }
 #gallery .grid-item img {
@@ -383,14 +385,10 @@ section#about #paragraph p:first-child {
 #gallery .grid-item .profileInfo {
   z-index: 100;
   position: absolute;
-  top: 3px;
-  right: 3px;
-  left: 3px;
-  /*margin-left: 10px;*/
-  bottom: 3px;
-  /*bottom: 43px;*/
-  /* position: absolute; */
-  /* width: 170px; */
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  bottom: 10px;
   opacity: 0;
   -webkit-transition: .3s ease opacity;
   -o-transition: .3s ease opacity;
@@ -499,11 +497,11 @@ ul#social-profiles li {
 .modal-container .modal-view .modal header {
   height: 147px;
   margin-top: -19px;
-  background: -moz-linear-gradient(45deg, #8852a0 0%, #4096ee 100%);
+  background: -moz-linear-gradient(45deg, rgba(136, 82, 160, 0.7) 0%, rgba(0, 172, 211, 0.7) 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #8852a0 0%, #4096ee 100%);
+  background: -webkit-linear-gradient(45deg, rgba(136, 82, 160, 0.7) 0%, rgba(0, 172, 211, 0.7) 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #8852a0 0%, #4096ee 100%);
+  background: linear-gradient(45deg, rgba(136, 82, 160, 0.7) 0%, rgba(0, 172, 211, 0.7) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   padding: 30px;
 }
@@ -638,6 +636,7 @@ ul#social-profiles li {
   width: 100%;
   position: relative;
   margin-top: 8em;
+  box-shadow: inset 0px 180px 230px #fff;
 }
 .map-section h2 {
   text-transform: uppercase;
@@ -677,7 +676,7 @@ ul#social-profiles li {
 }
 #map {
   width: 100%;
-  height: 1000px;
+  height: 820px;
   z-index: -10;
 }
 /* RSVP info ------------------------------------- */
