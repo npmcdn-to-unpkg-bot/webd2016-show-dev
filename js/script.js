@@ -252,7 +252,7 @@ function initMap() {
 
 	var bounds = [
 	    {min:0,max:500,func: map.setCenterWithOffset(latlng, 0, -110)},
-	    {min:501,max:850,func: map.setCenterWithOffset(latlng, 0, -210)},
+	    {min:501,max:850,func: map.setCenterWithOffset(latlng, 0, -410)},
 	    {min:851,func: map.setCenterWithOffset(latlng, 0, -210)}
 	];
 
@@ -274,7 +274,7 @@ function initMap() {
 	        }
 	    }
 	};
-	$(window).resize(resizeFn()); // bind the resize event handler
+	$(window).resize(resizeFn); // bind the resize event handler
 	$(document).ready(function(){
 	    $(window).trigger('resize'); // on load, init the lastBoundry
 	});
