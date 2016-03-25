@@ -941,9 +941,7 @@ ul {
 
 /* Footer --------------------------------------------- */
 footer{
-	// display: block;
 	
-	height: 100px;
 footer .social {
 	width: 100%;
 	font-size: 1.65em;
@@ -1072,13 +1070,13 @@ footer .social {
 	.instagram-item {
 		display: block;
 		float: left;
-		width: 50%;
+		width: 33.3%;
 
 
 
 		img {
 			display: block;
-			width: 60%;
+			// width: 60%;
 			margin: 0 auto;
 
 		}
@@ -1117,11 +1115,18 @@ footer .social {
 	}
 
 
-	
-
 }
 
-@media(max-width: 640px){
+@media(max-width: 735px){
+	 #instafeed{
+	.instagram-item {
+		width: 50%;
+	
+	}
+}
+}
+
+	@media(max-width: 640px){
 
 	// map section
 	.map-section .container {
@@ -1155,24 +1160,26 @@ footer .social {
 
 // INSTAGRAM SECTION
 	
-	#instafeed {
+// 	#instafeed {
 	
 
-	.instagram-item {
-		width: 100%;
+// 	.instagram-item {
+// 		width: 100%;
 		
 
 
-		img {
-			display: block;
-			width: 70%;
-			// padding-left: 10%;
-		}
-	}
-}
+// 		img {
+// 			display: block;
+// 			width: 70%;
+// 			// padding-left: 10%;
+// 		}
+// 	}
+// }
 
 
 }
+
+
 
 @media(max-width: 820px){
 	.modal-container .modal-view {
@@ -1188,6 +1195,13 @@ footer .social {
 	}
 	.modal-container .modal-view .modal .profile-select-buttons li span {
 			font-size:13px;
+	}
+
+	 #instafeed{
+		.instagram-item {
+			width: 100%;
+		
+		}
 	}
 }
 
