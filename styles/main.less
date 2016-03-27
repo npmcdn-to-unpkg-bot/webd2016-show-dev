@@ -277,6 +277,7 @@ article#right-box-intro{
 	padding-top:2.5%; 
 
 	div#header-container {
+		width: 100%;
 		
 		div#paragraph-top {
 			padding-bottom: 25%;
@@ -287,21 +288,37 @@ article#right-box-intro{
 				font-weight: light;
 				@media @mobile {
 			  		text-align: center;
+			  		margin: 5% 0;
+			  		width: 100%;
 				}
 				@media @tablet {
 					text-align: center;
 			  	}
 			}
 		}
-		button {
-			padding: 2.5% 0;
+		a {
+			
 			background-color: @lightPurple;
 			color: @white;
 			border: transparent;
 			border-radius: 4px;
 			&:last-child {
 				background-color: @lightBlue;
+				@media @mobile {
+			  	margin-top: 5%;
+			}
+				@media @tablet {
+					margin-top: 5%;
+			  	}
 			} 
+			@media @mobile {
+			  	width: 100%;
+			  	margin: 0 auto;
+			}
+			@media @tablet {
+				width: 50%;
+			  	margin: 0 auto;
+		  	}
 		}	
 	}
 }
