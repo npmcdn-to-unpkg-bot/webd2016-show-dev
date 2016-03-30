@@ -417,6 +417,12 @@ section#about {
 		color: @lightPurple;
 		
 		font-weight: bold;
+		@media @mobile {
+		  	margin-top: 25%;
+		}
+		@media @tablet {
+			margin-top: 35%;
+	  	}
 	}
 	p{
 		.px2em( 20, 16 );
@@ -426,7 +432,12 @@ section#about {
 		margin: 5% 24%;
 		p {
 			&:first-child{
+
 				margin-bottom: 10%;
+			}
+			&:last-child{
+
+				margin-bottom: 40%;
 			}
 		}
 		@media @mobile {
