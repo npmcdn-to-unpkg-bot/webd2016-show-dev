@@ -4,7 +4,8 @@
 
 $(window).scroll(function() {
     var x = $(this).scrollTop();
-    $('#about').css('background-position', '100% ' + parseInt(-x / 8) + 'px' + ', 0% ' + parseInt(-x / 2) + 'px, center top');
+    console.log('50% ' + parseInt(-x / 2 + 100) + 'px' + ', 50% ' + parseInt(x / 2) + 'px');
+    $('#about').css('background-position', '50% ' + parseInt(-x / 3 + 200 ) + 'px' + ', 50% ' + parseInt(x / 2) + 'px, center center');
 });
 	// Set up firebase url and variables
 	var index,avatar;
