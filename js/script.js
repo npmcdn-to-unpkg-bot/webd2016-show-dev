@@ -2,6 +2,10 @@
 
 (function(){
 
+$(window).scroll(function() {
+    var x = $(this).scrollTop();
+    $('#about').css('background-position', '100% ' + parseInt(-x / 8) + 'px' + ', 0% ' + parseInt(-x / 2) + 'px, center top');
+});
 	// Set up firebase url and variables
 	var index,avatar;
 	var url = new Firebase('https://humberinfluxdb.firebaseio.com');
@@ -196,6 +200,7 @@
     }
 
 });
+
 
 })();
 
