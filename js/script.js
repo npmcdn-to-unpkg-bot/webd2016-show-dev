@@ -5,8 +5,8 @@
 $(window).scroll(function() {
 	if ($( window ).width() > 1050) {
 	    var x = $(this).scrollTop();
-	    console.log('50% ' + parseInt(-x / 2 + 100) + 'px' + ', 50% ' + parseInt(x / 2) + 'px');
-	    $('#about').css('background-position', '50% ' + parseInt(-x / 3 + 200 ) + 'px' + ', 50% ' + parseInt(x / 2) + 'px, center center');
+	    //console.log('50% ' + parseInt(-x / 6 + 100) + 'px' + ', 50% ' + parseInt(x / 2) + 'px');
+	    $('#about').css('background-position', '50% ' + parseInt(-x / 1.5 + 450 ) + 'px' + ', 50% ' + parseInt(x / 2) + 'px, center center');
     }
 });
 	// Set up firebase url and variables
