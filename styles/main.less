@@ -66,6 +66,18 @@
   clear: both;
 }
 
+#bg-gradient { /* FF3.6-15 */
+		position: absolute;
+		top:0;
+		left:0;
+		height: 100%;
+		width: 100%;
+	background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0.02) 40%, rgba(255,255,255,0) 51%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0.02) 40%, rgba(255,255,255,0) 51%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0.02) 40%, rgba(255,255,255,0) 51%, rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	
+	}
 
 
 /* Global
@@ -398,12 +410,13 @@ article#left-box-intro{
 // about  ----------------------------------------->
 
 section#about {
-
+	position: relative;
 	min-height: 120vh;
-	background-image: url(
-    ../images/Influx_backgrounds.png);
-    background-size: percentage;
-    background-position: center bottom;
+	background: url(
+    ../images/influx_backgrounds.svg) no-repeat;
+    background-size: cover;
+  
+
 
 	h1,p {
 		margin: 0 auto;
@@ -415,6 +428,12 @@ section#about {
 		color: @lightPurple;
 		
 		font-weight: bold;
+		@media @mobile {
+		  	margin-top: 25%;
+		}
+		@media @tablet {
+			margin-top: 35%;
+	  	}
 	}
 	p{
 		.px2em( 20, 16 );
@@ -424,7 +443,12 @@ section#about {
 		margin: 5% 24%;
 		p {
 			&:first-child{
+
 				margin-bottom: 10%;
+			}
+			&:last-child{
+
+				margin-bottom: 40%;
 			}
 		}
 		@media @mobile {
@@ -984,8 +1008,12 @@ ul {
 
 /* RSVP info ------------------------------------- */
 #rsvp-info {
-	margin: 5em 0 7em 0;
+	padding: 5em 0 7em 0;
 	min-height: auto;
+	position: relative;
+	background: url(
+    ../images/thankyou_backgrounds.svg) no-repeat;
+    background-size: cover;
 
 	.btn {
 		position: relative;
