@@ -243,7 +243,6 @@ $(window).scroll(function() {
 
 	$('li.show-all').on('click', function(){
 		// $('.grid-item').removeClass('highlight');
-		$('.grid-item').addClass('hidden');
 		$('.grid-item').removeClass('hidden');
 		
 	});
@@ -300,10 +299,14 @@ function initMap() {
   
 
   var map = new google.maps.Map(document.getElementById('map'), {
-
+// <<<<<<< HEAD
+//     zoom: 17,
+//     center: myLatLng,
+// =======
     zoom: 16,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     center: latlng,
+// >>>>>>> 9e6806fc60c131c3ed8de998cfb0dc5b9773c401
 
     //map settings
     disableDefaultUI: true,
@@ -347,7 +350,7 @@ function initMap() {
 
 	var bounds = [
 	    {min:0,max:500,func: map.setCenterWithOffset(latlng, 0, -110)},
-	    {min:501,max:850,func: map.setCenterWithOffset(latlng, 0, -210)},
+	    {min:501,max:850,func: map.setCenterWithOffset(latlng, 0, -410)},
 	    {min:851,func: map.setCenterWithOffset(latlng, 0, -210)}
 	];
 
@@ -369,7 +372,7 @@ function initMap() {
 	        }
 	    }
 	};
-	$(window).resize(resizeFn()); // bind the resize event handler
+	$(window).resize(resizeFn); // bind the resize event handler
 	$(document).ready(function(){
 	    $(window).trigger('resize'); // on load, init the lastBoundry
 	});
