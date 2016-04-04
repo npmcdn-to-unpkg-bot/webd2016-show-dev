@@ -15,21 +15,26 @@ $(window).scroll(function() {
 	var index,avatar;
 	var url = new Firebase('https://webd-portfolioshow.firebaseio.com/');
 	var projects, projectLinks,resultsLength;
-	
+
 	function getProfile(getIndex){
 		projects = [];
 		projectLinks = [];
 		$('.work-grid').empty();
 		$('#social-profiles').empty();
 
-		url.child('students').once('value', function(snapshot) {		    
+		url.child('students').once('value', function(snapshot) {
+			resultsLength = snapshot.val().length;
+			var nextIndex = getNextIndex(getIndex, resultsLength);
+			var previousIndex = getPreviousIndex(getIndex, resultsLength);
+	
+
 		    var name = snapshot.val()[getIndex].name;
 		    var myAvatar = snapshot.val()[getIndex].avatar;
 		    var careerTitle = snapshot.val()[getIndex].title;
 		    var bio = snapshot.val()[getIndex].bio;
 		    var website = snapshot.val()[getIndex].website;
-		    var nextName = snapshot.val()[getIndex+1].name;
-		    var previousName = snapshot.val()[getIndex-1].name;
+		    var nextName = snapshot.val()[nextIndex].name; 
+		    var previousName = snapshot.val()[previousIndex].name;  
 		    var twitter = snapshot.val()[getIndex].social[0].twitter;
 		    var facebook = snapshot.val()[getIndex].social[0].facebook;
 		    var instagram = snapshot.val()[getIndex].social[0].instagram;
@@ -40,9 +45,8 @@ $(window).scroll(function() {
 		   	var artLink1 = snapshot.val()[getIndex].art1link;
 		   	var artLink2 = snapshot.val()[getIndex].art2link;
 		   	var artLink3 = snapshot.val()[getIndex].art3link;
-		  	resultsLength = snapshot.val().length;
-		   	console.log("results = " + snapshot.val().length);
-		   	console.log("yaw = " + snapshot.val()[19].name);
+		  	
+
 
 		   	if(getLink(art1) == true){
 		   		if(getLink(artLink1) == true){
@@ -106,6 +110,22 @@ $(window).scroll(function() {
 	    } else if(link.length > 0) {
 	    	return true;
 	    }
+    }
+
+    function getNextIndex(currentIndex, length) {
+    	if (currentIndex == (length-1)) {
+    		return 0;
+    	}
+
+    	return currentIndex + 1;
+    }
+
+    function getPreviousIndex(currentIndex, length) {
+    	if (currentIndex == 0) {
+    		return length - 1;
+    	}
+
+    	return currentIndex - 1;
     }
 
 	// ** replace jquery item with gallery item	
@@ -299,14 +319,9 @@ function initMap() {
   
 
   var map = new google.maps.Map(document.getElementById('map'), {
-// <<<<<<< HEAD
-//     zoom: 17,
-//     center: myLatLng,
-// =======
     zoom: 16,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     center: latlng,
-// >>>>>>> 9e6806fc60c131c3ed8de998cfb0dc5b9773c401
 
     //map settings
     disableDefaultUI: true,
