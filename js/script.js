@@ -45,35 +45,48 @@ $(window).scroll(function() {
 		   	var artLink1 = snapshot.val()[getIndex].art1link;
 		   	var artLink2 = snapshot.val()[getIndex].art2link;
 		   	var artLink3 = snapshot.val()[getIndex].art3link;
+
+		   	if($('.work-grid')){
+		   		$('.work-grid').remove();
+		   	}
+
 		  	
+		  	if(getLink(art1) == true || getLink(art2) == true || getLink(art3) == true){
 
+		  		$('<div class="work-grid col-lg-6 col-med-6 col-sm-6 col-xs-12"></div>').insertBefore( ".profile-select-buttons");
+		  		
+		  			if(getLink(art1) == true){
+		   		
+				   		if(getLink(artLink1) == true){
+					   			$('.work-grid').append('<a class="image" href="'+ artLink1 +'" target="_blank"><img src="'+ art1 +'" alt=""></a>')
+					   		}else{
+					   			$('.work-grid').append('<img class="image" src="'+ art1 +'" alt="">');
+						}	
+				   	}
 
-		   	if(getLink(art1) == true){
-		   		if(getLink(artLink1) == true){
-		   			$('.work-grid').append('<a class="image" href="'+ artLink1 +'" target="_blank"><img src="'+ art1 +'" alt=""></a>')
-		   		}else{
-		   			$('.work-grid').append('<img class="image" src="'+ art1 +'" alt="">');
-		   		}
+				   	if(getLink(art2) == true){
+				   		if(getLink(artLink2) == true){
+				   			$('.work-grid').append('<a class="image" href="'+ artLink2 +'" target="_blank"><img src="'+ art2 +'" alt=""></a>')
+				   		}else{
+				   			$('.work-grid').append('<img class="image" src="'+ art2 +'" alt="">');
+				   		}
+
+				   	}
+
+				   	if(getLink(art3) == true){
+				   		if(getLink(artLink3) == true){
+				   			$('.work-grid').append('<a class="image" href="'+ artLink3 +'" target="_blank"><img src="'+ art3 +'" alt=""></a>')
+				   		}else{
+				   			$('.work-grid').append('<img class="image" src="'+ art3 +'" alt="">');
+				   		}
+			  		}
 		   		
-		   		
-		   	}
-		   	if(getLink(art2) == true){
-		   		if(getLink(artLink2) == true){
-		   			$('.work-grid').append('<a class="image" href="'+ artLink2 +'" target="_blank"><img src="'+ art2 +'" alt=""></a>')
-		   		}else{
-		   			$('.work-grid').append('<img class="image" src="'+ art2 +'" alt="">');
-		   		}
-		   		
-		   		
-		   	}
-		   	if(getLink(art3) == true){
-		   		if(getLink(artLink3) == true){
-		   			$('.work-grid').append('<a class="image" href="'+ artLink3 +'" target="_blank"><img src="'+ art3 +'" alt=""></a>')
-		   		}else{
-		   			$('.work-grid').append('<img class="image" src="'+ art3 +'" alt="">');
-		   		}
-		   		
-		   		
+	   		}
+
+	   		if($('.work-grid').length < 1){
+		   		 	$('.profile-block').addClass('no-pics');
+		   	} else {
+		   		$('.profile-block').removeClass('no-pics');
 		   	}
 
 		   if (getLink(twitter) == true){
@@ -102,6 +115,10 @@ $(window).scroll(function() {
 
 
  	 	});
+
+ 	//  	if ($('.work-grid').children('.image').length < 1) {
+		// 	$('.profile-block').addClass('no-pics');
+		// } 
 	}
 	
  	function getLink(link){
@@ -149,6 +166,8 @@ $(window).scroll(function() {
 		// } 		
 		index = $(this).index();
 		getProfile(index);
+
+		
 
 		
 
