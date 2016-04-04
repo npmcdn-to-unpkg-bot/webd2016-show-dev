@@ -1135,7 +1135,6 @@ footer .social {
 	width: 100%;
 	font-size: 1.65em;
 
-
 	li {
 		margin-right: 1em;
 		text-align: right;
@@ -1271,6 +1270,19 @@ footer .social {
 		}
 	}
 }
+footer{
+		float: right;
+		  i {
+         
+            transition: color 0.5s ease;
+       
+            &:hover {
+                color: #3f51b5;
+            }
+        }
+	}
+
+
 }
 
 @media(max-width: 850px){
@@ -1310,9 +1322,14 @@ footer .social {
 	 #instafeed{
 	.instagram-item {
 		width: 50%;
+		&:nth-child(5),&:nth-child(6),&:nth-child(7),&:nth-child(8),&:nth-child(9),&:nth-child(10){
+     		display: none;
+    		}
 	
 	}
+
 }
+
 }
 
 	@media(max-width: 640px){
@@ -1427,6 +1444,12 @@ footer .social {
 		.instagram-item {
 			width: 100%;
 		
+		}
+	}
+	footer{
+		float: none;
+		.fa{
+			font-size: 1.3em;
 		}
 	}
 }
