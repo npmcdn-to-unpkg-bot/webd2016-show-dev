@@ -13,7 +13,7 @@ $(window).scroll(function() {
 });
 	// Set up firebase url and variables
 	var index,avatar;
-	var url = new Firebase('https://webd-portfolioshow.firebaseio.com/');
+	var url = new Firebase('https://humberinfluxdb.firebaseio.com/');
 	var projects, projectLinks,resultsLength;
 
 	function getProfile(getIndex){
