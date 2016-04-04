@@ -300,14 +300,10 @@ function initMap() {
   
 
   var map = new google.maps.Map(document.getElementById('map'), {
-// <<<<<<< HEAD
-//     zoom: 17,
-//     center: myLatLng,
-// =======
+
     zoom: 16,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     center: latlng,
-// >>>>>>> 9e6806fc60c131c3ed8de998cfb0dc5b9773c401
 
     //map settings
     disableDefaultUI: true,
