@@ -247,6 +247,7 @@ $(window).scroll(function() {
 		
 	});
 	$('li.show-hyb').on('click', function(){
+		$('.grid-item').addClass('hidden');
 		$('.grid-item.hyb').removeClass('hidden');
 	});
 	$('li.show-dev').on('click', function(){
