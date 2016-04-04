@@ -89,7 +89,7 @@ $(window).scroll(function() {
 		   	$('#social-profiles').append('<li><a href="'+behance+'" target="_blank"><i class="fa fa-behance"></i></a></li>');
 		   } 
 		    
-		    console.log(" name: "+ name + ", bio: " + bio + ", website: " + website);
+		    // console.log(" name: "+ name + ", bio: " + bio + ", website: " + website);
 
 		    $('.avatar-pic').find('.pic').attr('src', myAvatar);
 		    $('.modal-name').text(name);
@@ -140,39 +140,28 @@ $(window).scroll(function() {
 		// Get index of item clicked in the DOM
 		// index = $(this).index();
 		
-		if(index >= resultsLength-1){
-			index = 19;
-			getProfile(index);
-		} else if(index <= 1){
-			index = 0;
-			getProfile(index);
-		} 		
+		// if(index >= resultsLength-1){
+		// 	index = 19;
+		// 	getProfile(index);
+		// } else if(index <= 1){
+		// 	index = 0;
+		// 	getProfile(index);
+		// } 		
 		index = $(this).index();
 		getProfile(index);
 
-		console.log("this index = " + index);
 		
 
 		
 	})
 
 	$('.next-profile').click(function(){
-		if(index >= resultsLength){
-			index = 18;
-		}else{
-			index++;
-		}
-		console.log("index = " + index);
+		index = getNextIndex(index, resultsLength);
 		getProfile(index);
 	})
 
 	$('.last-profile').click(function(){
-		if(index < 0){
-			index = 0;
-		}else{
-			index--;
-		}
-		console.log("index = " + index);
+		index = getPreviousIndex(index, resultsLength);
 		getProfile(index);
 	})
 
@@ -186,11 +175,11 @@ $(window).scroll(function() {
 		// console.log("startX= " + startX);
 
 		$(this).mousemove(function(e){
-			console.log("slider left position = " + sliderLeftPosX );
+			// console.log("slider left position = " + sliderLeftPosX );
 			var finishX = e.clientX;
 			
 			if(finishX <= startX - 60){
-				console.log("newstartX = " + finishX);
+				// console.log("newstartX = " + finishX);
 				$('.slider').css("left", sliderLeftPosX - 610);
 				setInterval(function(){
 					$(this).off("mousedown");
@@ -198,7 +187,7 @@ $(window).scroll(function() {
 
 			}
 			if(finishX >= startX + 60){
-				console.log("newstartX = " + finishX);
+				// console.log("newstartX = " + finishX);
 				$('.slider').css("left", sliderLeftPosX + 610);
 				setInterval(function(){
 					$(this).off("mousedown");
