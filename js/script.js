@@ -127,6 +127,14 @@ $(window).scroll(function() {
 	});
 		
 	//set up instafeed.js
+	// var img_qty;
+	// var isStandardWindow = window.matchMedia("(min-width: 640px)").matches;
+	// if (window.matchMedia("(min-width: 640px)").matches) {
+	//   limit: 10,
+	// } else {
+	//   limit: 4,
+	// }
+
 	var feed = new Instafeed({
 	    accessToken: '1691322362.1677ed0.43cc655ed4884ffbb58bb593b185fb6a',
 	    get: 'user',
@@ -135,8 +143,19 @@ $(window).scroll(function() {
 	    template: '<a href="{{link}}"  class="instagram-item instagram-{{orientation}}" target="__blank"><img src="{{image}}" /></a>',
 	    limit: 10,
 	    resolution: 'standard_resolution'
-	});
+		});
 	feed.run();	
+
+	// function checkPosition() {
+ //    if (window.matchMedia('(max-width: 500px)').matches) {
+ //        img_qty=4;
+ //    } else {
+ //        img_qty=10;
+ //    }
+	// }
+
+	
+ 
 
 	// var $grid = $('.grid').isotope({
 	//   masonry: {
