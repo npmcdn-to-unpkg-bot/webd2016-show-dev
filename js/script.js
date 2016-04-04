@@ -2,6 +2,8 @@
 
 (function(){
 
+
+
 $(window).scroll(function() {
 	if ($( window ).width() > 1050) {
 	    var x = $(this).scrollTop();
@@ -11,12 +13,19 @@ $(window).scroll(function() {
 });
 	// Set up firebase url and variables
 	var index,avatar;
-	var url = new Firebase('https://humberinfluxdb.firebaseio.com');
-
+	var url = new Firebase('https://webd-portfolioshow.firebaseio.com/');
+	var projects, projectLinks,resultsLength;
+	
 	function getProfile(getIndex){
+		projects = [];
+		projectLinks = [];
+		$('.work-grid').empty();
 		$('#social-profiles').empty();
+
 		url.child('students').once('value', function(snapshot) {		    
 		    var name = snapshot.val()[getIndex].name;
+		    var myAvatar = snapshot.val()[getIndex].avatar;
+		    var careerTitle = snapshot.val()[getIndex].title;
 		    var bio = snapshot.val()[getIndex].bio;
 		    var website = snapshot.val()[getIndex].website;
 		    var nextName = snapshot.val()[getIndex+1].name;
@@ -25,24 +34,62 @@ $(window).scroll(function() {
 		    var facebook = snapshot.val()[getIndex].social[0].facebook;
 		    var instagram = snapshot.val()[getIndex].social[0].instagram;
 		    var behance = snapshot.val()[getIndex].social[0].behance;
+		   	var art1 = snapshot.val()[getIndex].art1;
+		   	var art2 = snapshot.val()[getIndex].art2;
+		   	var art3 = snapshot.val()[getIndex].art3;
+		   	var artLink1 = snapshot.val()[getIndex].art1link;
+		   	var artLink2 = snapshot.val()[getIndex].art2link;
+		   	var artLink3 = snapshot.val()[getIndex].art3link;
+		  	resultsLength = snapshot.val().length;
+		   	console.log("results = " + snapshot.val().length);
+		   	console.log("yaw = " + snapshot.val()[19].name);
 
-			   
-		   if (getSocialLink(twitter) == true){
-		   	$('#social-profiles').append('<li><a href="#"><i class="fa fa-twitter"></i></a></li>');
+		   	if(getLink(art1) == true){
+		   		if(getLink(artLink1) == true){
+		   			$('.work-grid').append('<a class="image" href="'+ artLink1 +'" target="_blank"><img src="'+ art1 +'" alt=""></a>')
+		   		}else{
+		   			$('.work-grid').append('<img class="image" src="'+ art1 +'" alt="">');
+		   		}
+		   		
+		   		
+		   	}
+		   	if(getLink(art2) == true){
+		   		if(getLink(artLink2) == true){
+		   			$('.work-grid').append('<a class="image" href="'+ artLink2 +'" target="_blank"><img src="'+ art2 +'" alt=""></a>')
+		   		}else{
+		   			$('.work-grid').append('<img class="image" src="'+ art2 +'" alt="">');
+		   		}
+		   		
+		   		
+		   	}
+		   	if(getLink(art3) == true){
+		   		if(getLink(artLink3) == true){
+		   			$('.work-grid').append('<a class="image" href="'+ artLink3 +'" target="_blank"><img src="'+ art3 +'" alt=""></a>')
+		   		}else{
+		   			$('.work-grid').append('<img class="image" src="'+ art3 +'" alt="">');
+		   		}
+		   		
+		   		
+		   	}
+
+		   if (getLink(twitter) == true){
+		   	$('#social-profiles').append('<li><a href="'+twitter+'" target="_blank"><i class="fa fa-twitter"></i></a></li>');
 		   } 
-		   if (getSocialLink(facebook) == true){
-		   $('#social-profiles').append('<li><a href="#"><i class="fa fa-facebook"></i></a></li>');
+		   if (getLink(facebook) == true){
+		   $('#social-profiles').append('<li><a href="'+facebook+'" target="_blank"><i class="fa fa-facebook"></i></a></li>');
 		   } 
-		   if (getSocialLink(instagram) == true){
-		   	$('#social-profiles').append('<li><a href="#"><i class="fa fa-instagram"></i></a></li>');
+		   if (getLink(instagram) == true){
+		   	$('#social-profiles').append('<li><a href="'+instagram+'" target="_blank"><i class="fa fa-instagram"></i></a></li>');
 		   } 
-		   if (getSocialLink(behance) == true){
-		   	$('#social-profiles').append('<li><a href="#"><i class="fa fa-behance"></i></a></li>');
+		   if (getLink(behance) == true){
+		   	$('#social-profiles').append('<li><a href="'+behance+'" target="_blank"><i class="fa fa-behance"></i></a></li>');
 		   } 
 		    
 		    console.log(" name: "+ name + ", bio: " + bio + ", website: " + website);
 
-		    $('.modal header h3').text(name);
+		    $('.avatar-pic').find('.pic').attr('src', myAvatar);
+		    $('.modal-name').text(name);
+		    $('.modal-career').text(careerTitle);
 		    $('.next-profile span').text(nextName);
 		    $('.last-profile span').text(previousName);
 		    $('.bio .website').text(website);
@@ -53,35 +100,59 @@ $(window).scroll(function() {
  	 	});
 	}
 	
-  function getSocialLink(link){
-    	if (link.length < 1 || link == undefined){
+ 	function getLink(link){
+    	if (link === undefined){
 	    	return false;
-	    } else {
+	    } else if(link.length > 0) {
 	    	return true;
 	    }
     }
 
 	// ** replace jquery item with gallery item	
 	$('.grid-item').click(function(){
+		$('.work-grid').empty();
 		$('.modal-container').fadeIn();
-		avatar = $(this).find('.primary-pic').attr('src');
+		
 		// alert(avatar);
 		$('.modal .pic').attr('src',avatar);
 		$('.modal').addClass('slide-in');
 		
 		// Get index of item clicked in the DOM
+		// index = $(this).index();
+		
+		if(index >= resultsLength-1){
+			index = 19;
+			getProfile(index);
+		} else if(index <= 1){
+			index = 0;
+			getProfile(index);
+		} 		
 		index = $(this).index();
 		getProfile(index);
+
+		console.log("this index = " + index);
+		
+
 		
 	})
 
 	$('.next-profile').click(function(){
-		index = index+1;
+		if(index >= resultsLength){
+			index = 18;
+		}else{
+			index++;
+		}
+		console.log("index = " + index);
 		getProfile(index);
 	})
 
 	$('.last-profile').click(function(){
-		index = index-1;
+		if(index < 0){
+			index = 0;
+		}else{
+			index--;
+		}
+		console.log("index = " + index);
 		getProfile(index);
 	})
 
@@ -92,7 +163,7 @@ $(window).scroll(function() {
 		var startX = e.clientX;
 		var sliderLeftPosX = parseInt($('.slider').css('left'), 10);
 		var clicked = true;
-		console.log("startX= " + startX);
+		// console.log("startX= " + startX);
 
 		$(this).mousemove(function(e){
 			console.log("slider left position = " + sliderLeftPosX );
@@ -127,6 +198,14 @@ $(window).scroll(function() {
 	});
 		
 	//set up instafeed.js
+	// var img_qty;
+	// var isStandardWindow = window.matchMedia("(min-width: 640px)").matches;
+	// if (window.matchMedia("(min-width: 640px)").matches) {
+	//   limit: 10,
+	// } else {
+	//   limit: 4,
+	// }
+
 	var feed = new Instafeed({
 	    accessToken: '1691322362.1677ed0.43cc655ed4884ffbb58bb593b185fb6a',
 	    get: 'user',
@@ -135,8 +214,19 @@ $(window).scroll(function() {
 	    template: '<a href="{{link}}"  class="instagram-item instagram-{{orientation}}" target="__blank"><img src="{{image}}" /></a>',
 	    limit: 10,
 	    resolution: 'standard_resolution'
-	});
+		});
 	feed.run();	
+
+	// function checkPosition() {
+ //    if (window.matchMedia('(max-width: 500px)').matches) {
+ //        img_qty=4;
+ //    } else {
+ //        img_qty=10;
+ //    }
+	// }
+
+	
+ 
 
 	// var $grid = $('.grid').isotope({
 	//   masonry: {
@@ -152,29 +242,23 @@ $(window).scroll(function() {
 	// });
 
 	$('li.show-all').on('click', function(){
-		$('.grid-item').removeClass('highlight');
-		$('.grid-item').removeClass('dim');
+		// $('.grid-item').removeClass('highlight');
+		$('.grid-item').removeClass('hidden');
 		
 	});
 	$('li.show-hyb').on('click', function(){
-		$('.grid-item').removeClass('highlight');
-		$('.grid-item').addClass('dim');
-		$('.grid-item.hyb').addClass('highlight');
-		// $('.grid-item.hyb').removeClass('hidden');
+		$('.grid-item').addClass('hidden');
+		$('.grid-item.hyb').removeClass('hidden');
 	});
 	$('li.show-dev').on('click', function(){
-		$('.grid-item').removeClass('highlight');
-		$('.grid-item').addClass('dim');
-		$('.grid-item.dev').addClass('highlight');
-		// $('.grid-item').addClass('hidden');
-		// $('.grid-item.dev').removeClass('hidden');
+
+		$('.grid-item').addClass('hidden');
+		$('.grid-item.dev').removeClass('hidden');
 	});
 	$('li.show-des').on('click', function(){
-		$('.grid-item').removeClass('highlight');
-		$('.grid-item').addClass('dim');
-		$('.grid-item.des').addClass('highlight');
-		// $('.grid-item').addClass('hidden');
-		// $('.grid-item.des').removeClass('hidden');
+
+		$('.grid-item').addClass('hidden');
+		$('.grid-item.des').removeClass('hidden');
 	});
 
 	/////////Toggle active class on selected element and remove from previous
