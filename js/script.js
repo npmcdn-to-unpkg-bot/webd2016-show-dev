@@ -243,6 +243,7 @@ $(window).scroll(function() {
 
 	$('li.show-all').on('click', function(){
 		// $('.grid-item').removeClass('highlight');
+		$('.grid-item').addClass('hidden');
 		$('.grid-item').removeClass('hidden');
 		
 	});
