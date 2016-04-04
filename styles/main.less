@@ -118,6 +118,10 @@ a, a:link, a:active, a:visited, a:hover {
 	text-decoration: none;
 }
 
+h3.modal-name {
+	margin-top: .7em;
+}
+
 section {
 	min-height: 75vh;
 }
@@ -892,7 +896,7 @@ ul {
         right: -15px;
 
 		.modal {
-			position: relative;
+			/*position: relative;*/
     		left: -8px;
 		    /*border: 2px solid blue;*/
 		    margin: 0 auto;
@@ -918,7 +922,7 @@ ul {
 			
 			header {
 				min-height: 147px;
-			    margin-top: -19px;
+			    /*margin-top: -19px;*/
 			    .blue-purple-gradient;
 			    padding: 30px;
 
@@ -1038,6 +1042,7 @@ ul {
 			    p {
 					&:nth-of-type(1){
 						margin-bottom: 20px;
+						    margin-top: 0;
 					}
 			    }
 		    }
@@ -1067,8 +1072,9 @@ ul {
 				    display: block;
 				    height: 67px;
 				    width: 100%;
-				    z-index: 10;
+			        position: relative;
 					margin: 0;
+					background: black;
 
 					i {
 						-webkit-transform: scale(.8);
@@ -1076,28 +1082,38 @@ ul {
 						-o-transform: scale(.8);
 						transform: scale(.8);
 					}
+
+					
 			    
 
 			    li {
 			    	display: inline-block;
-			    	height: 100%;
-			    	width: 50%;
+		    	    width: 49.33333%;
 			    	background: black;
 			    	/*border:1px solid red;*/
 			    	padding: 23px 40px;
 			    	color: white;
 			    	cursor: pointer;
+			    	position: absolute;
 			    	&:hover {
 			    		background:rgba(47, 47, 47, 0.92);
 			    	}
-
-			    	&:nth-of-type(1){
-			    		/*float: left;*/
+					
+					&:nth-of-type(1){
+						left: 0;
+			    		span {
+							margin-left: 12%;
+						}
 			    	}
 			    	&:nth-of-type(2){
-			    		/*float: right;*/
+			    		right: 0;
 			    		text-align: right;
+			    		span {
+							margin-right: 12%;
+						}
 			    	}
+
+			    	
 			    }
 		    }
 		}
@@ -1504,6 +1520,28 @@ footer{
 }
 
 	@media(max-width: 640px){
+
+	.modal-container .modal-view .modal .profile-select-buttons {
+		
+		li {
+			padding: 20px 10px;
+			span {
+				font-size:13px;
+			}
+			/*&:nth-of-type(1){
+	    		span {
+					float: right;
+				}
+	    	}
+	    	&:nth-of-type(2){
+	    		span {
+					float: left;
+				}
+	    	}*/
+			
+			
+		}
+	}
 	
 
 	#gallery {
@@ -1588,27 +1626,7 @@ footer{
 		    bottom: 23px;
 		    margin-left: 80px;
 	}
-	.modal-container .modal-view .modal .profile-select-buttons {
-		
-		li {
-			padding: 20px 10px;
-			span {
-				font-size:13px;
-			}
-			&:nth-of-type(1){
-	    		span {
-					float: right;
-				}
-	    	}
-	    	&:nth-of-type(2){
-	    		span {
-					float: left;
-				}
-	    	}
-			
-			
-		}
-	}
+	
 
 
 	 #instafeed{

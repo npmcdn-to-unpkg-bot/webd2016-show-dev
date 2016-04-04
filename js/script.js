@@ -53,7 +53,7 @@ $(window).scroll(function() {
 		  	
 		  	if(getLink(art1) == true || getLink(art2) == true || getLink(art3) == true){
 
-		  		$('<div class="work-grid col-lg-6 col-med-6 col-sm-6 col-xs-12"></div>').insertBefore( ".profile-select-buttons");
+		  		$('<div class="work-grid col-lg-6 col-med-6 col-sm-6 col-xs-12"></div>').insertAfter( ".bio");
 		  		
 		  			if(getLink(art1) == true){
 		   		
