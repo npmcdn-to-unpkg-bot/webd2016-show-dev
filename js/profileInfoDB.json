@@ -108,7 +108,7 @@
         "facebook":"",
         "twitter":"https://twitter.com/dowattie",
         "behance":"",
-        "instagram":"@dnandkumar",
+        "instagram":"https://www.instagram.com/d_nandkumar/",
         "linkedin":"",
         "github":"",
         "vimeo":""
@@ -131,7 +131,7 @@
         "facebook":"",
         "twitter":"https://twitter.com/frankyNomad",
         "behance":"",
-        "instagram":"@franky_nomad",
+        "instagram":"https://www.instagram.com/franky_nomad/",
         "linkedin":"",
         "github":"",
         "vimeo":""
@@ -166,8 +166,8 @@
       "title": "Interactive Designer",
       "email":"hello@hzl.ca",
       "website": "www.hzl.ca",
-      "art1": "",
-      "art2": "",
+      "art1": "images/art/hazel1.png",
+      "art2": "images/art/hazel2.png",
       "art3": "",
       "art1link": "",
       "art2link": "",
@@ -177,7 +177,7 @@
         "facebook":"",
         "twitter":"https://twitter.com/hzlllns",
         "behance":"",
-        "instagram":"@hzlllns",
+        "instagram":"https://www.instagram.com/hzlllns/",
         "linkedin":"https://www.linkedin.com/in/hazelllanes ",
         "github":"",
         "vimeo":""
@@ -200,7 +200,7 @@
         "facebook":"",
         "twitter":"https://twitter.com/jupit3r_",
         "behance":"",
-        "instagram":"@jupit3r",
+        "instagram":"https://www.instagram.com/jupit3r/",
         "linkedin":"https://ca.linkedin.com/in/jupit3r",
         "github":"",
         "vimeo":"https://vimeo.com/jupit3rw"
@@ -246,7 +246,7 @@
         "facebook":"",
         "twitter":"https://twitter.com/kristenakamura",
         "behance":"",
-        "instagram":"@krist.n",
+        "instagram":"https://www.instagram.com/krist.n/",
         "linkedin":"https://www.linkedin.com/in/kristennakamura",
         "github":"@kristenakamura",
         "vimeo":""
@@ -281,7 +281,7 @@
       "title": "UX Designer",
       "email":"hello@lisaharvey.co",
       "website": "www.lisaharvey.co",
-      "art1": "",
+      "art1": "images/art/lisa_preview01.png",
       "art2": "",
       "art3": "",
       "art1link": "",
@@ -292,7 +292,7 @@
         "facebook":"",
         "twitter":"https://twitter.com/lisaharv_",
         "behance":"",
-        "instagram":"@lisaharv",
+        "instagram":"https://www.instagram.com/lisaharv/",
         "linkedin":"https://ca.linkedin.com/in/lisaharv",
         "github":"",
         "vimeo":""
@@ -313,7 +313,7 @@
       "bio":"Who am I? Murata Gulube, someone who has found himself coding and enjoying it too. My years at humber college allowed my to find this path. I've done things like video effects, animations, graphic design and Web design. Even digging into WordPress and Drupal. It's all been fun. Learning from bright teachers and working along side crafty students. Now I make clean, glamorous, and inspiring developments with my code.",
       "social":[{
         "facebook":"",
-        "twitter":"@muratagulubay",
+        "twitter":"https://twitter.com/muratagulubay",
         "behance":"",
         "instagram":"",
         "linkedin":"",
@@ -361,7 +361,7 @@
         "facebook":"",
         "twitter":"https://twitter.com/SandrowTownsend",
         "behance":"@sandrow",
-        "instagram":"@its.sandman",
+        "instagram":"https://www.instagram.com/its.sandman/",
         "linkedin":"",
         "github":"",
         "vimeo":""
