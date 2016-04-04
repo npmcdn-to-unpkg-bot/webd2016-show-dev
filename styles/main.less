@@ -1234,8 +1234,9 @@ ul {
 
 /* Instagram feed ------------------------------------- */
 
-#instafeed {
+section#instafeed {
 	width: 100%;
+	min-height: auto;
 
 	.instagram-item {
 		display: block;
@@ -1251,20 +1252,23 @@ ul {
 }
 
 /* Footer --------------------------------------------- */
-footer{
-	
-footer .social {
-	width: 100%;
-	font-size: 1.65em;
 
-	li {
-		margin-right: 1em;
-		text-align: right;
-	}
+footer {
+	padding-top: .5em;
 
+	i { transition: color 0.5s ease;
+		&:hover { color: @lightBlue; }
+    }
+
+    .social {
+		font-size: 1.65em;
+
+		li {
+			margin-right: 1em;
+			text-align: right;
+		}
 }
 
-}
 
 
 
@@ -1373,7 +1377,6 @@ footer .social {
 		margin-bottom: 4em;
 	}
 
-		#instafeed {
 
 
 
@@ -1392,17 +1395,7 @@ footer .social {
 		}
 	}
 }
-footer{
-		float: right;
-		  i {
-         
-            transition: color 0.5s ease;
-       
-            &:hover {
-                color: #3f51b5;
-            }
-        }
-	}
+
 
 
 }
@@ -1442,20 +1435,17 @@ footer{
 
 
 
-@media(max-width: 940px){
-	
-}
-
 @media(max-width: 735px){
 	 #instafeed{
-	.instagram-item {
-		width: 50%;
-		&:nth-child(5),&:nth-child(6),&:nth-child(7),&:nth-child(8),&:nth-child(9),&:nth-child(10){
-     		display: none;
-    		}
-	
-	}
+		.instagram-item {
+			width: 50%;
 
+			&:nth-child(5),&:nth-child(6),
+			&:nth-child(7),&:nth-child(8),
+			&:nth-child(9),&:nth-child(10) {
+     			display: none;
+    		}
+	}
 }
 
 }
@@ -1574,6 +1564,7 @@ footer{
 		
 		}
 	}
+
 	footer{
 		float: none;
 		.fa{
