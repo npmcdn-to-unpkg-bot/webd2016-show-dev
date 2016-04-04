@@ -153,6 +153,7 @@ input {
 .header {
   position: static;
   width: 100%;
+  margin-top: 1em;
 }
 nav {
   display: inline-block;
@@ -169,6 +170,13 @@ nav ul li.active {
   border: 1px solid;
   border-radius: 2pt;
   padding: 0 10px;
+  -webkit-transition: color .5s ease;
+  -moz-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease;
+}
+nav ul li.active:hover {
+  border-color: #00acd3;
 }
 nav ul a {
   color: black;
@@ -226,6 +234,15 @@ nav ul.headerNav li {
   float: right;
   margin-right: 5%;
 }
+nav ul a {
+  -webkit-transition: color .5s ease;
+  -moz-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease;
+}
+nav ul a:hover {
+  color: #00acd3;
+}
 .row-nav {
   display: inline-block;
   width: 100%;
@@ -280,6 +297,9 @@ article#right-box-intro div#header-container a {
   color: #ffffff;
   border: transparent;
   border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
 }
 article#right-box-intro div#header-container a:last-child {
   background-color: #00acd3;
@@ -305,6 +325,34 @@ article#right-box-intro div#header-container a:last-child {
     width: 50%;
     margin: 0 auto;
   }
+}
+article#right-box-intro div#header-container a:before,
+article#right-box-intro div#header-container a:last-child:before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  left: 100%;
+  margin: -15px 0 0 1px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #603279;
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transform: scale3d(1, 2, 1);
+  transform: scale3d(1, 2, 1);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+}
+article#right-box-intro div#header-container a:last-child:before {
+  background: #2a909b;
+}
+article#right-box-intro div#header-container a:hover::before,
+article#right-box-intro div#header-container a:last-child:hover::before {
+  -webkit-transform: scale3d(9, 9, 1);
+  transform: scale3d(9, 9, 1);
 }
 article#left-box-intro {
   padding: 2.5%;
@@ -391,6 +439,8 @@ section#about h1 {
   margin-top: 20%;
   font-size: 2em;
   color: #8852a0;
+  position: relative;
+  z-index: 1000;
   font-weight: bold;
 }
 @media only screen and (max-width: 529px) {
@@ -1019,6 +1069,12 @@ ul#social-profiles li {
 #rsvp-info .btn:hover::before {
   -webkit-transform: scale3d(9, 9, 1);
   transform: scale3d(9, 9, 1);
+}
+#rsvp-info h5 {
+  margin-top: 3.5em;
+}
+#rsvp-info h5 a {
+  color: #00acd3;
 }
 /* Instagram feed ------------------------------------- */
 #instafeed {

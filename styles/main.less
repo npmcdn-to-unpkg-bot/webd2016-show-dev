@@ -177,6 +177,7 @@ input {
 .header {
 	position: static;
 	width: 100%;
+	margin-top: 1em;
 }
 .logo {
 
@@ -194,6 +195,14 @@ nav {
 			border: 1px solid;
 			border-radius: 2pt;
 			padding: 0 10px;
+			-webkit-transition: color .5s ease;
+		    -moz-transition: color .5s ease;
+		    -o-transition: color .5s ease;
+		    transition: color .5s ease;
+		}
+
+		&.active:hover {
+			border-color: @lightBlue;
 		}	
     }
     a {
@@ -247,6 +256,17 @@ nav {
   			float: right;
   			margin-right: 5%;
   			}
+		}
+
+		a {
+			-webkit-transition: color .5s ease;
+		    -moz-transition: color .5s ease;
+		    -o-transition: color .5s ease;
+		    transition: color .5s ease;
+		}
+
+		a:hover {
+			color: @lightBlue;
 		}
   	}
 }
@@ -314,6 +334,12 @@ article#right-box-intro{
 			color: @white;
 			border: transparent;
 			border-radius: 4px;
+
+			position: relative;
+			overflow: hidden;
+			z-index: 0;
+			
+
 			&:last-child {
 				background-color: @lightBlue;
 				@media @mobile {
@@ -331,6 +357,38 @@ article#right-box-intro{
 				width: 50%;
 			  	margin: 0 auto;
 		  	}
+		}
+
+		a:before,
+		a:last-child:before {
+		    content: '';
+		    z-index: -1;
+		    position: absolute;
+		    // top: 50%;
+		    left: 100%;
+		    margin: -15px 0 0 1px;
+		    width: 30px;
+		    height: 30px;
+		    border-radius: 50%;
+		    background: #603279;
+		    -webkit-transform-origin: 100% 50%;
+		    transform-origin: 100% 50%;
+		    -webkit-transform: scale3d(1, 2, 1);
+		    transform: scale3d(1, 2, 1);
+		    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+		    transition: transform 0.5s, opacity 0.5s;
+		    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+		    transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+			}
+			
+		a:last-child:before {
+			background: @darkBlue;
+		}
+		a:hover::before,
+		a:last-child:hover::before {
+
+		    -webkit-transform: scale3d(9, 9, 1);
+		    transform: scale3d(9, 9, 1);
 		}	
 	}
 }
@@ -426,6 +484,8 @@ section#about {
 		margin-top: 20%;
 		.px2em( 32, 16 );
 		color: @lightPurple;
+		position: relative;
+		z-index: 1000;
 		
 		font-weight: bold;
 		@media @mobile {
@@ -1142,6 +1202,14 @@ ul {
 
     -webkit-transform: scale3d(9, 9, 1);
     transform: scale3d(9, 9, 1);
+	}
+
+	h5 {
+		margin-top: 3.5em;
+
+		a {
+			color: @lightBlue;
+		}
 	}
 }
 
