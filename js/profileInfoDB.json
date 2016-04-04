@@ -1,6 +1,7 @@
 {
 	"students": [{
       "name": "Anna Safronova",
+      "avatar":"images/students/anna-1.jpg",
       "title": "Interactive Developer",
       "email":"anna@safronovs.com",
       "website": "www.annsafronova.com",
@@ -13,7 +14,7 @@
       "bio": "I am a creative front-end developer focused on constant learning and solving problems. In my working process, I use user-centered approach and I am dedicated to a project from A to B. I can design and build interactive interfaces or do user research or even create a business plan with the same level of curiosity and enthusiasm.  My goal is to create products with intuitive interfaces that make users experience easier and their lives better.  I am open to new opportunities and can’t wait to collaborate on your great project, check out my portfolio and drop me a line!",
       "social":[{
         "facebook":"",
-        "twitter":"@annasafronov",
+        "twitter":"https://twitter.com/annasafronov",
         "behance":"",
         "instagram":"",
         "linkedin":"https://ca.linkedin.com/in/annsafronova",
@@ -23,6 +24,7 @@
     },
   	{
       "name": "David Ho",
+      "avatar":"images/students/david-1.jpg",
       "title": "Web Developer",
       "email":"hi@davidho.ca",
       "website": "www.davidho.ca",
@@ -45,6 +47,7 @@
     },
     {
       "name": "Dean Kim",
+      "avatar":"images/students/dean-1.jpg",
       "title": "UX / UI Designer",
       "email":"lemkyj@gmail.com",
       "website": "www.deank.ca",
@@ -57,7 +60,7 @@
       "bio":"I’m a student in Web design & Interactive media and also working as a contrct UI/UX designer at Altus Dynamics. I am a hybrid guy with Front-end, UI, and UX design skills. I never get tired of learning new technologies. I’m always thrilled to learn new things. I’m also an enthusiastic storyteller, who love to express ideas through design, game, sports, music, etc. Recently I published a story based novel game through Steam platform. Please have a look, if you are interested!",
       "social":[{
         "facebook":"",
-        "twitter":"@code_DeanK",
+        "twitter":"https://twitter.com/code_DeanK",
         "behance":"",
         "instagram":"",
         "linkedin":"https://ca.linkedin.com/in/codedk",
@@ -67,6 +70,7 @@
     },
     {
       "name": "Dominik Sosin",
+      "avatar":"images/students/dominik-1.jpg",
       "title": "Interactive Developer",
       "email":"hello@dominiksosin.com",
       "website": "www.dominiksosin.com",
@@ -79,7 +83,7 @@
       "bio":"Hello.  I’m a web developer with a passion of building great products and learning new skills. I am always on the lookout for new challenges and creating solutions to overcome them.  I enjoy building elegant and responsive websites, like to play around with mobile applications, video animations and games.  I have a diverse set of skills, ranging from HTML5, CSS3, Javascript, Mobile Optimization, Wordpress to UX/UI.  In addition to bringing great designs to life I enjoy spending time outdoors fishing, camping, working out in the gym and spending quality time with friends.",
       "social":[{
         "facebook":"",
-        "twitter":"@DominorS",
+        "twitter":"https://twitter.com/DominorS",
         "behance":"",
         "instagram":"",
         "linkedin":"https://linkedin.com/in/sosind",
@@ -89,10 +93,11 @@
     },
     {
       "name": "Dowattie Nandkumar",
+      "avatar":"images/students/dowattie-1.jpg",
       "title": "Interactive Designer / Web Developer",
       "email":"dnandkumar@gmail.com",
       "website": "www.heydee.ca",
-      "art1": "images/art/dee1_blossom-education-site.png",
+      "art1": "images/art/dee1_blossom-education-site.jpg",
       "art2": "images/art/dee2_alphi-disney.jpg",
       "art3": "images/art/dee3_ttc-redesign.jpg",
       "art1link": "",
@@ -101,7 +106,7 @@
       "bio":"I want to solve problems through design. I am a front-end web developer and graphic designer. When designing a solution I like to take a minimalist approach and clearly define both purpose and product. There’s always something more to learn; so I’m constantly improving my skills to grow. I like dabbling in motion graphics, illustration and photography. Currently I’m exploring mobile applications and if I’m not doing something design related I’m catching up on pop culture, comics and netflix.",
       "social":[{
         "facebook":"",
-        "twitter":"@dowattie",
+        "twitter":"https://twitter.com/dowattie",
         "behance":"",
         "instagram":"@dnandkumar",
         "linkedin":"",
@@ -111,6 +116,7 @@
     },
     {
       "name": "Franky Sanche",
+      "avatar":"images/students/franky-1.jpg",
       "title": "Interactive Designer",
       "email":"",
       "website": "francoissanche.ca/portfolio",
@@ -123,7 +129,7 @@
       "bio":"My name is Francois Sanche.  I am a bi-lingual creative who draws from the worlds of technology, visual design and animation.   I'm a designer who has formal education in creative fields such as illustration, animation, industrial design, web development and interactive media.  If you are looking for someone to help tell your story, I'm your guy.  I'm interested in working on projects related to the following topics: Illustration, Web Design, UX design, Front-End development for the web and mobile technologies, Interactive technologies, Brand and Identity development, Interactive media, Motion graphics, Prop Design and Furniture Design.",
       "social":[{
         "facebook":"",
-        "twitter":"@frankyNomad",
+        "twitter":"https://twitter.com/frankyNomad",
         "behance":"",
         "instagram":"@franky_nomad",
         "linkedin":"",
@@ -133,6 +139,7 @@
     },
     {
       "name": "Fumi Fujita",
+      "avatar":"images/students/fumi-1.jpg",
       "title": "Web Developer / UX Designer",
       "email":"me@fumifujita.com",
       "website": "www.fumifujita.com",
@@ -145,7 +152,7 @@
       "bio":"I am a front-end developer / UI designer, and expected to graduate Humber College in 2016. I previously studied web design in Japan, focusing on HTML4, CSS 2 etc. Since I moved to Toronto in 2006, I never stopped practicing and working on my design techniques. When I heard about new ways to design websites for mobile devices, I decided it was a good time to upgrade my skills at college. I get excited when I design cool, new websites and enjoy coding. Once I graduate I want to get a job with a web design firm.",
       "social":[{
         "facebook":"https://www.facebook.com/fumifujitaweb",
-        "twitter":"@fumifujita",
+        "twitter":"https://twitter.com/fumifujita",
         "behance":"",
         "instagram":"",
         "linkedin":"https://ca.linkedin.com/in/fujitafumi",
@@ -155,6 +162,7 @@
     },
     {
       "name": "Hazel Llanes",
+        "avatar":"images/students/hazel-1.jpg",
       "title": "Interactive Designer",
       "email":"hello@hzl.ca",
       "website": "www.hzl.ca",
@@ -167,7 +175,7 @@
       "bio":"I'm an interaction designer that likes tinkering with code and I care about the small details that impact a person's experience on a website or app in meaningful ways. With every new project, I try my best to answer these questions: “How does this work?”, “Who is this for?” and “How can I make this better?” When I'm not creating new things on the internet, I'm listening to podcasts, reading fantasy books, and walking my dog Kobe.",
       "social":[{
         "facebook":"",
-        "twitter":"@hzlllns",
+        "twitter":"https://twitter.com/hzlllns",
         "behance":"",
         "instagram":"@hzlllns",
         "linkedin":"https://www.linkedin.com/in/hazelllanes ",
@@ -177,6 +185,7 @@
     },
     {
       "name": "Jupiter Winters",
+      "avatar":"images/students/jupiter-1.jpg",
       "title": "User Behaviour / Experience Designer",
       "email":"",
       "website": "www.jupit3r.com",
@@ -189,7 +198,7 @@
       "bio":"I've always been fascinated with technology, and aspired to work with software. But during my time at humber and learning so many aspects of web design and development, I found my passion as a user behaviour & experience designer, and making enriching and beneficial environments for all users.",
       "social":[{
         "facebook":"",
-        "twitter":"@jupit3r_",
+        "twitter":"https://twitter.com/jupit3r_",
         "behance":"",
         "instagram":"@jupit3r",
         "linkedin":"https://ca.linkedin.com/in/jupit3r",
@@ -199,9 +208,10 @@
     },
     {
       "name": "Kevin Wernicke",
+        "avatar":"images/students/kevin-1.jpg",
       "title": "Interactive Developer / Interactive Designer",
       "email":"",
-      "website": "",
+      "website": "www.kevinwernicke.com",
       "art1": "images/art/kevin1.png",
       "art2": "images/art/kevin2_mockup2.jpg",
       "art3": "",
@@ -211,7 +221,7 @@
       "bio":"My name is Kevin Wernicke I am a web designer and front-end developer. I have a yearning to work with UI & UX experiences because I love to design and create a more suitable solution for users.  I aspire to work with a business or startup to gain more experience in my field and eventually start up my own startup or create my own web design and development agency.",
       "social":[{
         "facebook":"",
-        "twitter":"@FFFInquisition1",
+        "twitter":"https://twitter.com/FFFInquisition1",
         "behance":"",
         "instagram":"",
         "linkedin":"https://ca.linkedin.com/in/kevinwernicke",
@@ -221,6 +231,7 @@
     },
     {
       "name": "Kristen Nakamura",
+        "avatar":"images/students/kristin-1.jpg",
       "title": "Interactive Developer",
       "email":"hello@kristennakamura.com",
       "website": "www.kristennakamura.com",
@@ -233,7 +244,7 @@
       "bio":"I am a psychology undergraduate turned designer and developer turned all around creative problem-solver. As a consumer, I love when a product or experience understands my needs, so I try to strive for that in everything I design, and everything I code.  I still love learning about evolutionary psychology and human behaviour and how much of it shapes successful design.  When I’m not tinkering with the web, I’m exploring it. I love to read articles, play video games, and watch Netflix. On occasion, I like leaving my screen to play board games, read sci fi, and explore Toronto via food.",
       "social":[{
         "facebook":"",
-        "twitter":"@kristenakamura",
+        "twitter":"https://twitter.com/kristenakamura",
         "behance":"",
         "instagram":"@krist.n",
         "linkedin":"https://www.linkedin.com/in/kristennakamura",
@@ -243,6 +254,7 @@
     },
     {
       "name": "Kyle Binger",
+        "avatar":"images/students/kyle-1.jpg",
       "title": "Web Developer / UX Designer",
       "email":"kyle.a.binger@gmail.com",
       "website": "www.kylebinger.com",
@@ -255,7 +267,7 @@
       "bio":"Here at Humber I’ve spent three years refining my skills of development and User Interface Design. I believe that being able to code a product is not enough, if it lacks a unison with good user interface design, the product will fail.  I believe to be successful in this industry it is important to always be learning, as standards are always evolving. To me, being able to experiment by breaking apart things is exciting and leads to innovation.  After graduation I aim to work with a company or start-up that enjoys solving unique problems with intuitive tech solutions.",
       "social":[{
         "facebook":"",
-        "twitter":"@Kyle_Binger",
+        "twitter":"https://twitter.com/Kyle_Binger",
         "behance":"",
         "instagram":"",
         "linkedin":"https://ca.linkedin.com/in/kylebinger",
@@ -265,6 +277,7 @@
     },
     {
       "name": "Lisa Harvey",
+        "avatar":"images/students/lisa-1.jpg",
       "title": "UX Designer",
       "email":"hello@lisaharvey.co",
       "website": "www.lisaharvey.co",
@@ -277,7 +290,7 @@
       "bio":"I have always been curious about human interaction, behaviour and emotion. This is where my love of user experience began. My ability to empathize and see things from many perspectives allows me to facilitate great design that isn’t just pretty, it works. Critical thinking and attention to detail are skills that make me a valuable asset to any team.  Some of the things that make me warm and fuzzy inside are organizing things, arts & crafts, lists, and burritos.",
       "social":[{
         "facebook":"",
-        "twitter":"@lisaharv_",
+        "twitter":"https://twitter.com/lisaharv_",
         "behance":"",
         "instagram":"@lisaharv",
         "linkedin":"https://ca.linkedin.com/in/lisaharv",
@@ -287,6 +300,7 @@
     },
     {
       "name": "Murata Gulube",
+        "avatar":"images/students/murata-1.jpg",
       "title": "",
       "email":"",
       "website": "",
@@ -309,9 +323,10 @@
     },
     {
       "name": "Sameet Dhaliwal",
+        "avatar":"images/students/sameet-1.jpg",
       "title": "",
       "email":"",
-      "website": "www.sameetd.ca",
+      "website": "http://www.sameetd.ca",
       "art1": "",
       "art2": "",
       "art3": "",
@@ -321,7 +336,7 @@
       "bio":"As a front-end developer and designer, my objective is to create visually appealing and usable interactive websites. I enjoy working on projects that involve UX/UI, mobile app design, branding and problem solving. I also enjoy learning new exciting things that will help me develope my skills and grow as a professional. I’m always on the lookout for new opportunities and collaborations, so feel free to contact me and let’s build something together!",
       "social":[{
         "facebook":"",
-        "twitter":"@SameetDha",
+        "twitter":"https://twitter.com/ameetDha",
         "behance":"",
         "instagram":"",
         "linkedin":"https://www.linkedin.com/in/sameet-dhaliwal-37711656?trk=nav_responsive_tab_profile",
@@ -331,6 +346,7 @@
     },
     {
       "name": "Sandrow Townsend",
+        "avatar":"images/students/sandrow-1.jpg",
       "title": "Interactive Developer / Graphic Designer",
       "email":"sandrow.townsend@gmail.com",
       "website": "www.sandrow.com",
@@ -343,7 +359,7 @@
       "bio":"Highly motivated web / graphic designer with a strong passion for design. Always being an artistic guy, I continue to have a strong interest in the design world. After all my experiences at design schools I've learned that the reason behind the design is more important than how it looks, that's why I first have a mindset of purpose before I start any task.",
       "social":[{
         "facebook":"",
-        "twitter":"@SandrowTownsend",
+        "twitter":"https://twitter.com/SandrowTownsend",
         "behance":"@sandrow",
         "instagram":"@its.sandman",
         "linkedin":"",
@@ -353,6 +369,7 @@
     },
     {
       "name": "Shawn Santiago",
+        "avatar":"images/students/shawn-1.jpg",
       "title": "Web Developer",
       "email":"santiagoshawn@gmail.com",
       "website": "www.shawnsantiago.ca",
@@ -365,7 +382,7 @@
       "bio":"Hi my name is Shawn, I’m a web developer. I spend my day experimenting with cool new JavaScript libraries like Angular and React, preprocessor like Sass and Less, and inhaling a wide variety of potentially useless information through various internet forums. I’m curious, and I enjoy work that challenges me to learn something new.  I do my best to stay on top of changes in the web industry so that I can meet challenges with tools well suited to the job at hand.",
       "social":[{
         "facebook":"",
-        "twitter":"@Shwne",
+        "twitter":"https://twitter.com/hwne",
         "behance":"",
         "instagram":"",
         "linkedin":"https://ca.linkedin.com/in/shawn-santiago-979b5687",
@@ -375,6 +392,7 @@
     },
     {
       "name": "Sowjanya Sunnappu",
+        "avatar":"images/students/sowjanya-1.jpg",
       "title": "Interactive Developer / UX Designer",
       "email":"sowjanya1232@gmail.com",
       "website": "www.sowjanya.ca",
@@ -387,7 +405,7 @@
       "bio":"Hello, my name is Sowjanya Sunnappu, a front-end developer and freelance UI/ UX Designer based in Toronto. I enjoy crafting simple yet beautiful digital experiences that serve as usable solutions.",
       "social":[{
         "facebook":"",
-        "twitter":"@sowjanya2802",
+        "twitter":"https://twitter.com/sowjanya2802",
         "behance":"",
         "instagram":"",
         "linkedin":"https://ca.linkedin.com/in/sowjanya-sunnappu-08216920",
@@ -397,19 +415,20 @@
     },
     {
       "name": "Wes Francis",
+        "avatar":"images/students/wes-1.jpg",
       "title": "Interactive Developer",
       "email":"wdean.francis@gmail.com",
       "website": "www.wesfrancis.com",
       "art1": "images/art/wes1_wesfrancis.png",
       "art2": "images/art/wes2_mmc.png",
       "art3": "images/art/wes3_thoughtbox.png",
-      "art1link": "www.wesfrancis.com",
-      "art2link": "www.mmcarchitects.ca",
+      "art1link": "http://www.wesfrancis.com",
+      "art2link": "http://www.mmcarchitects.ca",
       "art3link": "http://www.wesfrancis.com/projects/thoughtbox",
       "bio":"Coming from Graphic Design background has been a rewarding and challenging transition towards a career in interactive media.  My studies and client projects have provided me with critical thinking skills to design user interfaces that solve tangible problems for a broad set of users and experiences.  I’ve also really enjoyed the collaborative nature of my industry, especially the freedom to experiment with changing technology and simultaneously having to test all my assumptions about what’s possible.  I’ll continue sharpening my skills, and to engage and help others build products users truly care about. Feel free to drop me a line!",
       "social":[{
         "facebook":"",
-        "twitter":"@wslydean",
+        "twitter":"https://twitter.com/wslydean",
         "behance":"",
         "instagram":"",
         "linkedin":"https://ca.linkedin.com/in/wesley-francis-71b9958a",
@@ -419,6 +438,7 @@
     },
     {
       "name": "Yaw Agyabeng",
+        "avatar":"images/students/yaw-1.jpg",
       "title": "Interactive Developer / Graphic Designer",
       "email":"yawyawboakye@gmail.com",
       "website": "www.yboakye.com",
@@ -431,7 +451,7 @@
       "bio":"My name is Yaw Boakye and I am a front-end web developer / designer and I have a strong understanding of design. // So a little about myself, I enjoy coding HTML and CSS; on my off time. Before entering this program I obtained a job as a graphic designer working in house. With that experience along with my passion of front-end coding, I am now ready to continue my journey as a true designer.",
       "social":[{
         "facebook":"",
-        "twitter":"@YawBo",
+        "twitter":"https://twitter.com/YawBo",
         "behance":"",
         "instagram":"",
         "linkedin":"",

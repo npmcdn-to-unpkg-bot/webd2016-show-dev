@@ -110,7 +110,7 @@ button,
   height: 50px;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  color: #ffffff;
+  color: #FFFFFF;
   font-weight: bold;
   padding-left: 25px;
   padding-right: 25px;
@@ -120,7 +120,7 @@ button,
 }
 input {
   height: 50px;
-  color: #ffffff;
+  color: #FFFFFF;
   font-family: 'Montserrat';
   text-transform: uppercase;
   border-radius: 5px;
@@ -267,7 +267,7 @@ article#right-box-intro div#header-container div#paragraph-top p {
 }
 article#right-box-intro div#header-container a {
   background-color: #8852a0;
-  color: #ffffff;
+  color: #FFFFFF;
   border: transparent;
   border-radius: 4px;
 }
@@ -421,22 +421,53 @@ section#about #paragraph p:last-child {
 #gallery .selection li {
   display: inline-block;
   padding: 6px 5px 4px 5px;
+  border: 1px solid transparent;
+  border-radius: 4px;
   font-size: 13pt;
   font-weight: bold;
   margin-right: 15px;
   cursor: pointer;
+  color: #FFFFFF;
+}
+#gallery .selection li.show-all {
+  color: black;
+}
+#gallery .selection li.show-all:hover {
+  color: white;
+  background-color: black;
+}
+#gallery .selection li.show-all.active {
+  border-color: black;
 }
 #gallery .selection li.show-dev {
   color: #793f98;
 }
+#gallery .selection li.show-dev:hover {
+  color: white;
+  background-color: #793f98;
+}
+#gallery .selection li.show-dev.active {
+  border-color: #793f98;
+}
 #gallery .selection li.show-des {
-  color: #2a909b;
+  color: #00acd3;
+}
+#gallery .selection li.show-des:hover {
+  color: white;
+  background-color: #00acd3;
+}
+#gallery .selection li.show-des.active {
+  border-color: #00acd3;
 }
 #gallery .selection li.show-hyb {
   color: #89A0EC;
 }
-#gallery .selection li.active {
-  text-decoration: underline;
+#gallery .selection li.show-hyb:hover {
+  color: white;
+  background-color: #89A0EC;
+}
+#gallery .selection li.show-hyb.active {
+  border-color: #89A0EC;
 }
 #gallery .grid {
   width: 100%;
@@ -449,6 +480,7 @@ section#about #paragraph p:last-child {
 #gallery .grid-item {
   cursor: pointer;
   float: left;
+  visibility: visible;
   width: 16.666666667%;
   position: relative;
   display: inline-block;
@@ -467,7 +499,13 @@ section#about #paragraph p:last-child {
   /*padding-right: 10px;*/
 }
 #gallery .grid-item.dim {
-  opacity: .4;
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
 }
 #gallery .grid-item.highlight {
   opacity: 1;
@@ -580,7 +618,7 @@ section#about #paragraph p:last-child {
 #gallery .grid-item .profileInfo hr {
   border: none;
   height: 2px;
-  background: #ffffff;
+  background: #FFFFFF;
   width: 74px;
   margin: 0;
   margin-bottom: 4px;
@@ -590,7 +628,7 @@ section#about #paragraph p:last-child {
   left: 10px;
 }
 #gallery .grid-item .profileInfo p {
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 9pt;
 }
 #gallery .grid-item .profileInfo .title {
@@ -654,7 +692,6 @@ ul#social-profiles li {
 .modal-container .modal-view .modal {
   position: relative;
   left: -8px;
-  min-height: 675px;
   /*border: 2px solid blue;*/
   margin: 0 auto;
   padding: 0;
@@ -678,7 +715,7 @@ ul#social-profiles li {
   transition: 0.4s all cubic-bezier(0.3, 1, 0.5, 1);
 }
 .modal-container .modal-view .modal header {
-  height: 147px;
+  min-height: 147px;
   margin-top: -19px;
   background: -moz-linear-gradient(45deg, rgba(136, 82, 160, 0.7) 0%, rgba(0, 172, 211, 0.7) 100%);
   /* FF3.6-15 */
@@ -694,10 +731,11 @@ ul#social-profiles li {
   color: white;
 }
 .modal-container .modal-view .modal header p {
-  display: inline-block;
   position: relative;
   top: -20px;
-  left: 80px;
+  padding-left: 80px;
+  display: block;
+  margin-bottom: 10px;
 }
 .modal-container .modal-view .modal header ul {
   position: relative;
@@ -726,8 +764,14 @@ ul#social-profiles li {
   color: white;
   background: rgba(100, 100, 100, 0.5);
 }
+.modal-container .modal-view .modal .profile-block {
+  width: 100%;
+  position: absolute;
+  background: #E8E8E8;
+  margin-bottom: 70px;
+}
 .modal-container .modal-view .modal .bio {
-  background: #e8e8e8;
+  background: #E8E8E8;
   height: 100%;
   z-index: inherit;
   padding: 30px;
@@ -754,6 +798,10 @@ ul#social-profiles li {
 .modal-container .modal-view .modal .work-grid {
   background: #f3f3f3;
   padding: 20px;
+}
+.modal-container .modal-view .modal .work-grid .image {
+  display: block;
+  margin-bottom: 10px;
 }
 .modal-container .modal-view .modal .bio img,
 .modal-container .modal-view .modal .work-grid img {
@@ -808,10 +856,10 @@ ul#social-profiles li {
   background: rgba(47, 47, 47, 0.92);
 }
 .modal-container .modal-view .modal .profile-select-buttons li:nth-of-type(1) {
-  float: left;
+  /*float: left;*/
 }
 .modal-container .modal-view .modal .profile-select-buttons li:nth-of-type(2) {
-  float: right;
+  /*float: right;*/
   text-align: right;
 }
 /* Map ------------------------------------------ */
@@ -840,7 +888,7 @@ ul#social-profiles li {
   right: 0;
   bottom: 10em;
   background-color: #00acd3;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .map-section .container {
   background-color: white;
@@ -858,7 +906,7 @@ ul#social-profiles li {
 }
 .map-section .container a.btn {
   width: 170px;
-  color: #ffffff;
+  color: #FFFFFF;
   margin-top: 2em;
 }
 .map-section .show-info {
@@ -886,7 +934,7 @@ ul#social-profiles li {
   width: 170px;
   margin-top: 2em;
   background-color: #793f98;
-  color: #ffffff;
+  color: #FFFFFF;
   z-index: 0;
 }
 #rsvp-info .btn::before {
@@ -1050,6 +1098,12 @@ footer footer .social li {
   }
 }
 @media (max-width: 640px) {
+  #gallery .container {
+    width: 95%;
+  }
+  #gallery .selection li {
+    margin-right: 0;
+  }
   .map-section .container {
     padding: 2em;
   }
@@ -1074,13 +1128,25 @@ footer footer .social li {
   }
 }
 @media (max-width: 450px) {
+  #gallery .grid-item {
+    width: 49.99999%;
+  }
   .modal-container .modal-view .modal header ul {
     float: none;
     bottom: 23px;
     margin-left: 80px;
   }
+  .modal-container .modal-view .modal .profile-select-buttons li {
+    padding: 20px 10px;
+  }
   .modal-container .modal-view .modal .profile-select-buttons li span {
     font-size: 13px;
+  }
+  .modal-container .modal-view .modal .profile-select-buttons li:nth-of-type(1) span {
+    float: right;
+  }
+  .modal-container .modal-view .modal .profile-select-buttons li:nth-of-type(2) span {
+    float: left;
   }
   #instafeed .instagram-item {
     width: 100%;
