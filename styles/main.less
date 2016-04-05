@@ -24,7 +24,7 @@
 //font: italic small-caps bold 13px/150% Arial, Helvetica, sans-serif;
 @h1:  bold 2em "Montserrat", Arial, Helvetica, sans-serif;
 @h2:  bold 1.75em "Montserrat", Arial, Helvetica, sans-serif;
-@h3:  bold 1.35em "Montserrat", Arial, Helvetica, sans-serif;
+@h3:  normal 1.35em "Montserrat", Arial, Helvetica, sans-serif;
 @h4:  bold 1.05em "Montserrat", Arial, Helvetica, sans-serif;
 @p:   normal 1em "Lato", sans-serif;
 
@@ -94,6 +94,8 @@ body {
 	width: 100%;
 	font-family: @montserrat;
 	font-size: 17px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -1088,15 +1090,18 @@ ul {
 
 			    li {
 			    	display: inline-block;
-		    	    width: 49.33333%;
-			    	background: black;
+		    	    width: 50%;
+			    	background:rgba(47, 47, 47, 0.92);
 			    	/*border:1px solid red;*/
 			    	padding: 23px 40px;
 			    	color: white;
 			    	cursor: pointer;
 			    	position: absolute;
+					height: 100%;
+					text-align: center;
+
 			    	&:hover {
-			    		background:rgba(47, 47, 47, 0.92);
+			    		background:black;
 			    	}
 					
 					&:nth-of-type(1){
@@ -1104,12 +1109,21 @@ ul {
 			    		span {
 							margin-left: 12%;
 						}
+						i {
+							position: fixed;
+							left: 12px;
+						}
 			    	}
 			    	&:nth-of-type(2){
+			    		border-left: 1px solid black;
 			    		right: 0;
-			    		text-align: right;
+			    	
 			    		span {
 							margin-right: 12%;
+						}
+						i {
+							position: fixed;
+							right: 12px;
 						}
 			    	}
 

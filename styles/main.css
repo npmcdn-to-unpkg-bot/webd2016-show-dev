@@ -69,6 +69,8 @@ body {
   width: 100%;
   font-family: 'Montserrat', sans-serif;
   font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .container {
   width: 80%;
@@ -84,7 +86,7 @@ h2 {
   letter-spacing: 0.075em;
 }
 h3 {
-  font: bold 1.35em "Montserrat", Arial, Helvetica, sans-serif;
+  font: normal 1.35em "Montserrat", Arial, Helvetica, sans-serif;
 }
 h4 {
   font: bold 1.05em "Montserrat", Arial, Helvetica, sans-serif;
@@ -960,16 +962,18 @@ ul#social-profiles li {
 }
 .modal-container .modal-view .modal .profile-select-buttons li {
   display: inline-block;
-  width: 49.33333%;
-  background: black;
+  width: 50%;
+  background: rgba(47, 47, 47, 0.92);
   /*border:1px solid red;*/
   padding: 23px 40px;
   color: white;
   cursor: pointer;
   position: absolute;
+  height: 100%;
+  text-align: center;
 }
 .modal-container .modal-view .modal .profile-select-buttons li:hover {
-  background: rgba(47, 47, 47, 0.92);
+  background: black;
 }
 .modal-container .modal-view .modal .profile-select-buttons li:nth-of-type(1) {
   left: 0;
@@ -977,12 +981,20 @@ ul#social-profiles li {
 .modal-container .modal-view .modal .profile-select-buttons li:nth-of-type(1) span {
   margin-left: 12%;
 }
+.modal-container .modal-view .modal .profile-select-buttons li:nth-of-type(1) i {
+  position: fixed;
+  left: 12px;
+}
 .modal-container .modal-view .modal .profile-select-buttons li:nth-of-type(2) {
+  border-left: 1px solid black;
   right: 0;
-  text-align: right;
 }
 .modal-container .modal-view .modal .profile-select-buttons li:nth-of-type(2) span {
   margin-right: 12%;
+}
+.modal-container .modal-view .modal .profile-select-buttons li:nth-of-type(2) i {
+  position: fixed;
+  right: 12px;
 }
 /* Map ------------------------------------------ */
 .map-section {
