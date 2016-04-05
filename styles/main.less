@@ -1129,7 +1129,9 @@ ul {
 	width: 100%;
 	position: relative;
 	margin-top: 12em;
-	box-shadow: inset 0px 180px 230px #fff;
+	/*box-shadow: inset 0px 70px 100px white;*/
+	background:url('../images/map.png') center top;
+	background-size: cover;
 
 	p {
 		font-size: 1.3em;
@@ -1311,17 +1313,24 @@ ul {
 
 /* Footer --------------------------------------------- */
 footer{
-	
-footer .social {
-	width: 100%;
-	font-size: 1.65em;
+	.container {
+		>h3 {
+			float: left;
+		}
 
-	li {
-		margin-right: 1em;
-		text-align: right;
+		.social {
+			float: right;
+			/*width: 100%;*/
+			display: inline-block;
+			font-size: 1.2em;
+
+			li {
+				margin-right: 1em;
+				text-align: right;
+			}
+
+		}
 	}
-
-}
 
 }
 
@@ -1443,17 +1452,18 @@ footer .social {
 
 
 
-		img {
-			display: block;
-			// width: 60%;
-			margin: 0 auto;
+			img {
+				display: block;
+				// width: 60%;
+				margin: 0 auto;
 
+			}
 		}
 	}
-}
-footer{
-		float: right;
-		  i {
+
+	footer{
+		
+		i {
          
             transition: color 0.5s ease;
        
@@ -1636,11 +1646,26 @@ footer{
 		}
 	}
 	footer{
-		float: none;
-		.fa{
-			font-size: 1.3em;
-		}
+	    .container {
+	    	text-align: center;
+			>h3 {
+			    float: none;
+				text-align: center;
+
+			}
+
+			.social {
+				    float: none;
+				    font-size: 1.2em;
+				    margin: 0 auto;
+				    width: 90px;
+
+
+			}
+	    }
+
 	}
+
 }
 
 

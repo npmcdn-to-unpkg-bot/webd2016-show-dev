@@ -2,24 +2,24 @@ $(function() {
 
   var controller = new ScrollMagic.Controller();
 
-  TweenMax.set('#map', {opacity:0.1});
+  TweenMax.set('.map-section', {opacity:0.1});
   var mapScene = new TimelineMax()
               .add([
                 // TweenMax.to("#map", 200, {top: "125px", ease: Linear.easeNone}),
-                TweenMax.to("#map", 110, {opacity: "1", ease: Linear.easeNone}),
-    						TweenMax.to("#show-info", 420, {delay:"30", top: "-250", ease: Power2.easeOut}),
+                TweenMax.to(".map-section", 110, {opacity: "1", ease: Linear.easeNone}),
+    						TweenMax.to("#show-info", 420, {delay:"30", top: "-300", ease: Power2.easeOut}),
     						TweenMax.to(".direction-btn", 30, {delay:"80", bottom: "-=3.2em", ease: Power2.easeOut}),
               ]);
 
   var scene = new ScrollMagic.Scene({
-    triggerElement: '#map',
+    triggerElement: '.map-section',
     offset: 0,
     duration: 1000,
     triggerHook: 0.7
   })
   .setTween(mapScene)
   .addTo(controller);
-   scene.addIndicators({name: "mapScene Test"});
+   // scene.addIndicators({name: "mapScene Test"});
 
 
 });
