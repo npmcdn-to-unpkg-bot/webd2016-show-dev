@@ -320,90 +320,74 @@ $(window).scroll(function() {
 })();
 
 //set up the map
-// function initMap() {
-//   var myLatLng = {lat: 43.647054, lng: -79.403410};
-//   var latlng = new google.maps.LatLng(43.647054, -79.403410);
+function initMap() {
+  var myLatLng = {lat: 43.647054, lng: -79.403410};
+  var latlng = new google.maps.LatLng(43.647054, -79.403410);
 
   
 
-//   var map = new google.maps.Map(document.getElementById('map'), {
-//     zoom: 16,
-//     mapTypeId: google.maps.MapTypeId.ROADMAP,
-//     center: latlng,
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    center: latlng,
 
-//     //map settings
-//     disableDefaultUI: true,
-//     zoomControl: false,
-//   	scaleControl: false,
-//   	scrollwheel: false,
-//   	draggable: false,
+    //map settings
+    disableDefaultUI: true,
+    zoomControl: false,
+  	scaleControl: false,
+  	scrollwheel: false,
+  	draggable: false,
     
-//     //custom map theme - https://snazzymaps.com
+    //custom map theme - https://snazzymaps.com
 
-//     styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#f4f4f4"}]},
-//     {"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#e3e3e3"}]},
-//     {"featureType":"road","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":-37}]},
-//     {"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},
-//     {"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"off"},{"color":"#b2b2b2"}]},{"featureType":"transit","elementType":"geometry","stylers":
-//     [{"color":"#f3f3f3"}]}]
-//   });
+    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#f4f4f4"}]},
+    {"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#e3e3e3"}]},
+    {"featureType":"road","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":-37}]},
+    {"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},
+    {"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"off"},{"color":"#b2b2b2"}]},{"featureType":"transit","elementType":"geometry","stylers":
+    [{"color":"#f3f3f3"}]}]
+  });
 
-//   var marker = new google.maps.Marker({
-//     position: myLatLng,
-//     map: map,
-// 		icon: 'images/flux-marker.png',
-//     title: 'Hello World!'
-//   });
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+		icon: 'images/flux-marker.png',
+    title: 'Hello World!'
+  });
 
+  	var proj = null;
 
+	google.maps.Map.prototype.setCenterWithOffset= function(latlng, offsetX, offsetY) {
+	    var map = this;
+	    var ov = new google.maps.OverlayView();
+	    ov.onAdd = function() {
+	        var proj = this.getProjection();
+	        var aPoint = proj.fromLatLngToContainerPixel(latlng);
+	        // console.log(aPoint.y);
+	        // console.log(offsetY);
+	        aPoint.x = aPoint.x+offsetX;
+	        aPoint.y = aPoint.y+offsetY + 30; 
+	        map.setCenter(proj.fromContainerPixelToLatLng(aPoint));
+	    }; 
+	    ov.draw = function() {}; 
+	    ov.setMap(this); 
+	};
 
-// 	google.maps.Map.prototype.setCenterWithOffset= function(latlng, offsetX, offsetY) {
-// 	    var map = this;
-// 	    var ov = new google.maps.OverlayView();
-// 	    ov.onAdd = function() {
-// 	        var proj = this.getProjection();
-// 	        var aPoint = proj.fromLatLngToContainerPixel(latlng);
-// 	        aPoint.x = aPoint.x+offsetX;
-// 	        aPoint.y = aPoint.y+offsetY;
-// 	        map.setCenter(proj.fromContainerPixelToLatLng(aPoint));
-// 	    }; 
-// 	    ov.draw = function() {}; 
-// 	    ov.setMap(this); 
-// 	};
+	
 
-// 	var bounds = [
-// 	    {min:0,max:500,func: map.setCenterWithOffset(latlng, 0, -110)},
-// 	    {min:501,max:850,func: map.setCenterWithOffset(latlng, 0, -410)},
-// 	    {min:851,func: map.setCenterWithOffset(latlng, 0, -210)}
-// 	];
-
-// 	// define a resize function. use a closure for the lastBoundry determined.
-// 	var resizeFn = function(){
-// 	    var lastBoundry; // cache the last boundry used
-// 	    return function(){
-// 	        var width = window.innerWidth; // get the window's inner width
-// 	        var boundry, min, max;
-// 	        for(var i=0; i<bounds.length; i++){
-// 	            boundry = bounds[i];
-// 	            min = boundry.min || Number.MIN_VALUE;
-// 	            max = boundry.max || Number.MAX_VALUE;
-// 	            if(width > min && width < max 
-// 	               && lastBoundry !== boundry){
-// 	                lastBoundry = boundry;
-// 	                return boundry.func.call(boundry);            
-// 	            }
-// 	        }
-// 	    }
-// 	};
-// 	$(window).resize(resizeFn); // bind the resize event handler
-// 	$(document).ready(function(){
-// 	    $(window).trigger('resize'); // on load, init the lastBoundry
-// 	});
-// }
+	// define a resize function. use a closure for the lastBoundry determined.
+	var resizeFn = function(){
+	        var showInfoHeight = $('#show-info').outerHeight(true) + $('#show-info').position().top;
+	        var offsetY = ($('.map-section').outerHeight() / 2) - (showInfoHeight + (($('.map-section').outerHeight() - showInfoHeight) / 2));
+	         
+	        return map.setCenterWithOffset(latlng, 0, offsetY);
+	};
 
 
-
-
-
-
-
+	$(window).resize(resizeFn); // bind the resize event handler
+	$(document).ready(function(){
+		setTimeout(function() {
+	    	$(window).trigger('resize'); // on load, init the lastBoundry
+		}, 500);
+	});
+}
