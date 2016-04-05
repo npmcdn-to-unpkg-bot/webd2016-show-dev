@@ -989,8 +989,8 @@ ul#social-profiles li {
   width: 100%;
   position: relative;
   margin-top: 12em;
-  /*box-shadow: inset 0px 70px 100px white;*/
-  background: url('../images/map.png') center top;
+  box-shadow: inset 0px 50px 100px white;
+  background: url('../images/map.png') center 97%;
   background-size: cover;
 }
 .map-section p {
