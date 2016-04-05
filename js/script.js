@@ -4,13 +4,14 @@
 
 
 
-$(window).scroll(function() {
-	if ($( window ).width() > 1050) {
-	    var x = $(this).scrollTop();
-	    //console.log('50% ' + parseInt(-x / 6 + 100) + 'px' + ', 50% ' + parseInt(x / 2) + 'px');
-	    $('#about').css('background-position', '50% ' + parseInt(-x / 3 + 175 ) + 'px' + ', 50% ' + parseInt(x / 2) + 'px, center center');
-    }
-});
+	$(window).scroll(function() {
+		if ($( window ).width() > 1050) {
+		    var x = $(this).scrollTop();
+		    //console.log('50% ' + parseInt(-x / 6 + 100) + 'px' + ', 50% ' + parseInt(x / 2) + 'px');
+		    $('#about').css('background-position', '50% ' + parseInt(-x / 3 + 175 ) + 'px' + ', 50% ' + parseInt(x / 2) + 'px, center center');
+	    }
+	});
+
 	// Set up firebase url and variables
 	var index,avatar;
 	var url = new Firebase('https://humberinfluxdb.firebaseio.com/');
@@ -115,10 +116,6 @@ $(window).scroll(function() {
 
 
  	 	});
-
- 	//  	if ($('.work-grid').children('.image').length < 1) {
-		// 	$('.profile-block').addClass('no-pics');
-		// } 
 	}
 	
  	function getLink(link){
@@ -154,35 +151,21 @@ $(window).scroll(function() {
 		$('.modal .pic').attr('src',avatar);
 		$('.modal').addClass('slide-in');
 		
-		// Get index of item clicked in the DOM
-		// index = $(this).index();
-		
-		// if(index >= resultsLength-1){
-		// 	index = 19;
-		// 	getProfile(index);
-		// } else if(index <= 1){
-		// 	index = 0;
-		// 	getProfile(index);
-		// } 		
 		index = $(this).index();
-		getProfile(index);
+		getProfile(index)
 
 		
-
-		
-
-		
-	})
+	});
 
 	$('.next-profile').click(function(){
 		index = getNextIndex(index, resultsLength);
 		getProfile(index);
-	})
+	});
 
 	$('.last-profile').click(function(){
 		index = getPreviousIndex(index, resultsLength);
 		getProfile(index);
-	})
+	});
 
 
 	// Set up slider functionality
@@ -225,14 +208,6 @@ $(window).scroll(function() {
 		$('.modal').removeClass('slide-in');
 	});
 		
-	//set up instafeed.js
-	// var img_qty;
-	// var isStandardWindow = window.matchMedia("(min-width: 640px)").matches;
-	// if (window.matchMedia("(min-width: 640px)").matches) {
-	//   limit: 10,
-	// } else {
-	//   limit: 4,
-	// }
 
 	var feed = new Instafeed({
 	    accessToken: '1691322362.1677ed0.43cc655ed4884ffbb58bb593b185fb6a',
@@ -245,29 +220,6 @@ $(window).scroll(function() {
 		});
 	feed.run();	
 
-	// function checkPosition() {
- //    if (window.matchMedia('(max-width: 500px)').matches) {
- //        img_qty=4;
- //    } else {
- //        img_qty=10;
- //    }
-	// }
-
-	
- 
-
-	// var $grid = $('.grid').isotope({
-	//   masonry: {
-	//     // columnWidth: 50
-	//   }
-	// });
-
-	// $('.grid').isotope({
-	//   // options
-	//   itemSelector: '.grid-item',
-	//    isFitWidth: true
-	//   // layoutMode: 'fitRows'
-	// });
 
 	$('li.show-all').on('click', function(){
 		// $('.grid-item').removeClass('highlight');
@@ -318,3 +270,88 @@ $(window).scroll(function() {
 
 
 })();
+
+//set up the map
+function initMap() {
+  var myLatLng = {lat: 43.647054, lng: -79.403410};
+  var latlng = new google.maps.LatLng(43.647054, -79.403410);
+
+  
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    center: latlng,
+
+    //map settings
+    disableDefaultUI: true,
+    zoomControl: false,
+  	scaleControl: false,
+  	scrollwheel: false,
+  	draggable: false,
+    
+    //custom map theme - https://snazzymaps.com
+
+    styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#f4f4f4"}]},
+    {"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#e3e3e3"}]},
+    {"featureType":"road","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":-37}]},
+    {"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},
+    {"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"off"},{"color":"#b2b2b2"}]},{"featureType":"transit","elementType":"geometry","stylers":
+    [{"color":"#f3f3f3"}]}]
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+		icon: 'images/flux-marker.png',
+    title: 'Hello World!'
+  });
+
+  	var proj = null;
+
+	google.maps.Map.prototype.setCenterWithOffset= function(latlng, offsetX, offsetY) {
+	    var map = this;
+	    var ov = new google.maps.OverlayView();
+	    ov.onAdd = function() {
+	        var proj = this.getProjection();
+	        var aPoint = proj.fromLatLngToContainerPixel(latlng);
+	        // console.log(aPoint.y);
+	        // console.log(offsetY);
+	        aPoint.x = aPoint.x+offsetX;
+	        aPoint.y = aPoint.y+offsetY + 30; 
+	        map.setCenter(proj.fromContainerPixelToLatLng(aPoint));
+	    }; 
+	    ov.draw = function() {}; 
+	    ov.setMap(this); 
+	};
+
+	var bounds = [
+	    {min:0,max:500,func: map.setCenterWithOffset(latlng, 0, -110)},
+	    {min:501,max:850,func: map.setCenterWithOffset(latlng, 0, -410)},
+	    {min:851,func: map.setCenterWithOffset(latlng, 0, -210)}
+	];
+
+	// define a resize function. use a closure for the lastBoundry determined.
+	var resizeFn = function(){
+	    var lastBoundry; // cache the last boundry used
+	    return function(){
+	        var width = window.innerWidth; // get the window's inner width
+	        var boundry, min, max;
+	        for(var i=0; i<bounds.length; i++){
+	            boundry = bounds[i];
+	            min = boundry.min || Number.MIN_VALUE;
+	            max = boundry.max || Number.MAX_VALUE;
+	            if(width > min && width < max 
+	               && lastBoundry !== boundry){
+	                lastBoundry = boundry;
+	                return boundry.func.call(boundry);            
+	            }
+	        }
+	    }
+	};
+	$(window).resize(resizeFn); // bind the resize event handler
+	$(document).ready(function(){
+	    $(window).trigger('resize'); // on load, init the lastBoundry
+	});
+}
+
