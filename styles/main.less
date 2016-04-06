@@ -471,7 +471,7 @@ article#left-box-intro{
         
         #date {
             .px2em( 22, 16 );
-            font-size: 1.53vw;
+            
             @media @mobile {
 		  		.px2em( 22, 16 );
 			}
@@ -479,6 +479,9 @@ article#left-box-intro{
 				.px2em( 22, 16 );
 		  	}
 		  	@media @desktop {
+				font-size: 1.53vw;
+			}
+			@media @desktop-xl {
 				.px2em( 22, 16 );
 			}
 
@@ -498,13 +501,17 @@ article#left-box-intro{
 				.px2em( 49, 16 );
 		  	}
 		  	@media @desktop {
-				.px2em( 49, 16 );
+				font-size: 1.53vw;
 			}
+			@media @desktop-xl {
+				.px2em( 49, 16 );
+			} 
         }
     }
     #address {
         display: block;
         float: left;
+
         @media @mobile {
 		  	float: none;
 		}
@@ -521,7 +528,8 @@ article#left-box-intro{
             margin: 0;
             color: #666;
             .px2em( 18, 16 );
-            font-size: 1.25vw;
+            
+            font-weight: bold;
             line-height: 18pt;
             @media @mobile {
 		  		.px2em( 18, 16 );
@@ -530,6 +538,9 @@ article#left-box-intro{
 				.px2em( 18, 16 );
 		  	}
 		  	@media @desktop {
+				font-size: 1.25vw;
+			}
+			@media @desktop-xl {
 				.px2em( 18, 16 );
 			}
         }
