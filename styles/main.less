@@ -227,11 +227,14 @@ nav {
     }
     	&.headerNavMobile {
   			display: block;
-			
+		@media @desktop-xxl {
+	  		display: none;
+		}	
 	  	@media @desktop-xl {
 	  		display: none;
 		}
 		@media @desktop {
+			display: none;
 	  		li {
 	  			display: block;
 	  			float: none;
