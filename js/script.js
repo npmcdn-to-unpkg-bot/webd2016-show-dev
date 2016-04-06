@@ -324,34 +324,22 @@ function initMap() {
 	    ov.draw = function() {}; 
 	    ov.setMap(this); 
 	};
-
-	var bounds = [
-	    {min:0,max:500,func: map.setCenterWithOffset(latlng, 0, -110)},
-	    {min:501,max:850,func: map.setCenterWithOffset(latlng, 0, -410)},
-	    {min:851,func: map.setCenterWithOffset(latlng, 0, -210)}
-	];
-
+  
+	
+  
 	// define a resize function. use a closure for the lastBoundry determined.
 	var resizeFn = function(){
-	    var lastBoundry; // cache the last boundry used
-	    return function(){
-	        var width = window.innerWidth; // get the window's inner width
-	        var boundry, min, max;
-	        for(var i=0; i<bounds.length; i++){
-	            boundry = bounds[i];
-	            min = boundry.min || Number.MIN_VALUE;
-	            max = boundry.max || Number.MAX_VALUE;
-	            if(width > min && width < max 
-	               && lastBoundry !== boundry){
-	                lastBoundry = boundry;
-	                return boundry.func.call(boundry);            
-	            }
-	        }
-	    }
+	        var showInfoHeight = $('#show-info').outerHeight(true) + $('#show-info').position().top;
+	        var offsetY = ($('.map-section').outerHeight() / 2) - (showInfoHeight + (($('.map-section').outerHeight() - showInfoHeight) / 2));
+	         
+	        return map.setCenterWithOffset(latlng, 0, offsetY);
 	};
+  
+  
 	$(window).resize(resizeFn); // bind the resize event handler
 	$(document).ready(function(){
-	    $(window).trigger('resize'); // on load, init the lastBoundry
+		setTimeout(function() {
+	    	$(window).trigger('resize'); // on load, init the lastBoundry
+		}, 500);
 	});
 }
-
