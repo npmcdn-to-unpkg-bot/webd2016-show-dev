@@ -171,7 +171,8 @@ input {
 @mobile:      ~"only screen and (max-width: 529px)";
 @tablet:      ~"only screen and (min-width: 530px) and (max-width: 940px)";
 @desktop:     ~"only screen and (min-width: 941px) and (max-width: 990px)";
-@desktop-xl:  ~"only screen and (min-width: 991px)";
+@desktop-xl:  ~"only screen and (min-width: 991px) and (max-width: 1080px)";
+@desktop-xxl:  ~"only screen and (min-width: 1080px)";
 
 /* Content
 * 
@@ -471,7 +472,7 @@ article#left-box-intro{
         
         #date {
             .px2em( 22, 16 );
-            
+            font-size: 1.53vw;
             @media @mobile {
 		  		.px2em( 22, 16 );
 			}
@@ -479,9 +480,9 @@ article#left-box-intro{
 				.px2em( 22, 16 );
 		  	}
 		  	@media @desktop {
-				font-size: 1.53vw;
+				.px2em( 22, 16 );
 			}
-			@media @desktop-xl {
+			@media @desktop-xxl {
 				.px2em( 22, 16 );
 			}
 
@@ -501,11 +502,11 @@ article#left-box-intro{
 				.px2em( 49, 16 );
 		  	}
 		  	@media @desktop {
-				font-size: 1.53vw;
-			}
-			@media @desktop-xl {
 				.px2em( 49, 16 );
-			} 
+			}
+			@media @desktop-xxl {
+				.px2em( 49, 16 );
+			}
         }
     }
     #address {
@@ -528,8 +529,7 @@ article#left-box-intro{
             margin: 0;
             color: #666;
             .px2em( 18, 16 );
-            
-            font-weight: bold;
+            font-size: 1.25vw;
             line-height: 18pt;
             @media @mobile {
 		  		.px2em( 18, 16 );
@@ -538,9 +538,9 @@ article#left-box-intro{
 				.px2em( 18, 16 );
 		  	}
 		  	@media @desktop {
-				font-size: 1.25vw;
+				.px2em( 18, 16 );
 			}
-			@media @desktop-xl {
+			@media @desktop-xxl {
 				.px2em( 18, 16 );
 			}
         }
