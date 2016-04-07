@@ -544,7 +544,7 @@ article#left-box-intro #info #address p {
 }
 section#about {
   position: relative;
-  min-height: 120vh;
+  min-height: 105vh;
   background: url(../images/influx_backgrounds2.svg) no-repeat;
   background-size: cover;
 }
@@ -605,6 +605,9 @@ section#about #paragraph p:last-child {
   section#about #paragraph {
     margin: 5% 0 ;
   }
+}
+#gallery .selection {
+  text-align: center;
 }
 #gallery .selection li {
   display: inline-block;
