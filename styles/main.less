@@ -309,7 +309,7 @@ nav {
 #logo {
 	display: inline-block;
 	width: 100%;
-	padding: 2.5%;
+    padding: 2.5% 0;
 
   	@media @mobile {
   		img{
@@ -333,7 +333,8 @@ nav {
 }
 
 article#right-box-intro{
-	padding: 7%;
+	padding:0;
+	padding: 1%;
 	padding-top:2.5%; 
 
 	div#header-container {
@@ -436,7 +437,13 @@ article#right-box-intro{
 
 
 article#left-box-intro{
-	padding: 2.5%;
+	padding:0;
+	padding-top: 2.5%;
+
+	hr {
+		width: 90%;
+    	float: left;
+	}
 	@media @mobile {
 			  	text-align: center;
 			}
@@ -450,9 +457,9 @@ article#left-box-intro{
     	
         h1 {
             margin: 0;
-            padding: 2% 0;
+            padding: 1% 0;
             font-family:'Lato', sans-serif;
-            font-size:2em;
+            font-size:2.4em;
             font-weight: bold;
             color: @lightBlue;
         }
@@ -460,17 +467,19 @@ article#left-box-intro{
         	font-family: @montserrat;
             margin: 0;
             &:first-child {
-                font-size:1.3em;
+                font-size:1.5em;
+                color: #999;
                
             }
             &:last-child {
                 padding-bottom: 25px;
                 font-size:1.4em;
+                color: #666;
             }
         }
     }
     #info {
-    	margin-top: 25px;
+    	margin-top: 2em;
     
     #when {
         text-transform: uppercase;
@@ -500,9 +509,9 @@ article#left-box-intro{
         }
         #time {
             .px2em( 49, 16 );
-            font-size: 3.4vw;
+            font-size: 3.5em;
             font-weight: bold;
-            letter-spacing: -1px;
+            letter-spacing: -4px;
             @media @mobile {
 		  		.px2em( 49, 16 );
 			}
@@ -523,6 +532,8 @@ article#left-box-intro{
     #address {
         display: block;
         float: left;
+        letter-spacing: .02em;
+    font-size: 1.2em;
 
         @media @mobile {
 		  	float: none;
@@ -539,9 +550,10 @@ article#left-box-intro{
             padding: 0;
             margin: 0;
             color: #666;
-            font-size:1.2em;
-            font-size: 1.25vw;
-            line-height: 21pt;
+			line-height: 21pt;
+			font-size: 1.3em;
+			font-weight: bold;
+
             @media @mobile {
 		  		.px2em( 18, 16 );
 			}
