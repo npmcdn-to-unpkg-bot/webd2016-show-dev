@@ -552,6 +552,11 @@ article#left-box-intro #info #address p {
     font-size: 1.125em;
   }
 }
+.humber-logo {
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+}
 section#about {
   position: relative;
   min-height: 105vh;
@@ -1364,6 +1369,9 @@ footer .container i:hover {
     display: block;
     margin: 0 auto;
   }
+  .humber-logo {
+    margin-top: 1.5em;
+  }
 }
 @media (max-width: 850px) {
   #gallery .grid-item {
@@ -1388,9 +1396,6 @@ footer .container i:hover {
   .map-section .direction-btn {
     bottom: 5em!important;
   }
-}
-@media (max-width: 940px) {
-  
 }
 @media (max-width: 735px) {
   #instafeed .instagram-item {
