@@ -307,7 +307,8 @@ function initMap() {
     title: 'Hello World!'
   });
 
-  	var proj = null;
+
+
 
 	google.maps.Map.prototype.setCenterWithOffset= function(latlng, offsetX, offsetY) {
 	    var map = this;
@@ -337,9 +338,42 @@ function initMap() {
   
   
 	$(window).resize(resizeFn); // bind the resize event handler
-	$(document).ready(function(){
-		setTimeout(function() {
-	    	$(window).trigger('resize'); // on load, init the lastBoundry
-		}, 500);
+
+	google.maps.event.addListenerOnce(map, 'bounds_changed', function(){ 
+		console.log('puk');
+		 marker.setMap(map); 
+		$(window).trigger('resize'); // on load, init the lastBoundry
 	});
+
+
+	$(function() {
+	    var oTop = $('#show-info').offset().top - window.innerHeight;
+	    $(window).scroll(function(){
+
+	        var pTop = $('body').scrollTop();
+	        if( pTop > oTop ){
+	            start_count();
+	        }
+	    });
+	});
+
+	function start_count(){ 
+		$(window).trigger('resize'); // on load, init the lastBoundry
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
